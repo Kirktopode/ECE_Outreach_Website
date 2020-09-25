@@ -11,6 +11,11 @@ class Card extends React.Component {
 	// Set up
 	const degmax = 150;
 	let arr = React.Children.toArray(this.props.children);
+	
+	this.center = React.cloneElement(arr.shift(), {
+	    onMouseEnter:() => this.setState({hovering: true})
+	}, null);
+	
 	this.elements = [];
 	for(let i=0; i<arr.length; ++i) {
 	    let angle = i/arr.length*360;
@@ -43,14 +48,14 @@ class Card extends React.Component {
 			    + (this.state.open ? "open" : ""))
 	    }, null);
 	}
+	let center = React.cloneElement(this.center, {
+		className: ("card_center " + (this.state.hovering ? "" : "breathing"))
+	}, null);
+	//className={`card_center ${this.state.hovering ? "" : "breathing"}`}
 	return (<div className="card"
 		     onMouseLeave={() => {this.setState({hovering: false});
 					  this.setState({open: false})}}>
-		    <img alt="Something interesting"
-			 className={`card_center ${this.state.hovering ? "" : "breathing"}`}
-			 onMouseEnter={() => this.setState({hovering: true})}
-			 src={require('./images/center.jpg')}
-		    />
+		    {center}
 		    {elements}
 		</div>);
     }
@@ -61,6 +66,9 @@ function App() {
 	<div className="App">
 	    <header className="App-header">
 		<Card>
+		    <img alt="Spark"
+			 src={require('./images/spark.png')}
+		    />
 		    <img alt="Hover"
 			 src={require('./images/lightbulb.png')}
 		    />
@@ -75,6 +83,23 @@ function App() {
 		    />
 		    <img alt="Hover"
 			 src={require('./images/classroom.png')}
+		    />
+		</Card>
+		<Card>
+		    <img alt="Light"
+			 src={require('./images/lights.jpg')}
+		    />
+		    <img alt="Hover"
+			 src={require('./images/lightbulb.png')}
+		    />
+		    <img alt="Hover"
+			 src={require('./images/math.png')}
+		    />
+		    <img alt="Hover"
+			 src={require('./images/globe.png')}
+		    />
+		    <img alt="Hover"
+			 src={require('./images/newspaper.png')}
 		    />
 		</Card>
 	    </header>
