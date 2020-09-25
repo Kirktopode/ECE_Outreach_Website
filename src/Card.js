@@ -63,6 +63,14 @@ class Card extends React.Component {
 					  }, 500)}}>
 		    {center}
 		    {elements}
+		    <div className="card_dropdown">
+			<img alt="Lessons"
+			     src={require('./images/classroom.png')}
+			/>
+			<p>
+			    History
+			</p>
+		    </div>
 		</div>);
     }
 }

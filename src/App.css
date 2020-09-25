@@ -97,3 +97,30 @@
     position: relative;
     z-index: 1;
 }
+
+.card_dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    transform: translate(0em, 11em);
+    
+    min-width: 20em;
+    min-height: 4em;
+    border-radius: calc(4em/2);
+    background: white;
+}
+
+.card_dropdown>p {
+    font-size: 4vh;
+    margin: 0 6vh 0 12vh;
+}
+
+.card_dropdown>img {
+    width: 4.5em;
+    height: 4.5em;
+    border-radius: calc(4.5em/2);
+    position: absolute;
+    z-index: 1;
+}
