@@ -64,6 +64,9 @@
 .hover.hovering {
     transform: rotate(var(--angle)) translate(12em) rotate(calc(-1 * var(--angle)));
 }
+.hover.hovering.open {
+    transform: rotate(var(--angle-open)) translate(12em) rotate(calc(-1 * var(--angle-open)));
+}
 
 .breathing{
     animation: breathing 3s infinite;
