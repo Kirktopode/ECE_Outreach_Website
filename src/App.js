@@ -14,7 +14,20 @@ class Card extends React.Component {
 	this.elements = [];
 	for(let i=0; i<arr.length; ++i) {
 	    let angle = i/arr.length*360;
-	    let angle_open = (i+1)/(arr.length+1)*2*degmax-degmax;
+	    let angle_open;
+	    if(arr.length%2===1) {
+		if(i<arr.length/2) {
+		    angle_open = (i+1+Math.floor(arr.length/2))/(arr.length+1)*2*degmax-degmax;
+		} else {
+		    angle_open = (i-Math.floor(arr.length/2))/(arr.length+1)*2*degmax-degmax+360;
+		}
+	    } else {
+		if(i<=arr.length/2) {
+		    angle_open = (i+arr.length/2)/(arr.length+1)*2*degmax-degmax;
+		} else {
+		    angle_open = (i+arr.length/2-arr.length)/(arr.length+1)*2*degmax-degmax+360;
+		}
+	    }
 	    this.elements[i] = React.cloneElement(arr[i], {
 		style: {"--angle": (angle-90) + "deg",
 			"--angle-open": (angle_open-90) + "deg"},
