@@ -20,7 +20,7 @@ class Card extends React.Component {
 	let elements = [];
 	for(let i=0; i<this.elements.length; ++i) {
 	    elements[i] = React.cloneElement(this.elements[i], {
-		className: ("breathing hover " + (this.state.hovering ? "hovering" : ""))
+		className: ("hover " + (this.state.hovering ? "breathing hovering" : ""))
 	    }, null);
 	}
 	return (<div className="card"
@@ -28,7 +28,7 @@ class Card extends React.Component {
 		    <img alt="Something interesting"
 			 className={`card_center ${this.state.hovering ? "" : "breathing"}`}
 			 onMouseEnter={() => this.setState({hovering: true})}
-			 src={require('./center.jpg')}
+			 src={require('./images/center.jpg')}
 		    />
 		    {elements}
 		</div>);
@@ -41,13 +41,19 @@ function App() {
 	    <header className="App-header">
 		<Card>
 		    <img alt="Hover"
-			 src={require('./hover.png')}
+			 src={require('./images/lightbulb.png')}
 		    />
 		    <img alt="Hover"
-			 src={require('./hover.png')}
+			 src={require('./images/math.png')}
 		    />
 		    <img alt="Hover"
-			 src={require('./hover.png')}
+			 src={require('./images/globe.png')}
+		    />
+		    <img alt="Hover"
+			 src={require('./images/newspaper.png')}
+		    />
+		    <img alt="Hover"
+			 src={require('./images/classroom.png')}
 		    />
 		</Card>
 	    </header>
