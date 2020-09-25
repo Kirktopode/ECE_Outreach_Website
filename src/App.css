@@ -58,11 +58,16 @@
     position: absolute;
     transition: 0.5s;
     z-index: 0;
+    display: hidden;
     transform: rotate(var(--angle))
 	       translate(5em) rotate(calc(-1 * var(--angle)));
 }
 .hover.hovering {
+    display: block;
     transform: rotate(var(--angle)) translate(12em) rotate(calc(-1 * var(--angle)));
+}
+.hover.open {
+    transform: rotate(var(--angle-open)) translate(5em) rotate(calc(-1 * var(--angle-open)));
 }
 .hover.hovering.open {
     transform: rotate(var(--angle-open)) translate(12em) rotate(calc(-1 * var(--angle-open)));
