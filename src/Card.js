@@ -13,8 +13,10 @@ class Card extends React.Component {
 	
 	this.center = React.cloneElement(arr.shift(), {
 	    onMouseEnter:() => {
-		this.setState({open: false});
-		this.setState({hovering: true});
+		if(!this.state.hovering) {
+		    this.setState({open: false});
+		    this.setState({hovering: true});
+		}
 	    }
 	}, null);
 	
