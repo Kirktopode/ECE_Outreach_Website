@@ -68,7 +68,7 @@ class Card extends React.Component {
 			     src={require('./images/classroom.png')}
 			/>
 			<p>
-			    History
+			    History of the Project
 			</p>
 		    </div>
 		</div>);

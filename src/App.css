@@ -108,13 +108,13 @@
     
     min-width: 20em;
     min-height: 4em;
-    border-radius: calc(4em/2);
+    border-radius: 0 calc(4em/2) calc(4em/2) 0;
     background: white;
 }
 
 .card_dropdown>p {
     font-size: 4vh;
-    margin: 0 6vh 0 12vh;
+    margin: 0 6vh 0 6vh;
 }
 
 .card_dropdown>img {
@@ -123,4 +123,5 @@
     border-radius: calc(4.5em/2);
     position: absolute;
     z-index: 1;
+    transform: translate(calc(-4.5em/2));
 }
