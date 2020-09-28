@@ -57,7 +57,7 @@
     border-radius: calc(3.5em/2);
     position: absolute;
     transition: 0.5s;
-    z-index: 0;
+    z-index: 1;
     display: hidden;
     transform: rotate(var(--angle))
 	       translate(5em) rotate(calc(-1 * var(--angle)));
@@ -95,7 +95,7 @@
     height: 15em;
     border-radius: calc(15em/2);
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .card_dropdown {
@@ -107,6 +107,7 @@
     transform: translate(0em, 11em);
     transition: 0.5s;
     transition-delay: 0.25s;
+    z-index: 0;
 }
 
 .card_dropdown.folded {
