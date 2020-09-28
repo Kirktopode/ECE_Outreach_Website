@@ -53,8 +53,15 @@ class Card extends React.Component {
 	    }, null);
 	}
 	let center = React.cloneElement(this.center, {
-		className: ("card_center " + (this.state.hovering ? "" : "breathing"))
+	    className: ("card_center " + (this.state.hovering ? "" : "breathing"))
 	}, null);
+	let mover = (
+	    <div className={"card_title_mover" + (this.state.open && this.state.hovering ? "" : " folded")}>
+		<p>
+		    History of the Project
+		</p>
+	    </div>
+	);
 	return (<div className="card"
 		     onMouseLeave={() => {this.setState({hovering: false});
 					  setTimeout(() => {
@@ -67,9 +74,9 @@ class Card extends React.Component {
 			<img alt="Lessons"
 			     src={require('./images/classroom.png')}
 			/>
-			<p>
-			    History of the Project
-			</p>
+			<div className="card_title_wrapper">
+			    {mover}
+			</div>
 		    </div>
 		</div>);
     }
