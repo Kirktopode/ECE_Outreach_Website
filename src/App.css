@@ -105,6 +105,13 @@
     align-items: left;
     justify-content: center;
     transform: translate(0em, 11em);
+    transition: 0.5s;
+    transition-delay: 0.25s;
+}
+
+.card_dropdown.folded {
+    transform: translate(50%, 0em);
+    transition-delay: 0.25s;
 }
 
 .card_title_wrapper {
@@ -121,7 +128,7 @@
     min-width: 20em;
     min-height: 4em;
     transition: 0.5s;
-    transition-delay: 0.5s;
+    transition-delay: 0.75s;
 
     transform: translate(0em);
 }
