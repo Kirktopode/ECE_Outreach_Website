@@ -52,18 +52,17 @@
 
 /* the little hover bubbles */
 .hover {
-    width: 3.5em;
-    height: 3.5em;
+    --scale: 2.75em;
+    width: var(--scale);
+    height: var(--scale);
     border-radius: calc(3.5em/2);
     position: absolute;
     transition: 0.5s;
     z-index: 1;
-    display: hidden;
     transform: rotate(var(--angle))
 	       translate(5em) rotate(calc(-1 * var(--angle)));
 }
 .hover.hovering {
-    display: block;
     transform: rotate(var(--angle)) translate(12em) rotate(calc(-1 * var(--angle)));
 }
 .hover.open {
@@ -71,6 +70,9 @@
 }
 .hover.hovering.open {
     transform: rotate(var(--angle-open)) translate(12em) rotate(calc(-1 * var(--angle-open)));
+}
+.hover.breathing {
+    --scale: 3.5em;
 }
 
 .breathing{
