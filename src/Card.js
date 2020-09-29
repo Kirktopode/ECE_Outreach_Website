@@ -65,8 +65,8 @@ class Card extends React.Component {
 	for(let i=0; i<this.hover_elements.length; ++i) {
 	    hover_elements[i] = React.cloneElement(this.hover_elements[i], {
 		className: ("hover " + (this.state.hovering ? " hovering " : "")
-			    + (this.state.open !== i ? " breathing " : "")
-			    + (this.state.open !== null ? "open" : ""))
+			    + (this.state.open !== i ? " breathing" : "")
+			    + (this.state.open !== null ? " open" : ""))
 	    }, null);
 	}
 	let center = React.cloneElement(this.center, {
