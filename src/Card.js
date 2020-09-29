@@ -10,16 +10,17 @@ class Card extends React.Component {
 	// Set up
 	const degmax = 150;
 	this.intake_children = React.Children.toArray(this.props.children);
-	
-	this.center = React.cloneElement(this.intake_children.shift(), {
+
+	let center = this.intake_children.shift();
+	this.center = React.cloneElement(center, {
 	    onMouseEnter:() => {
 		if(!this.state.hovering) {
 		    this.setState({open: null});
 		    this.setState({hovering: true});
 		}
 	    }
-	}, null);
-	
+	}, React.Children.toArray(center.props.children));
+
 	this.hover_elements = [];
 	for(let i=0; i<this.intake_children.length; ++i) {
 	    let angle = i/this.intake_children.length*360;
@@ -40,7 +41,7 @@ class Card extends React.Component {
 	    this.hover_elements[i] = React.cloneElement(this.intake_children[i], {
 		style: {"--angle": (angle-90) + "deg",
 			"--angle-open": (angle_open-90) + "deg"},
-		onClick:() => this.setState({open: i})}, null);
+		onClick:() => this.setState({open: i})}, this.intake_children[i].props.children);
 	}
     }
     
@@ -66,12 +67,12 @@ class Card extends React.Component {
 	    hover_elements[i] = React.cloneElement(this.hover_elements[i], {
 		className: ("hover " + (this.state.hovering ? " hovering " : "")
 			    + (this.state.open !== i ? " breathing" : "")
-			    + (this.state.open !== null ? " open" : ""))
-	    }, null);
+			    + (this.state.open !== null ? " open" : "")),
+	    }, this.hover_elements[i].props.children);
 	}
 	let center = React.cloneElement(this.center, {
 	    className: ("card_center " + (this.state.hovering ? "" : "breathing"))
-	}, null);
+	}, this.center.props.children);
 	return (<div className="card"
 		     onMouseLeave={() => {this.setState({hovering: false});
 					  setTimeout(() => {
