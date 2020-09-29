@@ -10,104 +10,82 @@ function App() {
 	<div className="App">
 	    <header className="App-header">
 		<Card>
-		    <Icon>
-			<img alt="Spark"
-			     src={require('./images/spark.png')}
-			/>
-		    </Icon>
+		    <Icon alt="Spark"
+			  src={require('./images/spark.png')}
+		    />
 		    <Dropdown>
-			<Icon>
-			    <img alt="Concepts"
-				 src={require('./images/lightbulb.png')}
-			    />
-			</Icon>
+			<Icon alt="Concepts"
+			      src={require('./images/lightbulb.png')}
+			/>
 			<Label>
 			    Key Concepts
 			</Label>
 		    </Dropdown>
 		    <Dropdown>
-			<Icon>
-			    <img alt="Math"
-				 src={require('./images/math.png')}
-			    />
-			</Icon>
+			<Icon alt="Math"
+			      src={require('./images/math.png')}
+			/>
 			<Label>
 			    Math Ideas
 			</Label>
 		    </Dropdown>
 		    <Dropdown>
-			<Icon>
-			    <img alt="History"
-				 src={require('./images/globe.png')}
-			    />
-			</Icon>
+			<Icon alt="History"
+			      src={require('./images/globe.png')}
+			/>
 			<Label>
 			    History of the Project
 			</Label>
 		    </Dropdown>
 		    <Dropdown>
-			<Icon>
-			    <img alt="News"
-				 src={require('./images/newspaper.png')}
-			    />
-			</Icon>
+			<Icon alt="News"
+			      src={require('./images/newspaper.png')}
+			/>
 			<Label>
 			    Applications in the News
 			</Label>
 		    </Dropdown>
 		    <Dropdown>
-			<Icon>
-			    <img alt="Lessons"
-				 src={require('./images/classroom.png')}
-			    />
-			</Icon>
+			<Icon alt="Lessons"
+			      src={require('./images/classroom.png')}
+			/>
 			<Label>
 			    Takeaway Lessons
 			</Label>
 		    </Dropdown>
 		</Card>
 		<Card>
-		    <Icon>
-			<img alt="Light"
-			     src={require('./images/lights.jpg')}
-			/>
-		    </Icon>
+		    <Icon alt="Light"
+			  src={require('./images/lights.jpg')}
+		    />
 		    <Dropdown>
-			<Icon>
-			    <img alt="Math"
-				 src={require('./images/math.png')}
-			    />
-			</Icon>
+			<Icon alt="Math"
+			      src={require('./images/math.png')}
+			/>
 			<Label>
 			    Math Ideas
 			</Label>
 		    </Dropdown>
 		    <Dropdown>
-			<Icon>
-			    <img alt="Concepts"
-				 src={require('./images/lightbulb.png')}
-			    />
-			</Icon>
+			<Icon alt="Concepts"
+			      src={require('./images/lightbulb.png')}
+			/>
 			<Label>
 			    Key Concepts
 			</Label>
 		    </Dropdown>
 		    <Dropdown>
-			<Icon>
-			    <img alt="Lessons"
-				 src={require('./images/classroom.png')}
-			    />
-			</Icon>
+			<Icon alt="Lessons"
+			      src={require('./images/classroom.png')}
+			/>
 			<Label>
 			    Takeaway Lessons
 			</Label>
 		    </Dropdown>
 		    <Dropdown>
-			<Icon>
-			    <img alt="History"
-				 src={require('./images/globe.png')}
-			    />
-			</Icon>
+			<Icon alt="History"
+			      src={require('./images/globe.png')}
+			/>
 			<Label>
 			    History of the Project
 			</Label>

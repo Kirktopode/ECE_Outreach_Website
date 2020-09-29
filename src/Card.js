@@ -1,14 +1,15 @@
 import React from 'react';
 
 class Card extends React.Component {
+    static degmax = 150; // how far the hover elements move out of the way
     constructor(props) {
 	super(props);
 	this.state = {
 	    hovering: false,
 	    open: null,
 	};
+	console.log(Card.degmax);
 	// Set up
-	const degmax = 150;
 	this.dropdown_elements = React.Children.toArray(this.props.children)
 	    .filter((child) => child.type.name === "Dropdown");
 
@@ -29,15 +30,15 @@ class Card extends React.Component {
 	    let angle_open;
 	    if(this.dropdown_elements.length%2===1) {
 		if(i<this.dropdown_elements.length/2) {
-		    angle_open = (i+1+Math.floor(this.dropdown_elements.length/2))/(this.dropdown_elements.length+1)*2*degmax-degmax;
+		    angle_open = (i+1+Math.floor(this.dropdown_elements.length/2))/(this.dropdown_elements.length+1)*2*Card.degmax-Card.degmax;
 		} else {
-		    angle_open = (i-Math.floor(this.dropdown_elements.length/2))/(this.dropdown_elements.length+1)*2*degmax-degmax+360;
+		    angle_open = (i-Math.floor(this.dropdown_elements.length/2))/(this.dropdown_elements.length+1)*2*Card.degmax-Card.degmax+360;
 		}
 	    } else {
 		if(i<=this.dropdown_elements.length/2) {
-		    angle_open = (i+this.dropdown_elements.length/2)/(this.dropdown_elements.length+1)*2*degmax-degmax;
+		    angle_open = (i+this.dropdown_elements.length/2)/(this.dropdown_elements.length+1)*2*Card.degmax-Card.degmax;
 		} else {
-		    angle_open = (i+this.dropdown_elements.length/2-this.dropdown_elements.length)/(this.dropdown_elements.length+1)*2*degmax-degmax+360;
+		    angle_open = (i+this.dropdown_elements.length/2-this.dropdown_elements.length)/(this.dropdown_elements.length+1)*2*Card.degmax-Card.degmax+360;
 		}
 	    }
 	    this.hover_elements[i] = React.cloneElement(this.dropdown_elements[i], {
