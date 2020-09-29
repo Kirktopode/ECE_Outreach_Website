@@ -49,22 +49,10 @@ class Card extends React.Component {
     render() {
 	let dropdown_elements = [];
 	for(let i=0; i<this.dropdown_elements.length; ++i) {
-	    let el = React.cloneElement(this.dropdown_elements[i], {
+	    dropdown_elements[i] = React.cloneElement(this.dropdown_elements[i], {
 		mode: "expand",
-		folded: (!this.state.open === i || !this.state.hovering).toString(),
+		folded: (this.state.open !== i || !this.state.hovering).toString(),
 	    }, this.dropdown_elements[i].props.children);
-	    dropdown_elements[i] = (
-		<div className={"card_dropdown" + (this.state.open === i && this.state.hovering ? "" : " folded")}>
-		    <div className="card_title_wrapper">
-			<div className={"card_title_mover" + (this.state.open === i && this.state.hovering ? "" : " folded")}>
-			    <p>
-				History of the Project
-			    </p>
-			</div>
-		    </div>
-		    {el}
-		</div>
-	    );
 	}
 	
 	let hover_elements = [];
