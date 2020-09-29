@@ -5,6 +5,8 @@ class Dropdown extends React.Component {
 	super(props);
 	this.dropdown = React.Children.toArray(this.props.children)
 	    .filter((child) => child.type.name === "Icon")[0];
+	this.label = React.Children.toArray(this.props.children)
+	    .filter((child) => child.type.name === "Label")[0];
     }
     render() {
 	if(this.props.mode === "hover") {
@@ -18,7 +20,7 @@ class Dropdown extends React.Component {
 			<div className="card_title_wrapper">
 			    <div className={"card_title_mover" + (folded ? " folded" : "")}>
 				<p>
-				    History of the Project
+				    {this.label}
 				</p>
 			    </div>
 			</div>
