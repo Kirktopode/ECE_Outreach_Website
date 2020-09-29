@@ -11,7 +11,7 @@ class Card extends React.Component {
 	const degmax = 150;
 	this.dropdown_elements = this.props.children.filter((child) => child.type.name === "Dropdown");
 
-	let center = this.props.children.filter((child) => child.type.name === "Center")[0];
+	let center = this.props.children.filter((child) => child.type.name === "Icon")[0];
 	this.center = React.cloneElement(center, {
 	    onMouseEnter:() => {
 		if(!this.state.hovering) {

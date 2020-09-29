@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Center extends React.Component {
+class Icon extends React.Component {
     constructor(props) {
 	super(props);
 	this.image = React.Children.toArray(props.children)[0];
@@ -13,4 +13,4 @@ class Center extends React.Component {
     }
 }
 
-export default Center;
+export default Icon;

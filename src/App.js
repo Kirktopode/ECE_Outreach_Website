@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card.js';
-import Center from './Center.js';
+import Icon from './Icon.js';
 import Dropdown from './Dropdown.js';
 import './App.css';
 
@@ -9,11 +9,11 @@ function App() {
 	<div className="App">
 	    <header className="App-header">
 		<Card>
-		    <Center>
+		    <Icon>
 			<img alt="Spark"
 			     src={require('./images/spark.png')}
 			/>
-		    </Center>
+		    </Icon>
 		    <Dropdown>
 			<img alt="Concepts"
 			     src={require('./images/lightbulb.png')}
@@ -41,11 +41,11 @@ function App() {
 		    </Dropdown>
 		</Card>
 		<Card>
-		    <Center>
+		    <Icon>
 			<img alt="Light"
 			     src={require('./images/lights.jpg')}
 			/>
-		    </Center>
+		    </Icon>
 		    <Dropdown>
 			<img alt="Ideas"
 			     src={require('./images/lightbulb.png')}
