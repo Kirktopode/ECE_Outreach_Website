@@ -9,7 +9,7 @@ class Card extends React.Component {
 	};
 	// Set up
 	const degmax = 150;
-	this.intake_children = this.props.children.filter((child) => child.type.name === "Dropdown");
+	this.dropdown_elements = this.props.children.filter((child) => child.type.name === "Dropdown");
 
 	let center = this.props.children.filter((child) => child.type.name === "Center")[0];
 	this.center = React.cloneElement(center, {
@@ -22,35 +22,39 @@ class Card extends React.Component {
 	}, React.Children.toArray(center.props.children));
 
 	this.hover_elements = [];
-	for(let i=0; i<this.intake_children.length; ++i) {
-	    let angle = i/this.intake_children.length*360;
+	for(let i=0; i<this.dropdown_elements.length; ++i) {
+	    let angle = i/this.dropdown_elements.length*360;
 	    let angle_open;
-	    if(this.intake_children.length%2===1) {
-		if(i<this.intake_children.length/2) {
-		    angle_open = (i+1+Math.floor(this.intake_children.length/2))/(this.intake_children.length+1)*2*degmax-degmax;
+	    if(this.dropdown_elements.length%2===1) {
+		if(i<this.dropdown_elements.length/2) {
+		    angle_open = (i+1+Math.floor(this.dropdown_elements.length/2))/(this.dropdown_elements.length+1)*2*degmax-degmax;
 		} else {
-		    angle_open = (i-Math.floor(this.intake_children.length/2))/(this.intake_children.length+1)*2*degmax-degmax+360;
+		    angle_open = (i-Math.floor(this.dropdown_elements.length/2))/(this.dropdown_elements.length+1)*2*degmax-degmax+360;
 		}
 	    } else {
-		if(i<=this.intake_children.length/2) {
-		    angle_open = (i+this.intake_children.length/2)/(this.intake_children.length+1)*2*degmax-degmax;
+		if(i<=this.dropdown_elements.length/2) {
+		    angle_open = (i+this.dropdown_elements.length/2)/(this.dropdown_elements.length+1)*2*degmax-degmax;
 		} else {
-		    angle_open = (i+this.intake_children.length/2-this.intake_children.length)/(this.intake_children.length+1)*2*degmax-degmax+360;
+		    angle_open = (i+this.dropdown_elements.length/2-this.dropdown_elements.length)/(this.dropdown_elements.length+1)*2*degmax-degmax+360;
 		}
 	    }
-	    this.hover_elements[i] = React.cloneElement(this.intake_children[i], {
+	    this.hover_elements[i] = React.cloneElement(this.dropdown_elements[i], {
 		style: {"--angle": (angle-90) + "deg",
 			"--angle-open": (angle_open-90) + "deg"},
-		onClick:() => this.setState({open: i})}, this.intake_children[i].props.children);
+		onClick:() => this.setState({open: i}),
+		mode: "hover"}, this.dropdown_elements[i].props.children);
 	}
     }
     
     render() {
 	let dropdown_elements = [];
-	for(let i=0; i<this.intake_children.length; ++i) {
+	for(let i=0; i<this.dropdown_elements.length; ++i) {
+	    let el = React.cloneElement(this.dropdown_elements[i], {
+		mode: "expand",
+		folded: (!this.state.open === i || !this.state.hovering).toString(),
+	    }, this.dropdown_elements[i].props.children);
 	    dropdown_elements[i] = (
 		<div className={"card_dropdown" + (this.state.open === i && this.state.hovering ? "" : " folded")}>
-		    {this.intake_children[i]}
 		    <div className="card_title_wrapper">
 			<div className={"card_title_mover" + (this.state.open === i && this.state.hovering ? "" : " folded")}>
 			    <p>
@@ -58,6 +62,7 @@ class Card extends React.Component {
 			    </p>
 			</div>
 		    </div>
+		    {el}
 		</div>
 	    );
 	}

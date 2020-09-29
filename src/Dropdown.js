@@ -6,10 +6,17 @@ class Dropdown extends React.Component {
 	this.image = React.Children.toArray(props.children)[0];
     }
     render() {
-	return React.cloneElement(
-	    this.image,
-	    this.props,
-	    null);
+	if(this.props.mode === "hover") {
+	    return React.cloneElement(
+		this.image,
+		this.props,
+		null);
+	} else if(this.props.mode === "expand") {
+	    return React.cloneElement(
+		this.image,
+		this.props,
+		null);
+	}
     }
 }
 
