@@ -3,14 +3,15 @@ import React from 'react';
 class Dropdown extends React.Component {
     constructor(props) {
 	super(props);
-	this.image = React.Children.toArray(props.children)[0];
+	this.dropdown = React.Children.toArray(this.props.children)
+	    .filter((child) => child.type.name === "Icon")[0];
     }
     render() {
 	if(this.props.mode === "hover") {
 	    return React.cloneElement(
-		this.image,
+		this.dropdown,
 		this.props,
-		null);
+		this.dropdown.props.children);
 	} else if(this.props.mode === "expand") {
 	    let folded = this.props.folded === "true";
 	    return (<div className={"card_dropdown" + (folded ? " folded" : "")}>
@@ -22,9 +23,9 @@ class Dropdown extends React.Component {
 			    </div>
 			</div>
 			{React.cloneElement(
-			    this.image,
+			    this.dropdown,
 			    this.props,
-			    null)}
+			    this.dropdown.props.children)}
 		    </div>
 		   );
 	}

@@ -15,29 +15,39 @@ function App() {
 			/>
 		    </Icon>
 		    <Dropdown>
-			<img alt="Concepts"
-			     src={require('./images/lightbulb.png')}
-			/>
+			<Icon>
+			    <img alt="Concepts"
+				 src={require('./images/lightbulb.png')}
+			    />
+			</Icon>
 		    </Dropdown>
 		    <Dropdown>
-			<img alt="Math"
-			     src={require('./images/math.png')}
-			/>
+			<Icon>
+			    <img alt="Math"
+				 src={require('./images/math.png')}
+			    />
+			</Icon>
 		    </Dropdown>
 		    <Dropdown>
-			<img alt="History"
-			     src={require('./images/globe.png')}
-			/>
+			<Icon>
+			    <img alt="History"
+				 src={require('./images/globe.png')}
+			    />
+			</Icon>
 		    </Dropdown>
 		    <Dropdown>
-			<img alt="News"
-			     src={require('./images/newspaper.png')}
-			/>
+			<Icon>
+			    <img alt="News"
+				 src={require('./images/newspaper.png')}
+			    />
+			</Icon>
 		    </Dropdown>
 		    <Dropdown>
-			<img alt="Lessons"
-			     src={require('./images/classroom.png')}
-			/>
+			<Icon>
+			    <img alt="Lessons"
+				 src={require('./images/classroom.png')}
+			    />
+			</Icon>
 		    </Dropdown>
 		</Card>
 		<Card>
@@ -47,24 +57,32 @@ function App() {
 			/>
 		    </Icon>
 		    <Dropdown>
-			<img alt="Ideas"
-			     src={require('./images/lightbulb.png')}
-			/>
+			<Icon>
+			    <img alt="Ideas"
+				 src={require('./images/lightbulb.png')}
+			    />
+			</Icon>
 		    </Dropdown>
 		    <Dropdown>
-			<img alt="Math"
-			     src={require('./images/math.png')}
-			/>
+			<Icon>
+			    <img alt="Math"
+				 src={require('./images/math.png')}
+			    />
+			</Icon>
 		    </Dropdown>
 		    <Dropdown>
-			<img alt="History"
-			     src={require('./images/globe.png')}
-			/>
+			<Icon>
+			    <img alt="History"
+				 src={require('./images/globe.png')}
+			    />
+			</Icon>
 		    </Dropdown>
 		    <Dropdown>
-			<img alt="News"
-			     src={require('./images/newspaper.png')}
-			/>
+			<Icon>
+			    <img alt="News"
+				 src={require('./images/newspaper.png')}
+			    />
+			</Icon>
 		    </Dropdown>
 		</Card>
 	    </header>

@@ -9,9 +9,11 @@ class Card extends React.Component {
 	};
 	// Set up
 	const degmax = 150;
-	this.dropdown_elements = this.props.children.filter((child) => child.type.name === "Dropdown");
+	this.dropdown_elements = React.Children.toArray(this.props.children)
+	    .filter((child) => child.type.name === "Dropdown");
 
-	let center = this.props.children.filter((child) => child.type.name === "Icon")[0];
+	let center = React.Children.toArray(this.props.children)
+	    .filter((child) => child.type.name === "Icon")[0];
 	this.center = React.cloneElement(center, {
 	    onMouseEnter:() => {
 		if(!this.state.hovering) {
