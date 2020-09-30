@@ -58,7 +58,7 @@
     border-radius: calc(3.5em/2);
     position: absolute;
     transition: 0.5s;
-    z-index: 1;
+    z-index: 0;
     transform: rotate(var(--angle))
 	       translate(5em) rotate(calc(-1 * var(--angle)));
 }
@@ -103,7 +103,7 @@
     height: 15em;
     border-radius: calc(15em/2);
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .card_dropdown {
@@ -116,11 +116,13 @@
     transition: 0.5s;
     transition-delay: 0.25s;
     z-index: 0;
+    max-width: 25em;
 }
 
 .card_dropdown.folded {
     transform: translate(50%, 0em);
     transition-delay: 0.25s;
+    max-width: 10em;
 }
 
 .card_title_wrapper {
@@ -148,7 +150,7 @@
 }
 
 .card_title_mover>p {
-    margin: 0 6vmin 0 6vmin;
+    margin: 1vmin 6vmin 1vmin 8vmin;
     font-size: 4vmin;
 }
 
