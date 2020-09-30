@@ -124,6 +124,7 @@
     justify-content: center;
     transition: 0.5s;
     transition-delay: 0.75s;
+    min-width: 10em;
 
     transform: translate(0em);
 }
@@ -168,6 +169,7 @@
 }
 
 .card_dropdown_content {
+    overflow: hidden;
     position: absolute;
     background: #444;
     z-index: -1;
@@ -178,13 +180,17 @@
     transform: translate(0, 100%);
     font-size: 0.85em;
     text-align: left;
+    max-height: 10em;
     
     transition:
-	transform 0.5s 1.3s;
+	max-height 0.5s 1.3s,
+	padding 0s 1.3s;
 }
 
 .card_dropdown_content.folded {
-    transform: translate(0, 0);
+    max-height: 0;
+    padding: 0;
     transition:
-	transform 0.4s 0s;
+	max-height 0.4s 0s,
+	padding 0s 0.3s;
 }
