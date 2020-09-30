@@ -23,9 +23,11 @@ class Dropdown extends React.Component {
 				    {this.label}
 				</p>
 			    </div>
-			    <div className={"card_dropdown_content" + (folded ? " folded" : "")}>
-				Lorem ipsum is some sample text that is just here for
-				to check that padding is okay
+			    <div className={"card_dropdown_mover" + (folded ? " folded" : "")}>
+				<div className={"card_dropdown_content" + (folded ? " folded" : "")}>
+				    Lorem ipsum is some sample text that is just here for
+				    to check that padding is okay
+				</div>
 			    </div>
 			</div>
 			{React.cloneElement(
