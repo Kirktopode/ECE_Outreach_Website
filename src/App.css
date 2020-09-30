@@ -177,12 +177,26 @@
     transform: translate(0, 100%);
     font-size: 0.85em;
     text-align: left;
-    max-height: 10em;
-    width: 16em;
+    max-height: 15em;
+    width: 17em;
     
     transition:
 	max-height 0.5s 1.3s,
 	padding 0s 1.3s;
+}
+
+.card_dropdown_content:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5em;
+  width: 100%;
+  content: "";
+  background: linear-gradient(to top,
+     #444f 10%, 
+     #4440 100%
+  );
+  pointer-events: none; /* so the text is still selectable */
 }
 
 .card_dropdown_content.folded {

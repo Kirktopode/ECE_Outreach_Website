@@ -5,6 +5,8 @@ class Dropdown extends React.Component {
 	super(props);
 	this.dropdown = React.Children.toArray(this.props.children)
 	    .filter((child) => child.type.name === "Icon")[0];
+	this.content = React.Children.toArray(this.props.children)
+	    .filter((child) => child.type.name === "Content")[0];
 	this.label = React.Children.toArray(this.props.children)
 	    .filter((child) => child.type.name === "Label")[0];
     }
@@ -25,8 +27,7 @@ class Dropdown extends React.Component {
 			    </div>
 			    <div className={"card_dropdown_mover" + (folded ? " folded" : "")}>
 				<div className={"card_dropdown_content" + (folded ? " folded" : "")}>
-				    Lorem ipsum is some sample text that is just here for
-				    to check that padding is okay
+				    {this.content}
 				</div>
 			    </div>
 			</div>

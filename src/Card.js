@@ -8,7 +8,6 @@ class Card extends React.Component {
 	    hovering: false,
 	    open: null,
 	};
-	console.log(Card.degmax);
 	// Set up
 	this.dropdown_elements = React.Children.toArray(this.props.children)
 	    .filter((child) => child.type.name === "Dropdown");
