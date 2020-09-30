@@ -17,11 +17,15 @@ class Dropdown extends React.Component {
 	} else if(this.props.mode === "expand") {
 	    let folded = this.props.folded === "true";
 	    return (<div className={"card_dropdown" + (folded ? " folded" : "")}>
-			<div className="card_title_wrapper">
+			<div className={"card_title_wrapper" + (folded ? " folded" : "")}>
 			    <div className={"card_title_mover" + (folded ? " folded" : "")}>
 				<p>
 				    {this.label}
 				</p>
+			    </div>
+			    <div className={"card_dropdown_content" + (folded ? " folded" : "")}>
+				Lorem ipsum is some sample text that is just here for
+				to check that padding is okay
 			    </div>
 			</div>
 			{React.cloneElement(

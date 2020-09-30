@@ -24,7 +24,7 @@
     border-radius: calc(32em/2);
 }
 
-@media (max-aspect-ratio: 6/8) {
+@media (max-aspect-ratio: 2/3) {
   .App-header {
     flex-direction: column;
   }
@@ -107,6 +107,12 @@
 
 .card_title_wrapper {
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    transition: 0.5s;
+    transition-delay: 1.5s;
 }
 
 .card_title_mover {
@@ -131,7 +137,7 @@
 
 .card_title_mover>p {
     margin: 1vw 4vw 1vw 6vw;
-    font-size: 2.5vw;
+    font-size: 1.5em;
 }
 
 .card_dropdown>img {
@@ -141,4 +147,23 @@
     position: absolute;
     z-index: 1;
     transform: translate(calc(-4.5em/2));
+}
+
+.card_dropdown_content {
+    position: absolute;
+    background: #444;
+    z-index: -1;
+    padding: 1em;
+    max-width: 16em;
+    min-width: 10em;
+    border-radius: 0 0 calc(1em) calc(1em);
+    transform: translate(0, 100%);
+    font-size: 0.85em;
+    text-align: left;
+    transition: 0.5s;
+    transition-delay: 1.3s;
+}
+
+.card_dropdown_content.folded {
+    transform: translate(0, 0em);
 }
