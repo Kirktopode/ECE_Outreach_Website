@@ -101,7 +101,7 @@
 
 .card_dropdown.folded {
     transform: translate(50%, 0em);
-    transition-delay: 0.25s;
+    transition-delay: 0.75s;
     max-width: 10em;
 }
 
@@ -132,7 +132,7 @@
 
 .card_title_mover.folded {
     transform: translate(-100%);
-    transition-delay: 0s;
+    transition-delay: 0.3s;
 }
 
 .card_title_mover>p {
@@ -160,10 +160,13 @@
     transform: translate(0, 100%);
     font-size: 0.85em;
     text-align: left;
-    transition: 0.5s;
-    transition-delay: 1.3s;
+    
+    transition:
+	transform 0.5s 1.3s;
 }
 
 .card_dropdown_content.folded {
-    transform: translate(0, 0em);
+    transform: translate(-6em, 0em);
+    transition:
+	transform 0.4s 0s;
 }
