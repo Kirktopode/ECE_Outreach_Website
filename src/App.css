@@ -124,7 +124,6 @@
     justify-content: center;
     transition: 0.5s;
     transition-delay: 0.75s;
-    min-width: 10em;
 
     transform: translate(0em);
 }
@@ -174,13 +173,12 @@
     background: #444;
     z-index: -1;
     padding: 1em;
-    max-width: 16em;
-    min-width: 10em;
     border-radius: 0 0 calc(1em) calc(1em);
     transform: translate(0, 100%);
     font-size: 0.85em;
     text-align: left;
     max-height: 10em;
+    width: 16em;
     
     transition:
 	max-height 0.5s 1.3s,
