@@ -186,17 +186,18 @@
 }
 
 .card_dropdown_content:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 5em;
-  width: 100%;
-  content: "";
-  background: linear-gradient(to top,
-     #444f 10%, 
-     #4440 100%
-  );
-  pointer-events: none; /* so the text is still selectable */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6em;
+    width: 100%;
+    content: "";
+    background: linear-gradient(to top,
+				#444f 30%, 
+		 		#4440 100%
+);
+    pointer-events: none; /* so the text is still selectable */
+    transform: translate(0, 12em);
 }
 
 .card_dropdown_content.folded {
