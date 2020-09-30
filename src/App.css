@@ -101,7 +101,7 @@
 
 .card_dropdown.folded {
     transform: translate(50%, 0em);
-    transition-delay: 0.75s;
+    transition-delay: 0.5s;
     max-width: 10em;
 }
 
@@ -191,6 +191,6 @@
     max-height: 0;
     padding: 0;
     transition:
-	max-height 0.4s 0s,
-	padding 0s 0.3s;
+	max-height 0.3s 0s,
+	padding 0s 0.2s;
 }
