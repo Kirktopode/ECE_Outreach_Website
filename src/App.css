@@ -97,12 +97,14 @@
     transition-delay: 0.25s;
     z-index: 0;
     max-width: 25em;
+    padding: 5em;
 }
 
 .card_dropdown.folded {
     transform: translate(50%, 0em);
     transition-delay: 0.5s;
     max-width: 10em;
+    padding: 0;
 }
 
 .card_title_wrapper {
@@ -113,7 +115,6 @@
     justify-content: center;
     transition: 0.5s;
     transition-delay: 1.5s;
-    padding: 0 5em;
 }
 
 .card_dropdown_mover {
@@ -165,7 +166,7 @@
     border-radius: calc(4.5em/2);
     position: absolute;
     z-index: 1;
-    transform: translate(calc(-4.5em/2-5em));
+    transform: translate(calc(-4.5em/2));
 }
 
 .card_dropdown_content_wrapper {
