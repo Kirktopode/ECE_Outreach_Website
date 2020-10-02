@@ -45,8 +45,10 @@ body {
     z-index: 0;
     transform: rotate(var(--angle))
 	       translate(5em) rotate(calc(-1 * var(--angle)));
+    visibility: hidden;
 }
 .hover.hovering {
+    visibility: visible;
     transform: rotate(var(--angle)) translate(12em) rotate(calc(-1 * var(--angle)));
 }
 .hover.open {
@@ -88,10 +90,6 @@ body {
     border-radius: calc(15em/2);
     position: absolute;
     z-index: 1;
-}
-
-.hack {
-    z-index: 2;
 }
 
 .card_dropdown {
