@@ -156,7 +156,7 @@
 }
 
 .card_title_mover>p {
-    margin: 1vw 4vw 1vw 6vw;
+    margin: 0.5em 1em 0.5em 2em; /*top right bottom left */
     font-size: 1.5em;
 }
 
