@@ -90,6 +90,14 @@ body {
     z-index: 1;
 }
 
+.hack {
+    z-index: 2;
+}
+
+.honk {
+    visibility: hidden;
+}
+
 .card_dropdown {
     position: absolute;
     display: flex;

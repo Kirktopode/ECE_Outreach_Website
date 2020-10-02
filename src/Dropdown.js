@@ -18,26 +18,44 @@ class Dropdown extends React.Component {
 		this.dropdown.props.children);
 	} else if(this.props.mode === "expand") {
 	    let folded = this.props.folded === "true";
-	    return (<div className={"card_dropdown" + (folded ? " folded" : "")}>
-			<div className={"card_title_wrapper" + (folded ? " folded" : "")}>
-			    <div className={"card_title_mover" + (folded ? " folded" : "")}>
-				<p>
-				    {this.label}
-				</p>
+	    return (<>
+			<div className={"card_dropdown" + (folded ? " folded" : "")}>
+			    <div className={"card_title_wrapper" + (folded ? " folded" : "")}>
+				<div className={"card_title_mover" + (folded ? " folded" : "")}>
+				    <p>
+					{this.label}
+				    </p>
+				</div>
+				<div className={"card_dropdown_mover" + (folded ? " folded" : "")}>
+				    <div className={"card_dropdown_content_wrapper" + (folded ? " folded" : "")}>
+					<div className={"card_dropdown_content" + (folded ? " folded" : "")}>
+					    {this.content}
+					</div>
+				    </div>
+				</div>
 			    </div>
-			    <div className={"card_dropdown_mover" + (folded ? " folded" : "")}>
-				<div className={"card_dropdown_content_wrapper" + (folded ? " folded" : "")}>
-				    <div className={"card_dropdown_content" + (folded ? " folded" : "")}>
-					{this.content}
+			    {React.cloneElement(
+				this.dropdown,
+				this.props,
+				this.dropdown.props.children)}
+			</div>
+			<div className={"card_dropdown hack" + (folded ? " folded" : "")}>
+			    <div className={"card_title_wrapper" + (folded ? " folded" : "")}>
+				<div className={"card_title_mover honk" + (folded ? " folded" : "")}>
+				    <p>
+					{this.label}
+				    </p>
+				</div>
+				<div className={"card_dropdown_mover" + (folded ? " folded" : "")}>
+				    <div className={"card_dropdown_content_wrapper" + (folded ? " folded" : "")}>
+					<div className={"card_dropdown_content" + (folded ? " folded" : "")}>
+					    {this.content}
+					</div>
 				    </div>
 				</div>
 			    </div>
 			</div>
-			{React.cloneElement(
-			    this.dropdown,
-			    this.props,
-			    this.dropdown.props.children)}
-		    </div>
+		    </>
 		   );
 	}
     }
