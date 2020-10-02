@@ -171,6 +171,13 @@ body {
     position: absolute;
     z-index: 1;
     transform: translate(calc(-4.5em/2));
+    visibility: visible;
+    transition: visibility 0s 0s;
+}
+
+.card_dropdown.folded>img {
+    visibility: hidden;
+    transition: visibility 0s 0.75s;
 }
 
 .card_dropdown_content_wrapper {
