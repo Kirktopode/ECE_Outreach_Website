@@ -86,7 +86,7 @@ body {
     width: 15em;
     height: 15em;
     border-radius: calc(15em/2);
-    position: relative;
+    position: absolute;
     z-index: 1;
 }
 
@@ -99,7 +99,6 @@ body {
     transform: translate(0em, 11em);
     transition: 0.5s;
     transition-delay: 0.25s;
-    z-index: 0;
     max-width: 25em;
     padding: 5em;
 }
@@ -123,7 +122,6 @@ body {
 
 .card_dropdown_mover {
     position: absolute;
-    z-index: -1;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -188,7 +186,6 @@ body {
     overflow: hidden;
     position: relative;
     background: #444;
-    z-index: -1;
     padding: 1em;
     border-radius: 0 0 calc(1em) calc(1em);
     font-size: 0.85em;
