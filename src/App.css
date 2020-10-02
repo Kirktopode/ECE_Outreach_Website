@@ -167,14 +167,21 @@
     transform: translate(calc(-4.5em/2));
 }
 
+.card_dropdown_content_wrapper {
+    position: absolute;
+    transform: translate(0, 100%);
+    overflow: hidden;
+    
+}
+
 .card_dropdown_content {
     overflow: hidden;
-    position: absolute;
+    /*position: absolute;*/
     background: #444;
     z-index: -1;
     padding: 1em;
     border-radius: 0 0 calc(1em) calc(1em);
-    transform: translate(0, 100%);
+    /*transform: translate(0, 100%);*/
     font-size: 0.85em;
     text-align: left;
     max-height: 15em;
@@ -184,6 +191,7 @@
 	max-height 0.5s 1.3s,
 	padding 0s 1.3s;
 }
+
 
 .card_dropdown_content:after {
     position: absolute;

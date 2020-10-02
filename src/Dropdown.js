@@ -26,8 +26,10 @@ class Dropdown extends React.Component {
 				</p>
 			    </div>
 			    <div className={"card_dropdown_mover" + (folded ? " folded" : "")}>
-				<div className={"card_dropdown_content" + (folded ? " folded" : "")}>
-				    {this.content}
+				<div className={"card_dropdown_content_wrapper" + (folded ? " folded" : "")}>
+				    <div className={"card_dropdown_content" + (folded ? " folded" : "")}>
+					{this.content}
+				    </div>
 				</div>
 			    </div>
 			</div>
