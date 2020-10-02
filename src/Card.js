@@ -53,7 +53,7 @@ class Card extends React.Component {
 	for(let i=0; i<this.dropdown_elements.length; ++i) {
 	    dropdown_elements[i] = React.cloneElement(this.dropdown_elements[i], {
 		mode: "expand",
-		folded: (this.state.open !== i || !this.state.hovering).toString(),
+		folded: (!(i == 3/* || this.state.open !== i || !this.state.hovering*/)).toString(),
 	    }, this.dropdown_elements[i].props.children);
 	}
 	

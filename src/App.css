@@ -13,7 +13,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: 1.7vmin;
+    font-size: 1.5vmin;
     color: white;
 }
 
@@ -186,13 +186,14 @@ body {
 
 .card_dropdown_content {
     overflow: hidden;
+    position: relative;
     background: #444;
     z-index: -1;
     padding: 1em;
     border-radius: 0 0 calc(1em) calc(1em);
     font-size: 0.85em;
     text-align: left;
-    max-height: 15em;
+    max-height: 17em;
     width: 17em;
     
     transition:
@@ -204,16 +205,17 @@ body {
 .card_dropdown_content:after {
     position: absolute;
     top: 0;
-    left: 5em;
+    left: 0;
+    right: 0;
     height: 6em;
-    width: calc(100%-10em);
     content: "";
+    border-radius: 0 0 calc(1em) calc(1em);
     background: linear-gradient(to top,
-				#444f 30%, 
+				#444f 20%, 
 		 		#4440 100%
 );
     pointer-events: none; /* so the text is still selectable */
-    transform: translate(0, 12em);
+    transform: translate(0, 13em);
 }
 
 .card_dropdown_content.folded {
