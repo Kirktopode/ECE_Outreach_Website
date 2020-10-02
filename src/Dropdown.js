@@ -26,24 +26,18 @@ class Dropdown extends React.Component {
 					{this.label}
 				    </p>
 				</div>
-				<div className={"card_dropdown_mover" + (folded ? " folded" : "")}>
-				    <div className={"card_dropdown_content_wrapper" + (folded ? " folded" : "")}>
-					<div className={"card_dropdown_content" + (folded ? " folded" : "")}>
-					    {this.content}
-					</div>
-				    </div>
-				</div>
 			    </div>
 			    {React.cloneElement(
 				this.dropdown,
 				this.props,
 				this.dropdown.props.children)}
 			</div>
-			<div className={"card_dropdown hack" + (folded ? " folded" : "")}>
+			<div className={"card_dropdown" + (folded ? " folded" : "")}
+			     style={{"z-index": "2"}}>
 			    <div className={"card_title_wrapper" + (folded ? " folded" : "")}>
-				<div className={"card_title_mover honk" + (folded ? " folded" : "")}>
+				<div className={"card_title_mover" + (folded ? " folded" : "")} style={{visibility: "hidden"}}>
 				    <p>
-					{this.label}
+					{this.label /* phantom for alignment */}
 				    </p>
 				</div>
 				<div className={"card_dropdown_mover" + (folded ? " folded" : "")}>
