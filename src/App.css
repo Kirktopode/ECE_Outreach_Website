@@ -176,6 +176,10 @@
     padding: 0 5em 5em;
 }
 
+.card_dropdown_content_wrapper.folded {
+    padding: 0;
+}
+
 .card_dropdown_content {
     overflow: hidden;
     background: #444;
