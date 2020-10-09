@@ -33,7 +33,7 @@ class Dropdown extends React.Component {
 				this.dropdown.props.children)}
 			</div>
 			<div className={"card_dropdown" + (folded ? " folded" : "")}
-			     style={{"z-index": "2"}}>
+			     style={{"zIndex": "2"}}>
 			    <div className={"card_title_wrapper" + (folded ? " folded" : "")}>
 				<div className={"card_title_mover" + (folded ? " folded" : "")} style={{visibility: "hidden"}}>
 				    <p>

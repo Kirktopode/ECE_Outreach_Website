@@ -41,8 +41,6 @@ class Card extends React.Component {
 	let children;
 	if(this.props.src) {
 	    let config = TOML.parse(syncGet(this.props.src + "/config.toml"));
-
-	    console.log(config);
 	    
 	    children = [
 		(<Icon alt={config.center.alt}
