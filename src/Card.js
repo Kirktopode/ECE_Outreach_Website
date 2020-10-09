@@ -5,6 +5,8 @@ import Label from './Label.js';
 import Content from './Content.js';
 import Dropdown from './Dropdown.js';
 
+const TOML = require('toml');
+
 function syncGet(url) {
     var response = {}; // Fuck javascript
     var xhr = new XMLHttpRequest();
@@ -38,16 +40,19 @@ class Card extends React.Component {
 	// first check if we need to load JSON or if inline is okay
 	let children;
 	if(this.props.src) {
-	    let config = JSON.parse(syncGet(this.props.src));
+	    let config = TOML.parse(syncGet(this.props.src + "/config.toml"));
+
+	    console.log(config);
+	    
 	    children = [
-		(<Icon alt=""
-		       src={require(`${config.center}`)}
+		(<Icon alt={config.center.alt}
+		       src={`${this.props.src+'/'+config.center.src}`}
 		 />)];
-	    config.dropdowns.forEach(dropdown => {
-		let content = syncGet(dropdown.content);
+	    config.dropdown.forEach(dropdown => {
+		let content = syncGet(this.props.src+'/'+dropdown.content);
 		children.push(
 		    (<Dropdown>
-			 <Icon alt="Concepts"
+			 <Icon alt=""
 			       src={require(`${dropdown.icon}`)}
 			 />
 			 <Label>

@@ -1,0 +1,8 @@
+[center]
+src="center.jpg"
+alt="Lights"
+
+[[dropdown]]
+icon="./images/math.png"
+label="Math"
+content="math.html"

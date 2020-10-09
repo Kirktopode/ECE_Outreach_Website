@@ -81,7 +81,7 @@ function App() {
 			</Content>
 		    </Dropdown>
 		</Card>
-		<Card src="./cards/lights.json" />
+		<Card src="./cards/lights" />
 	    </header>
 	</div>
     );
