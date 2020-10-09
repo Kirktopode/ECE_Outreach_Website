@@ -1,0 +1,28 @@
+[center]
+src="center.png"
+alt="Spark"
+
+[[dropdown]]
+icon="./images/lightbulb.png"
+label="Key Concepts"
+content="concepts.html"
+
+[[dropdown]]
+icon="./images/math.png"
+label="Math Ideas"
+content="math.html"
+
+[[dropdown]]
+icon="./images/globe.png"
+label="History of the Project"
+content="history.html"
+
+[[dropdown]]
+icon="./images/newspaper.png"
+label="News"
+content="news.html"
+
+[[dropdown]]
+icon="./images/classroom.png"
+label="Lessons"
+content="lessons.html"
