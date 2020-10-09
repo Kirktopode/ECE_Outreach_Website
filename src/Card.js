@@ -45,34 +45,17 @@ class Card extends React.Component {
 		 />)];
 	    config.dropdowns.forEach(dropdown => {
 		let content = syncGet(dropdown.content);
-		console.log(content);
+		children.push(
+		    (<Dropdown>
+			 <Icon alt="Concepts"
+			       src={require(`${dropdown.icon}`)}
+			 />
+			 <Label>
+			     {dropdown.label}
+			 </Label>
+			 <Content dangerouslySetInnerHTML={ { __html: content } }/>
+		     </Dropdown>));
 	    });
-	    /*
-	    fetch()
-		.then(r => r.json())
-		.then(j  => {
-		    children = [
-			(<Icon alt=""
-			       src={require(`${j.center}`)}
-			 />)];
-		    console.log(j.dropdowns.map(d=>d.content));
-		    j.dropdowns.forEach(dropdown => {
-			fetch(dropdown.content)
-			    .then((r) => r.text())
-			    .then(text  => {
-				children.push(
-				    (<Dropdown>
-					 <Icon alt="Concepts"
-					       src={require(`${dropdown.icon}`)}
-					 />
-					 <Label>
-					     {dropdown.label}
-					 </Label>
-					 <Content dangerouslySetInnerHTML={ { __html: text } }/>
-				     </Dropdown>));
-			    });
-		    });
-		});*/
 	} else {
 	    children = this.props.children;
 	}
