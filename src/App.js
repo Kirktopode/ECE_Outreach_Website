@@ -1,9 +1,5 @@
 import React from 'react';
 import Card from './Card.js';
-import Icon from './Icon.js';
-import Label from './Label.js';
-import Content from './Content.js';
-import Dropdown from './Dropdown.js';
 import './App.css';
 
 function App() {
