@@ -3,7 +3,11 @@ import React from 'react';
 class Content extends React.Component {
     constructor(props) {
 	super(props);
-	this.content = props.children;
+	if(props.children)
+	    this.content = props.children;
+	else
+	    this.content = (<div dangerouslySetInnerHTML={props.dangerouslySetInnerHTML}>
+			    </div>);
     }
     render() {
 	return this.content;

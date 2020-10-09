@@ -1,0 +1,10 @@
+{
+    "center": "./images/lights.jpg",
+    "dropdowns": [
+	{
+	    "icon": "./images/math.png",
+	    "label": "math",
+	    "content": "./cards/lights.html"
+	}
+    ]
+}

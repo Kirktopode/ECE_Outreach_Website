@@ -1,18 +1,17 @@
 import React from 'react';
 
+import Icon from './Icon.js';
+import Label from './Label.js';
+import Content from './Content.js';
+import Dropdown from './Dropdown.js';
+
 class Card extends React.Component {
     static degmax = 150; // how far the hover elements move out of the way
-    constructor(props) {
-	super(props);
-	this.state = {
-	    hovering: false,
-	    open: null,
-	};
-	// Set up
-	this.dropdown_elements = React.Children.toArray(this.props.children)
+    mcs(children) {// Set up
+	this.dropdown_elements = React.Children.toArray(children)
 	    .filter((child) => child.type.name === "Dropdown");
 
-	let center = React.Children.toArray(this.props.children)
+	let center = React.Children.toArray(children)
 	    .filter((child) => child.type.name === "Icon")[0];
 	this.center = React.cloneElement(center, {
 	    onMouseEnter:() => {
@@ -47,8 +46,49 @@ class Card extends React.Component {
 		mode: "hover"}, this.dropdown_elements[i].props.children);
 	}
     }
+    constructor(props) {
+	super(props);
+	this.state = {
+	    hovering: false,
+	    open: null,
+	};
+
+	// first check if we need to load JSON or if inline is okay
+	let children;
+	if(this.props.src) {
+	    fetch(this.props.src)
+		.then(r => r.json())
+		.then(j  => {
+		    children = [
+			(<Icon alt="Spark"
+			       src={require(`${j.center}`)}
+			 />)];
+		    j.dropdowns.forEach(dropdown => {
+			fetch(dropdown.content)
+			    .then((r) => r.text())
+			    .then(text  => {
+				children.push(
+				    (<Dropdown>
+					 <Icon alt="Concepts"
+					       src={require(`${dropdown.icon}`)}
+					 />
+					 <Label>
+					     {dropdown.label}
+					 </Label>
+					 <Content dangerouslySetInnerHTML={ { __html: text } }/>
+				     </Dropdown>));
+			    });
+		    });
+		    this.msc(children);
+		});
+	} else {
+	    this.msc(this.props.children);
+	}
+    }
     
     render() {
+	if(!this.dropdown_elements)
+	    return null;
 	let dropdown_elements = [];
 	for(let i=0; i<this.dropdown_elements.length; ++i) {
 	    dropdown_elements[i] = React.cloneElement(this.dropdown_elements[i], {
