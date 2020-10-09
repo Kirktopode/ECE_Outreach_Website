@@ -5,9 +5,78 @@ import Label from './Label.js';
 import Content from './Content.js';
 import Dropdown from './Dropdown.js';
 
+function syncGet(url) {
+    var response = {}; // Fuck javascript
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, false);
+    xhr.onload = function(D) { return function (e) {
+	if (xhr.readyState === 4) {
+	    if (xhr.status === 200) {
+		response.text=xhr.responseText;
+	    } else {
+		console.error(xhr.statusText);
+	    }
+	}
+    }}(response);
+    xhr.onerror = function (e) {
+	console.error(xhr.statusText);
+    };
+    xhr.send(null);
+
+    return response.text;
+}
+
 class Card extends React.Component {
     static degmax = 150; // how far the hover elements move out of the way
-    mcs(children) {// Set up
+    constructor(props) {
+	super(props);
+	this.state = {
+	    hovering: false,
+	    open: null,
+	};
+
+	// first check if we need to load JSON or if inline is okay
+	let children;
+	if(this.props.src) {
+	    let config = JSON.parse(syncGet(this.props.src));
+	    children = [
+		(<Icon alt=""
+		       src={require(`${config.center}`)}
+		 />)];
+	    config.dropdowns.forEach(dropdown => {
+		let content = syncGet(dropdown.content);
+		console.log(content);
+	    });
+	    /*
+	    fetch()
+		.then(r => r.json())
+		.then(j  => {
+		    children = [
+			(<Icon alt=""
+			       src={require(`${j.center}`)}
+			 />)];
+		    console.log(j.dropdowns.map(d=>d.content));
+		    j.dropdowns.forEach(dropdown => {
+			fetch(dropdown.content)
+			    .then((r) => r.text())
+			    .then(text  => {
+				children.push(
+				    (<Dropdown>
+					 <Icon alt="Concepts"
+					       src={require(`${dropdown.icon}`)}
+					 />
+					 <Label>
+					     {dropdown.label}
+					 </Label>
+					 <Content dangerouslySetInnerHTML={ { __html: text } }/>
+				     </Dropdown>));
+			    });
+		    });
+		});*/
+	} else {
+	    children = this.props.children;
+	}
+	
 	this.dropdown_elements = React.Children.toArray(children)
 	    .filter((child) => child.type.name === "Dropdown");
 
@@ -44,45 +113,6 @@ class Card extends React.Component {
 			"--angle-open": (angle_open-90) + "deg"},
 		onClick:() => this.setState({open: i}),
 		mode: "hover"}, this.dropdown_elements[i].props.children);
-	}
-    }
-    constructor(props) {
-	super(props);
-	this.state = {
-	    hovering: false,
-	    open: null,
-	};
-
-	// first check if we need to load JSON or if inline is okay
-	let children;
-	if(this.props.src) {
-	    fetch(this.props.src)
-		.then(r => r.json())
-		.then(j  => {
-		    children = [
-			(<Icon alt="Spark"
-			       src={require(`${j.center}`)}
-			 />)];
-		    j.dropdowns.forEach(dropdown => {
-			fetch(dropdown.content)
-			    .then((r) => r.text())
-			    .then(text  => {
-				children.push(
-				    (<Dropdown>
-					 <Icon alt="Concepts"
-					       src={require(`${dropdown.icon}`)}
-					 />
-					 <Label>
-					     {dropdown.label}
-					 </Label>
-					 <Content dangerouslySetInnerHTML={ { __html: text } }/>
-				     </Dropdown>));
-			    });
-		    });
-		    this.msc(children);
-		});
-	} else {
-	    this.msc(this.props.children);
 	}
     }
     
