@@ -1,25 +1,66 @@
-# React JS Landing Page Template
+## Cards
+Extensive work has gone into making cards easy to work with. They are currently configured
+using TOML (can be made to work with JSON super easily). The recommended card directory
+structure is as follows:  
+```
+public
+└─card_dir
+  ├─config.toml
+  ├─center.jpg
+  ├─dropdown_ideas.html
+  ├─dropdown_lessons.html
+  └─dropdown_news.html
+```
+These should be put in the `public` folder of the react app. Here is a minimal example
+of how to use a card with the above directory structure:  
+```jsx
+import React from 'react';
+import Card from './Card.js';
+import './App.css';
 
+function App() {
+    return (
+	<div className="App">
+	    <header className="App-header">
+			<Card src="./card_dir" />
+	    </header>
+	</div>
+    );
+}
 
-### <a href="https://react-landing-page-template.herokuapp.com">LIVE DEMO</a> 
+export default App;
+```
+Once compiled, the `<Card>` tag will fetch the `card_dir/config.toml` file and parse its
+contents, fetching additional files as required.  
 
-## Description
-This is a ReactJS based landing page template, fit for a startup company/service with a one page view. The design is inspired by a template from <a href="https://www.free-css.com/assets/files/free-css-templates/preview/page234/interact/">Free-CSS.com </a>
-All componenets data can be easily modified to git use by changing the data.JSON file that contains all data.
+What follows is a sample `config.toml` that references the above directory structure:  
+```toml
+[center]
+src="center.jpg"
+alt="CardName"
 
-## Make it Yours!
-### 1. Preps
-You will need to have <a href="https://nodejs.org/">Node JS</a> installed on your pc. 
+[[dropdown]]
+icon="lightbulb"
+label="Ideas"
+content="dropdown_ideas.html"
 
-### 2. Clone Files
-After cloning the files, you will have to run ```yarn``` followed by ```yarn start``` in the CLI
-### 3. Add your own data 
-Change the data in the ```data.JSON``` file as well as add any images to ```public/img/```
-You can also change styles by modifying the ```public/css``` files.
+[[dropdown]]
+icon="classroom"
+label="Lessons"
+content="dropdown_lessons.html"
 
+[[dropdown]]
+icon="newspaper"
+label="News"
+content="dropdown_news.html"
+```
 
-## Credits
-##### Free CSS 
-<a href="https://www.free-css.com/assets/files/free-css-templates/preview/page234/interact/">Free-CSS.com </a>
+The contents of `dropdown_*.html` above will be literally copy-pasted into the card dropdown
+box.  
 
-##### Issaaf kattan
+Available values for `icon` are:  
+- `lightbulb`
+- `math`
+- `globe`
+- `newspaper`
+- `classroom`
