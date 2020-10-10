@@ -3,26 +3,26 @@ src="center.png"
 alt="Spark"
 
 [[dropdown]]
-icon="./images/lightbulb.png"
+icon="lightbulb"
 label="Key Concepts"
 content="concepts.html"
 
 [[dropdown]]
-icon="./images/math.png"
+icon="math"
 label="Math Ideas"
 content="math.html"
 
 [[dropdown]]
-icon="./images/globe.png"
+icon="globe"
 label="History of the Project"
 content="history.html"
 
 [[dropdown]]
-icon="./images/newspaper.png"
+icon="newspaper"
 label="News"
 content="news.html"
 
 [[dropdown]]
-icon="./images/classroom.png"
+icon="classroom"
 label="Lessons"
 content="lessons.html"

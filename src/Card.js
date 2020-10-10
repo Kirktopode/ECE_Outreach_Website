@@ -7,6 +7,12 @@ import Dropdown from './Dropdown.js';
 
 const TOML = require('toml');
 
+const iconBasePath = "./images/card_floats"
+
+function lookupIconName(name) {
+    return iconBasePath + "/" + name + ".png"
+}
+
 function syncGet(url) {
     var response = {}; // Fuck javascript
     var xhr = new XMLHttpRequest();
@@ -51,7 +57,7 @@ class Card extends React.Component {
 		children.push(
 		    (<Dropdown>
 			 <Icon alt=""
-			       src={require(`${dropdown.icon}`)}
+			       src={require(`${lookupIconName(dropdown.icon)}`)}
 			 />
 			 <Label>
 			     {dropdown.label}

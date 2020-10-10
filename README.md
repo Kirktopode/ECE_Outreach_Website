@@ -40,20 +40,27 @@ src="center.jpg"
 alt="CardName"
 
 [[dropdown]]
-icon="./images/lightbulb.png"
+icon="lightbulb"
 label="Ideas"
 content="dropdown_ideas.html"
 
 [[dropdown]]
-icon="./images/classroom.png"
+icon="classroom"
 label="Lessons"
 content="dropdown_lessons.html"
 
 [[dropdown]]
-icon="./images/newspaper.png"
+icon="newspaper"
 label="News"
 content="dropdown_news.html"
 ```
 
 The contents of `dropdown_*.html` above will be literally copy-pasted into the card dropdown
-box.
+box.  
+
+Available values for `icon` are:  
+- `lightbulb`
+- `math`
+- `globe`
+- `newspaper`
+- `classroom`

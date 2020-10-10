@@ -3,21 +3,21 @@ src="center.jpg"
 alt="Lights"
 
 [[dropdown]]
-icon="./images/lightbulb.png"
+icon="lightbulb"
 label="Key Concepts"
 content="concepts.html"
 
 [[dropdown]]
-icon="./images/math.png"
+icon="math"
 label="Math"
 content="math.html"
 
 [[dropdown]]
-icon="./images/classroom.png"
+icon="classroom"
 label="Lessons"
 content="lessons.html"
 
 [[dropdown]]
-icon="./images/newspaper.png"
+icon="newspaper"
 label="News"
 content="news.html"
