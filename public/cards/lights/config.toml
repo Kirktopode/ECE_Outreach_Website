@@ -1,0 +1,23 @@
+[center]
+src="center.jpg"
+alt="Lights"
+
+[[dropdown]]
+icon="lightbulb"
+label="Key Concepts"
+content="concepts.html"
+
+[[dropdown]]
+icon="math"
+label="Math"
+content="math.html"
+
+[[dropdown]]
+icon="classroom"
+label="Lessons"
+content="lessons.html"
+
+[[dropdown]]
+icon="newspaper"
+label="News"
+content="news.html"

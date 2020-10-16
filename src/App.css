@@ -1,38 +1,249 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+	animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #181c24;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+	transform: rotate(0deg);
+    }
+    to {
+	transform: rotate(360deg);
+    }
+}
+
+/* big container around a card, handles re-hiding on exit */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 32em;
+    height: 32em;
+    border-radius: calc(32em/2);
+}
+
+@media (max-aspect-ratio: 2/3) {
+    .App-header {
+	flex-direction: column;
+    }
+}
+
+/* the little hover bubbles */
+.hover {
+    --scale: 2.75em;
+    width: var(--scale);
+    height: var(--scale);
+    border-radius: calc(3.5em/2);
+    position: absolute;
+    transition: 0.5s;
+    z-index: 0;
+    transform: rotate(var(--angle))
+	       translate(5em) rotate(calc(-1 * var(--angle)));
+    visibility: hidden;
+}
+.hover.hovering {
+    visibility: visible;
+    transform: rotate(var(--angle)) translate(12em) rotate(calc(-1 * var(--angle)));
+}
+.hover.open {
+    transform: rotate(var(--angle-open)) translate(5em) rotate(calc(-1 * var(--angle-open)));
+}
+.hover.hovering.open {
+    transform: rotate(var(--angle-open)) translate(12em) rotate(calc(-1 * var(--angle-open)));
+}
+.hover.breathing {
+    --scale: 3.5em;
+}
+
+.breathing{
+    animation: breathing 3s infinite;
+    animation-delay: 0s;
+}
+@keyframes breathing {
+    0% {
+	box-shadow: 0 0 0 0em rgba(30, 77, 43, 255);
+    }
+    75% {
+	box-shadow: 0 0 0 0.75em rgba(30, 77, 43, 0);
+    }
+    100% {
+	box-shadow: 0 0 0 0.75em rgba(0, 0, 0, 0);
+    }
+}
+.breathing:nth-of-type(2n) { animation-delay: -0.5s }
+.breathing:nth-of-type(3n) { animation-delay: -1.0s }  
+.breathing:nth-of-type(5n) { animation-delay: -1.5s }  
+.breathing:nth-of-type(7n) { animation-delay: -2.0s }  
+.breathing:nth-of-type(11n) { animation-delay: -2.5s }  
+
+
+/* center image */
+.card_center {
+    width: 15em;
+    height: 15em;
+    border-radius: calc(15em/2);
+    position: absolute;
+    z-index: 1;
+}
+
+.card_dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    transform: translate(0em, 11em);
+    transition: 0.5s;
+    transition-delay: 0.25s;
+    max-width: 25em;
+    padding: 5em;
+}
+
+.card_dropdown.folded {
+    transform: translate(50%, 0em);
+    transition-delay: 0.5s;
+    max-width: 10em;
+    padding: 0;
+}
+
+.card_title_wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    transition: 0.5s;
+    transition-delay: 1.5s;
+}
+
+.card_dropdown_mover {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    transition: 0.5s;
+    transition-delay: 0.75s;
+
+    transform: translate(0em);
+}
+
+.card_dropdown_mover.folded {
+    transform: translate(-15em);
+    transition-delay: 0.3s;
+}
+
+.card_title_mover {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: #141414;
+    border-radius: 0 calc(4em/2) calc(4em/2) 0;
+    min-width: 20em;
+    min-height: 4em;
+    transition: 0.5s;
+    transition-delay: 0.75s;
+
+    transform: translate(0em);
+}
+
+.card_title_mover.folded {
+    transform: translate(-100%);
+    transition-delay: 0.3s;
+}
+
+.card_title_mover>p {
+    margin: 0.5em 1em 0.5em 2em; /*top right bottom left */
+    font-size: 1.5em;
+}
+
+.card_dropdown>img {
+    width: 4.5em;
+    height: 4.5em;
+    border-radius: calc(4.5em/2);
+    position: absolute;
+    z-index: 1;
+    transform: translate(calc(-4.5em/2));
+    visibility: visible;
+    transition: visibility 0s 0s;
+}
+
+.card_dropdown.folded>img {
+    visibility: hidden;
+    transition: visibility 0s 0.75s;
+}
+
+.card_dropdown_content_wrapper {
+    position: absolute;
+    transform: translate(0, 100%);
+    overflow: hidden;
+    padding: 0 5em 5em;
+}
+
+.card_dropdown_content_wrapper.folded {
+    padding: 0;
+}
+
+.card_dropdown_content {
+    overflow: hidden;
+    position: relative;
+    background: #444;
+    padding: 1em;
+    border-radius: 0 0 calc(1em) calc(1em);
+    font-size: 0.85em;
+    text-align: left;
+    max-height: 17em;
+    width: 17em;
+    
+    transition:
+	max-height 0.5s 1.3s,
+	padding 0s 1.3s;
+}
+
+
+.card_dropdown_content:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6em;
+    content: "";
+    border-radius: 0 0 calc(1em) calc(1em);
+    background: linear-gradient(to top,
+				#444f 20%, 
+		 		#4440 100%
+);
+    pointer-events: none; /* so the text is still selectable */
+    transform: translate(0, 13em);
+}
+
+.card_dropdown_content.folded {
+    max-height: 0;
+    padding: 0;
+    transition:
+	max-height 0.3s 0s,
+	padding 0s 0.2s;
 }
