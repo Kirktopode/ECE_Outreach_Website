@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ECE_Outreach_Website/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/ECE_Outreach_Website/static/js/main.8514ea5b.chunk.js",
+    "main.js.map": "/ECE_Outreach_Website/static/js/main.8514ea5b.chunk.js.map",
+    "runtime-main.js": "/ECE_Outreach_Website/static/js/runtime-main.7aaddd4d.js",
+    "runtime-main.js.map": "/ECE_Outreach_Website/static/js/runtime-main.7aaddd4d.js.map",
+    "static/js/2.8ec8fc10.chunk.js": "/ECE_Outreach_Website/static/js/2.8ec8fc10.chunk.js",
+    "static/js/2.8ec8fc10.chunk.js.map": "/ECE_Outreach_Website/static/js/2.8ec8fc10.chunk.js.map",
+    "index.html": "/ECE_Outreach_Website/index.html",
+    "precache-manifest.012334d85ca87cd7a9c889355a924bf9.js": "/ECE_Outreach_Website/precache-manifest.012334d85ca87cd7a9c889355a924bf9.js",
+    "service-worker.js": "/ECE_Outreach_Website/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/ECE_Outreach_Website/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.8ec8fc10.chunk.js.LICENSE.txt": "/ECE_Outreach_Website/static/js/2.8ec8fc10.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7aaddd4d.js",
+    "static/js/2.8ec8fc10.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.8514ea5b.chunk.js"
+  ]
+}
