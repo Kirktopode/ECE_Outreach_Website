@@ -6,7 +6,6 @@ import Content from './Content.js';
 import Dropdown from './Dropdown.js';
 
 const TOML = require('toml');
-// import TOML from 'toml'
 
 const iconBasePath = "./images/card_floats"
 
