@@ -5,9 +5,9 @@ import Label from './Label.js';
 import Content from './Content.js';
 import Dropdown from './Dropdown.js';
 
-const TOML = require('toml');
+const TOML = require('toml/index');
 
-const iconBasePath = "./images/card_floats"
+const iconBasePath = "./card_floats"
 
 function lookupIconName(name) {
     return iconBasePath + "/" + name + ".png"

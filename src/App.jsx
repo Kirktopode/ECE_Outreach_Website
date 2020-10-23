@@ -9,7 +9,7 @@ import Gallery from './components/gallery';
 // import Team from './components/Team';
 import Contact from './components/contact';
 import JsonData from './data/data.json';
-import Card from "./Card";
+// import Card from "./Card";
 
 export class App extends Component {
   state = {
