@@ -1,6 +1,6 @@
 {
 			"name": "ECE-Outreach",
-			"homepage_disabled": "http://kirktopode.github.io/ECE_Outreach_Website",
+			"homepage": "http://kirktopode.github.io/ECE_Outreach_Website",
 			"version": "0.1.0",
 			"private": true,
 			"dependencies": {
