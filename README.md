@@ -1,5 +1,5 @@
 # ECE Outreach Site
-=======
+
 <a href="https://kirktopode.github.io/ECE_Outreach_Website/">Preview Site</a>
 ## Cards
 Extensive work has gone into making cards easy to work with. They are currently configured
