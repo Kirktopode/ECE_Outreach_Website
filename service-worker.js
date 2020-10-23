@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ECE_Outreach_Website/precache-manifest.15707dbf5d72860c433286c8cf7fcade.js"
+  "/ECE_Outreach_Website/precache-manifest.f15bd83326f34622a68306d9acd700d3.js"
 );
 
 self.addEventListener('message', (event) => {
