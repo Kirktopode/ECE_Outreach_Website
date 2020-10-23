@@ -5,23 +5,23 @@ class Dropdown extends React.Component {
 		super(props);
 		this.dropdown = React.Children.toArray(this.props.children)
 			.filter((child) => {
-				// if (child.type.name.length > 2)
-				// 	return child.type.name === "Icon"
-				// else
+				if (child.type.name.length > 2)
+					return child.type.name === "Icon"
+				else
 					return child.props.src
 			})[0];
 		this.content = React.Children.toArray(this.props.children)
 			.filter((child) => {
-				// if (child.type.name.length > 2)
-				// 	return child.type.name === "Content"
-				// else
+				if (child.type.name.length > 2)
+					return child.type.name === "Content"
+				else
 					return child.props.dangerouslySetInnerHTML
 			})[0];
 		this.label = React.Children.toArray(this.props.children)
 			.filter((child) => {
-				// if (child.type.name.length > 2 )
-				// 	return child.type.name === "Label"
-				// else
+				if (child.type.name.length > 2 )
+					return child.type.name === "Label"
+				else
 					return child.props.children
 			})[0];
     }

@@ -1,8 +1,8 @@
 {
     "Header": {
 
-        "title": "We are a Landing Page",
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+        "title": "ECE Outreach",
+        "paragraph": "Students of Colorado State University bringing Electrical and Computer Engineering to students from middle school to college."
 
     },
     "About": {
@@ -105,8 +105,8 @@
         }
     ],
     "Contact": {
-        "address": "4321 California St, San Francisco, CA 12345 ",
-        "phone": "+1 123 456 1234",
+        "address": "xxx",
+        "phone": "xxx",
         "email": "info@company.com",
         "facebook": "fb.com",
         "twitter": "twitter.com",
