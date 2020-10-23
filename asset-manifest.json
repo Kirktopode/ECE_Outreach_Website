@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ECE_Outreach_Website/static/css/main.0c141ef2.chunk.css",
-    "main.js": "/ECE_Outreach_Website/static/js/main.28ffbc95.chunk.js",
-    "main.js.map": "/ECE_Outreach_Website/static/js/main.28ffbc95.chunk.js.map",
+    "main.js": "/ECE_Outreach_Website/static/js/main.06a4c286.chunk.js",
+    "main.js.map": "/ECE_Outreach_Website/static/js/main.06a4c286.chunk.js.map",
     "runtime-main.js": "/ECE_Outreach_Website/static/js/runtime-main.15f0e96d.js",
     "runtime-main.js.map": "/ECE_Outreach_Website/static/js/runtime-main.15f0e96d.js.map",
     "static/js/2.63d13b60.chunk.js": "/ECE_Outreach_Website/static/js/2.63d13b60.chunk.js",
     "static/js/2.63d13b60.chunk.js.map": "/ECE_Outreach_Website/static/js/2.63d13b60.chunk.js.map",
     "index.html": "/ECE_Outreach_Website/index.html",
-    "precache-manifest.24b56ee2ef3615d80f8cc3ced34194cf.js": "/ECE_Outreach_Website/precache-manifest.24b56ee2ef3615d80f8cc3ced34194cf.js",
+    "precache-manifest.ad94973ef456a3b4bac227dc3717ee3a.js": "/ECE_Outreach_Website/precache-manifest.ad94973ef456a3b4bac227dc3717ee3a.js",
     "service-worker.js": "/ECE_Outreach_Website/service-worker.js",
     "static/css/main.0c141ef2.chunk.css.map": "/ECE_Outreach_Website/static/css/main.0c141ef2.chunk.css.map",
     "static/js/2.63d13b60.chunk.js.LICENSE.txt": "/ECE_Outreach_Website/static/js/2.63d13b60.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.15f0e96d.js",
     "static/js/2.63d13b60.chunk.js",
     "static/css/main.0c141ef2.chunk.css",
-    "static/js/main.28ffbc95.chunk.js"
+    "static/js/main.06a4c286.chunk.js"
   ]
 }
