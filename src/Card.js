@@ -6,6 +6,7 @@ import Content from './Content.js';
 import Dropdown from './Dropdown.js';
 
 const TOML = require('toml');
+// import TOML from 'toml'
 
 const iconBasePath = "./images/card_floats"
 
@@ -42,7 +43,6 @@ class Card extends React.Component {
 	    hovering: false,
 	    open: null,
 	};
-
 	// first check if we need to load JSON or if inline is okay
 	let children;
 	if(this.props.src) {
