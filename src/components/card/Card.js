@@ -77,21 +77,13 @@ class Card extends React.Component {
 		    return child.props.children
 	    });
 
-	let center = React.Children.toArray(children)
+	this.center = React.Children.toArray(children)
 	    .filter((child) => {
 		if (child.type.name.length > 2)
 		    return child.type.name === "Icon"
 		else
 		    return !child.props.children
 	    })[0];
-	this.center = React.cloneElement(center, {
-	    onMouseEnter:() => {
-		if(!this.state.hovering) {
-		    this.setState({open: null});
-		    this.setState({hovering: true});
-		}
-	    }
-	}, React.Children.toArray(center.props.children));
 
 	this.hover_elements = [];
 	for(let i=0; i<this.dropdown_elements.length; ++i) {
@@ -140,13 +132,19 @@ class Card extends React.Component {
 	let center = React.cloneElement(this.center, {
 	    className: ("card_center " + (this.state.hovering ? "" : "breathing"))
 	}, this.center.props.children);
-	return (<div className="card_wrapper">
-		    <div className="card"
+	return (<div className="card_wrapper"
 		     onMouseLeave={() => {this.setState({hovering: false});
 					  setTimeout(() => {
 					      if(!this.state.hovering)
 						  this.setState({open: null});
-					  }, 500)}}>
+					  }, 500)}}
+		     onMouseEnter={() => {
+			 if(!this.state.hovering) {
+			     this.setState({open: null});
+			     this.setState({hovering: true});
+			 }
+		     }}>
+		    <div className="card">
 		    {center}
 		    {hover_elements}
 		    {dropdown_elements}
