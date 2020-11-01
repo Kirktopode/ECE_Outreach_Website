@@ -35,6 +35,7 @@
 
 /* big container around a card, handles re-hiding on exit */
 .card {
+    float: left;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -246,4 +247,29 @@
     transition:
 	max-height 0.3s 0s,
 	padding 0s 0.2s;
+}
+
+.card_wrapper {
+    height: 32em;
+    position: relative;
+}
+
+.card_description_wrapper {
+    left: 32em;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.card_title {
+    font-weight: 425;
+    font-size: 4em;
+    color: #333;
+}
+
+.card_description {
+    font-size: 1.5em;
+    color: #555;
 }
