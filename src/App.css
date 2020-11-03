@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Bahnschrift';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bahnschrift'),
+       url('fonts/Bahnschrift.ttf') format('truetype');
+}
 .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -53,10 +60,10 @@
 
 /* the little hover bubbles */
 .hover {
-    --scale: 2.75em;
+    --scale: 4em;
     width: var(--scale);
     height: var(--scale);
-    border-radius: calc(3.5em/2);
+    border-radius: calc(var(--scale)/2);
     position: absolute;
     transition: 0.5s;
     z-index: 0;
@@ -75,7 +82,7 @@
     transform: rotate(var(--angle-open)) translate(12em) rotate(calc(-1 * var(--angle-open)));
 }
 .hover.breathing {
-    --scale: 3.5em;
+    --scale: 5em;
 }
 
 .breathing{
@@ -202,7 +209,7 @@
 
 .card_dropdown_content_wrapper {
     position: absolute;
-    transform: translate(0, 100%);
+    transform: translate(0, 100%) translate(0, -1px);
     overflow: hidden;
     padding: 0 5em 5em;
 }
@@ -217,11 +224,11 @@
     background: #9998;
     padding: 1em;
     border-radius: 0 0 calc(1em) calc(1em);
-    font-size: 0.5em;
+    font-size: 0.6em;
     text-align: left;
     max-height: 17em;
     transform: translate(-1em);
-    width: 34.5em;
+    width: 28em;
     color: #444;
     
     transition:
@@ -255,6 +262,7 @@
 }
 
 .card_wrapper {
+    font-family: Bahnschrift;
     font-size: 1.1em;
     height: 32em;
     position: relative;
@@ -262,23 +270,35 @@
 }
 
 .card_description_wrapper {
+    text-shadow: -0.5px 1px black;
     left: 32em;
     margin: 0;
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .card_title {
+    max-width: 90%;
+    padding: 0.1em 0.5em 0 0.5em;
+    background: #888;
+    border-radius: 0.5em 0.5em 0 0;
     font-weight: 425;
-    font-size: 4em;
-    color: #333;
+    font-size: 3.2em;
+    color: #eee;
 }
 
 .card_description {
+    padding: 0.4em;
+    background: #999;
+    border-radius: 1.2em;
     font-size: 1.5em;
-    color: #555;
+    color: #eee;
 }
 
 .portfolio-items {
