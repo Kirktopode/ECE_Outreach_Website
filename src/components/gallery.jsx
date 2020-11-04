@@ -17,7 +17,7 @@ export class Gallery extends Component {
           </div>
           <div className="row">
             <div className="portfolio-items">
-              <Card src="./cards/lights" />
+              <Card src="./cards/solar_cars" />
             </div>
           </div>
         </div>
