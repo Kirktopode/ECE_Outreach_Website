@@ -1,22 +1,28 @@
 {
   "files": {
-    "main.css": "/ECE_Outreach_Website/static/css/main.0c141ef2.chunk.css",
-    "main.js": "/ECE_Outreach_Website/static/js/main.5398b00d.chunk.js",
-    "main.js.map": "/ECE_Outreach_Website/static/js/main.5398b00d.chunk.js.map",
+    "main.css": "/ECE_Outreach_Website/static/css/main.bd6cfe15.chunk.css",
+    "main.js": "/ECE_Outreach_Website/static/js/main.ee67c5c7.chunk.js",
+    "main.js.map": "/ECE_Outreach_Website/static/js/main.ee67c5c7.chunk.js.map",
     "runtime-main.js": "/ECE_Outreach_Website/static/js/runtime-main.15f0e96d.js",
     "runtime-main.js.map": "/ECE_Outreach_Website/static/js/runtime-main.15f0e96d.js.map",
-    "static/js/2.63d13b60.chunk.js": "/ECE_Outreach_Website/static/js/2.63d13b60.chunk.js",
-    "static/js/2.63d13b60.chunk.js.map": "/ECE_Outreach_Website/static/js/2.63d13b60.chunk.js.map",
+    "static/js/2.534a1c9c.chunk.js": "/ECE_Outreach_Website/static/js/2.534a1c9c.chunk.js",
+    "static/js/2.534a1c9c.chunk.js.map": "/ECE_Outreach_Website/static/js/2.534a1c9c.chunk.js.map",
     "index.html": "/ECE_Outreach_Website/index.html",
-    "precache-manifest.f1d7e9830c832948df9114aeed888eee.js": "/ECE_Outreach_Website/precache-manifest.f1d7e9830c832948df9114aeed888eee.js",
+    "precache-manifest.0f3369a11a3e262e13d3377080ec9d8b.js": "/ECE_Outreach_Website/precache-manifest.0f3369a11a3e262e13d3377080ec9d8b.js",
     "service-worker.js": "/ECE_Outreach_Website/service-worker.js",
-    "static/css/main.0c141ef2.chunk.css.map": "/ECE_Outreach_Website/static/css/main.0c141ef2.chunk.css.map",
-    "static/js/2.63d13b60.chunk.js.LICENSE.txt": "/ECE_Outreach_Website/static/js/2.63d13b60.chunk.js.LICENSE.txt"
+    "static/css/main.bd6cfe15.chunk.css.map": "/ECE_Outreach_Website/static/css/main.bd6cfe15.chunk.css.map",
+    "static/js/2.534a1c9c.chunk.js.LICENSE.txt": "/ECE_Outreach_Website/static/js/2.534a1c9c.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/ECE_Outreach_Website/static/media/latinmodern-math.0b8cd504.otf",
+    "static/media/classroom.png": "/ECE_Outreach_Website/static/media/classroom.25c22201.png",
+    "static/media/globe.png": "/ECE_Outreach_Website/static/media/globe.179b4ecb.png",
+    "static/media/lightbulb.png": "/ECE_Outreach_Website/static/media/lightbulb.8aacb7c7.png",
+    "static/media/math.png": "/ECE_Outreach_Website/static/media/math.0288da19.png",
+    "static/media/newspaper.png": "/ECE_Outreach_Website/static/media/newspaper.8389fea8.png"
   },
   "entrypoints": [
     "static/js/runtime-main.15f0e96d.js",
-    "static/js/2.63d13b60.chunk.js",
-    "static/css/main.0c141ef2.chunk.css",
-    "static/js/main.5398b00d.chunk.js"
+    "static/js/2.534a1c9c.chunk.js",
+    "static/css/main.bd6cfe15.chunk.css",
+    "static/js/main.ee67c5c7.chunk.js"
   ]
 }

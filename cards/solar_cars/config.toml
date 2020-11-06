@@ -1,0 +1,25 @@
+[center]
+title="Solar Powered Cars"
+description="Solar pannels are a marvel of modern technology. This project explores how they are designed, manufactured, and used to power several types of vehicles."
+src="center.jpg"
+alt="Lights"
+
+[[dropdown]]
+icon="lightbulb"
+label="Applicable Areas"
+content="areas.html"
+
+[[dropdown]]
+icon="math"
+label="Relevant Equations"
+content="math.html"
+
+[[dropdown]]
+icon="classroom"
+label="Key Lesson Points"
+content="lessons.html"
+
+[[dropdown]]
+icon="newspaper"
+label="Applications in Industry"
+content="news.html"
