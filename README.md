@@ -20,7 +20,6 @@ of how to use a card with the above directory structure:
 import React from 'react';
 import Card from './Card.js';
 import './App.css';
->>>>>>> 20da996b56e8c40fb444fcdbe051111448f9dbf0
 
 function App() {
     return (
@@ -32,9 +31,6 @@ function App() {
     );
 }
 
-<<<<<<< HEAD
-<a href="https://kirktopode.github.io/ECE_Outreach_Website/">Github Pages Hosting</a>
-=======
 export default App;
 ```
 Once compiled, the `<Card>` tag will fetch the `card_dir/config.toml` file and parse its
