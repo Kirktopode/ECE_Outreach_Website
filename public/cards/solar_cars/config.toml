@@ -16,10 +16,10 @@ content="math.html"
 
 [[dropdown]]
 icon="classroom"
-label="Lessons"
+label="Key Lesson Points"
 content="lessons.html"
 
 [[dropdown]]
 icon="newspaper"
-label="News"
+label="Applications in Industry"
 content="news.html"
