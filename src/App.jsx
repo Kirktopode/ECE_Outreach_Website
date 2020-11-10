@@ -6,7 +6,7 @@ import About from './components/about';
 // import Services from './components/services';
 import Gallery from './components/gallery';
 // import Testimonials from './components/testimonials';
-// import Team from './components/Team';
+import Team from './components/Team';
 import Contact from './components/contact';
 import JsonData from './data/data.json';
 // import Card from "./Card";
@@ -33,7 +33,7 @@ export class App extends Component {
         {/*<Services data={this.state.landingPageData.Services} />*/}
         <Gallery />
         {/*<Testimonials data={this.state.landingPageData.Testimonials} />*/}
-        {/*<Team data={this.state.landingPageData.Team} />*/}
+        <Team data={this.state.landingPageData.Team} />
         <Contact data={this.state.landingPageData.Contact} />
       </div>
     )

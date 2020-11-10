@@ -85,23 +85,93 @@
         }
     ],
     "Team": [{
-            "img": "img/team/01.jpg",
-            "name": "John Doe",
-            "job": "Director"
+            "img": "img/team/brandon_crisp.png",
+            "name": "Brandon Crisp",
+            "job": "Senior Design Student",
+            "description": "I’m a senior in Electrical Engineering, and lead of the Analog Outreach Team, and I’m interested in power electronics."
         },
         {
-            "img": "img/team/02.jpg",
-            "name": "Mike Doe",
-            "job": "Senior Designer"
+            "img": "img/team/no_image.png",
+            "name": "Ian Johnson",
+            "job": "Senior Design Student",
+            "description": ""
+        },
+        {
+            "img": "img/team/no_image.png",
+            "name": "Jameson Richard",
+            "job": "Senior Design Student",
+            "description": "I'm a senior in Computer Engineering and I am interested in robotics and web development."
+        },
+        {
+            "img": "img/team/no_image.png",
+            "name": "Jeremy Rodriquez",
+            "job": "Senior Design Student",
+            "description": ""
+        },
+        {
+            "img": "img/team/cole_taylor.png",
+            "name": "Cole Taylor",
+            "job": "Senior",
+            "description": "I am a senior in Electrical Engineering, the Controls team lead of the Rocket Team at CSU, and have a passion for aerospace and automotives. "
+        },
+        {
+            "img": "img/team/no_image.png",
+            "name": "Kailee Mitsuyasu",
+            "job": "Senior",
+            "description": ""
+        },
+        {
+            "img": "img/team/no_image.png",
+            "name": "Ryan Barnes",
+            "job": "Senior",
+            "description": ""
         }, {
-            "img": "img/team/03.jpg",
-            "name": "Jane Doe",
-            "job": "Senior Designer"
+            "img": "img/team/no_image.png",
+            "name": "David Neitenbach",
+            "job": "Junior",
+            "description": ""
         },
         {
-            "img": "img/team/04.jpg",
-            "name": "Karen Doe",
-            "job": "Project Manager"
+            "img": "img/team/no_image.png",
+            "name": "Devin Pohl",
+            "job": "Junior",
+            "description": ""
+        },
+        {
+            "img": "img/team/no_image.png",
+            "name": "Jacklyn Moore",
+            "job": "Junior",
+            "description": ""
+        },
+        {
+            "img": "img/team/no_image.png",
+            "name": "Kori Eliaz",
+            "job": "Junior",
+            "description": ""
+        },
+        {
+            "img": "img/team/no_image.png",
+            "name": "TJ Dunham",
+            "job": "Junior",
+            "description": ""
+        },
+        {
+            "img": "img/team/no_image.png",
+            "name": "Vani Kapoor",
+            "job": "Junior",
+            "description": ""
+        },
+        {
+            "img": "img/team/no_image.png",
+            "name": "Ethan Schultz",
+            "job": "Sophomore",
+            "description": ""
+        },
+        {
+            "img": "img/team/no_image.png",
+            "name": "Kendra Ott",
+            "job": "Sophomore",
+            "description": ""
         }
     ],
     "Contact": {

@@ -8,8 +8,7 @@ export class Team extends Component {
           <div className="col-md-8 col-md-offset-2 section-title">
             <h2>Meet the Team</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-              dapibus leonec.
+              Meet our wonderful team of electrical and computer engineering students!
             </p>
           </div>
           <div id="row">
@@ -22,6 +21,7 @@ export class Team extends Component {
                       <div className="caption">
                         <h4>{d.name}</h4>
                         <p>{d.job}</p>
+                        <p>{d.description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}</p>
                       </div>
                     </div>
                   </div>
