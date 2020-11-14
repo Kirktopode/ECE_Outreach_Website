@@ -45,8 +45,13 @@
 }
 
 /* big container around a card, handles re-hiding on exit */
-.card {
+.card_wrapper.cw_left>.card {
     float: left;
+}
+.card_wrapper.cw_right>.card {
+    float: right;
+}
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -273,10 +278,15 @@
     margin-bottom: 4em;
 }
 
+.card_wrapper.cw_left>.card_description_wrapper {
+    left: 32em;
+}
+.card_wrapper.cw_right>.card_description_wrapper {
+    right: 32em;
+}
 .card_description_wrapper {
     padding-bottom: 5em;
     text-shadow: -0.5px 1px black;
-    left: 32em;
     margin: 0;
     position: absolute;
     top: 50%;

@@ -40,10 +40,15 @@ class Card extends React.Component {
     static degmax = 150; // how far the hover elements move out of the way
     constructor(props) {
 	super(props);
+	if(!props.float)
+	    throw new Error("Component Card lacking 'float' property. Help: <Card float=\"left\">");
+	if(props.float != "left" && props.float != "right")
+	    throw new Error("Component Card has invalid 'float' property. Help: <Card float=\"left\"> or <Card float=\"right\">");
 	this.state = {
 	    hovering: false,
 	    hover_override: false,
 	    open: null,
+	    float_dir: props.float,
 	};
 	// first check if we need to load JSON or if inline is okay
 	let children;
@@ -145,7 +150,7 @@ class Card extends React.Component {
 			this.setState({hovering: false});
 			this.setState({open: null});
 		    }
-		    return (<div className="card_wrapper"
+		    return (<div className={"card_wrapper " + (this.state.float_dir == "left" ? "cw_left" : "cw_right")}
 				 onMouseLeave={() => {
 				     if(this.state.hover_override) {
 					 this.setState({hover_override: false});
