@@ -138,29 +138,26 @@ class Card extends React.Component {
 	return (
             <TrackVisibility>
 		{({ isVisible }) => {
-		    if(isVisible && !this.state.hovering
-		       /* && this.state.open !== null && !this.state.hovering*/) {
-			//this.setState({open: null});
+		    if(isVisible && !this.state.hovering) {
 			this.setState({hovering: true});
 		    }
 		    if(!isVisible && this.state.hovering && !this.state.hover_override) {
 			this.setState({hovering: false});
+			this.setState({open: null});
 		    }
 		    return (<div className="card_wrapper"
 				 onMouseLeave={() => {
-				     this.setState({hover_override: false});
-				     //this.setState({hovering: false});
-				     //setTimeout(() => {
-					// if(!this.state.hovering)
-					  //   this.setState({open: null});
-				     //}, 500)
+				     if(this.state.hover_override) {
+					 this.setState({hover_override: false});
+				     }
 				 }}
 				 onMouseEnter={() => {
 				     if(!this.state.hovering) {
-					 //this.setState({open: null});
 					 this.setState({hovering: true});
 				     }
-				     this.setState({hover_override: true});
+				     if(!this.state.hover_override) {
+					 this.setState({hover_override: true});
+				     }
 				 }}>
 				<div className="card">
 				    {center}
