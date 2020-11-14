@@ -5,6 +5,8 @@ import Label from './Label.js';
 import Content from './Content.js';
 import Dropdown from './Dropdown.js';
 
+import TrackVisibility from 'react-on-screen';
+
 const TOML = require('toml/index');
 
 const iconBasePath = "./card_floats"
@@ -40,6 +42,7 @@ class Card extends React.Component {
 	super(props);
 	this.state = {
 	    hovering: false,
+	    hover_override: false,
 	    open: null,
 	};
 	// first check if we need to load JSON or if inline is okay
@@ -132,32 +135,49 @@ class Card extends React.Component {
 	let center = React.cloneElement(this.center, {
 	    className: ("card_center " + (this.state.hovering ? "" : "breathing"))
 	}, this.center.props.children);
-	return (<div className="card_wrapper"
-		     onMouseLeave={() => {this.setState({hovering: false});
-					  setTimeout(() => {
-					      if(!this.state.hovering)
-						  this.setState({open: null});
-					  }, 500)}}
-		     onMouseEnter={() => {
-			 if(!this.state.hovering) {
-			     this.setState({open: null});
-			     this.setState({hovering: true});
-			 }
-		     }}>
-		    <div className="card">
-		    {center}
-		    {hover_elements}
-		    {dropdown_elements}
-		    </div>
-		    <div className="card_description_wrapper">
-			<div className="card_title">
-			    {this.title}
-			</div>
-			<div className="card_description">
-			    {this.description}
-			</div>
-		    </div>
-		</div>);
+	return (
+            <TrackVisibility>
+		{({ isVisible }) => {
+		    if(isVisible && !this.state.hovering
+		       /* && this.state.open !== null && !this.state.hovering*/) {
+			//this.setState({open: null});
+			this.setState({hovering: true});
+		    }
+		    if(!isVisible && this.state.hovering && !this.state.hover_override) {
+			this.setState({hovering: false});
+		    }
+		    return (<div className="card_wrapper"
+				 onMouseLeave={() => {
+				     this.setState({hover_override: false});
+				     //this.setState({hovering: false});
+				     //setTimeout(() => {
+					// if(!this.state.hovering)
+					  //   this.setState({open: null});
+				     //}, 500)
+				 }}
+				 onMouseEnter={() => {
+				     if(!this.state.hovering) {
+					 //this.setState({open: null});
+					 this.setState({hovering: true});
+				     }
+				     this.setState({hover_override: true});
+				 }}>
+				<div className="card">
+				    {center}
+				    {hover_elements}
+				    {dropdown_elements}
+				</div>
+				<div className="card_description_wrapper">
+				    <div className="card_title">
+					{this.title}
+				    </div>
+				    <div className="card_description">
+					{this.description}
+				    </div>
+				</div>
+			    </div>);
+		}}
+		</TrackVisibility>);
     }
 }
 
