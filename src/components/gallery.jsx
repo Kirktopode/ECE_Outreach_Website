@@ -11,8 +11,9 @@ export class Gallery extends Component {
           <div className="section-title">
             <h2>Gallery</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-                dapibus leonec.
+              These are the projects that our team has developed for teaching your students.
+              Some of these are meant to be hands-on workshops, others are flashy demonstrations,
+              and all are primed for ECE education!
             </p>
           </div>
           <div className="row">

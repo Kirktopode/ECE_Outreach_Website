@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import {
+    Link,
+} from "react-router-dom"
 
 export class Navigation extends Component {
   render() {
@@ -18,9 +21,9 @@ export class Navigation extends Component {
               <span className="icon-bar"></span>{" "}
               <span className="icon-bar"></span>{" "}
             </button>
-            <a className="navbar-brand page-scroll" href="#page-top">
+            <Link className="navbar-brand page-scroll" to="/">
               ECE Outreach
-            </a>{" "}
+            </Link>{" "}
           </div>
 
           <div
@@ -28,30 +31,30 @@ export class Navigation extends Component {
             id="bs-example-navbar-collapse-1"
           >
             <ul className="nav navbar-nav navbar-right">
-              <li>
-                <a href="#features" className="page-scroll">
+              {/* <li>
+                <Link href="#features" className="page-scroll">
                   Features
-                </a>
-              </li>
+                </Link>
+              </li> */}
               <li>
-                <a href="#about" className="page-scroll">
+                <Link to="/" className="page-scroll">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#portfolio" className="page-scroll">
+                <Link to="/gallery" className="page-scroll">
                   Gallery
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#team" className="page-scroll">
+                <Link to="/team" className="page-scroll">
                   Team
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="page-scroll">
+                <Link to="/contact" className="page-scroll">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

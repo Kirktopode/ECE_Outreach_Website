@@ -9,6 +9,12 @@ import Gallery from './components/gallery';
 import Team from './components/Team';
 import Contact from './components/contact';
 import JsonData from './data/data.json';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+} from "react-router-dom"
 // import Card from "./Card";
 
 export class App extends Component {
@@ -24,18 +30,46 @@ export class App extends Component {
   }
 
   render() {
+
+    // const example = (
+
+    //   <Router>
+    //       <Link to="/contact" className="header-link">About Us</Link>
+    //       <Switch>
+    //           <Route path="/signup">
+    //               <Signup
+    //                   handleSignup={this.handleSignup}
+    //                   clearError={this.clearSignupError}
+    //                   error={this.state.signupError}
+    //               />
+    //           </Route>
+    //           <Route path="/">
+    //               <FrontPage />
+    //           </Route>
+    //       </Switch>
+    //   </Router>
+    // )
+
     return (
-      <div>
+      <Router>
         <Navigation />
-        <Header data={this.state.landingPageData.Header} />
-        <Features data={this.state.landingPageData.Features} />
-        <About data={this.state.landingPageData.About} />
-        {/*<Services data={this.state.landingPageData.Services} />*/}
-        <Gallery />
-        {/*<Testimonials data={this.state.landingPageData.Testimonials} />*/}
-        <Team data={this.state.landingPageData.Team} />
-        <Contact data={this.state.landingPageData.Contact} />
-      </div>
+        <Switch>
+          <Route path="/gallery">
+            <Gallery />
+          </Route>
+          <Route path="/team">
+            <Team data={this.state.landingPageData.Team} />
+          </Route>
+          <Route path="/contact">
+            {/* <Features data={this.state.landingPageData.Features} /> */}
+            <Contact data={this.state.landingPageData.Contact} />
+          </Route>
+          <Route path="/">
+            <Header data={this.state.landingPageData.Header} />
+            <About data={this.state.landingPageData.About} />
+          </Route>
+        </Switch>
+      </Router>
     )
   }
 }

@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 
+
+// Merge with Contact - turn into something we can use
+
 export class features extends Component {
   render() {
     return (
