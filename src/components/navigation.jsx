@@ -37,22 +37,22 @@ export class Navigation extends Component {
                 </Link>
               </li> */}
               <li>
-                <Link to="/" className="page-scroll">
+                <Link to="/ECE_Outreach_Website" className="page-scroll">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/gallery" className="page-scroll">
+                <Link to="/ECE_Outreach_Website/gallery" className="page-scroll">
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link to="/team" className="page-scroll">
+                <Link to="/ECE_Outreach_Website/team" className="page-scroll">
                   Team
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="page-scroll">
+                <Link to="/ECE_Outreach_Website/contact" className="page-scroll">
                   Contact
                 </Link>
               </li>
