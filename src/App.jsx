@@ -54,17 +54,17 @@ export class App extends Component {
       <Router>
         <Navigation />
         <Switch>
-          <Route path="/gallery">
+          <Route path="/ECE_Outreach_Website/gallery">
             <Gallery />
           </Route>
-          <Route path="/team">
+          <Route path="/ECE_Outreach_Website/team">
             <Team data={this.state.landingPageData.Team} />
           </Route>
-          <Route path="/contact">
+          <Route path="/ECE_Outreach_Website/contact">
             {/* <Features data={this.state.landingPageData.Features} /> */}
             <Contact data={this.state.landingPageData.Contact} />
           </Route>
-          <Route path="/">
+          <Route path="/ECE_Outreach_Website">
             <Header data={this.state.landingPageData.Header} />
             <About data={this.state.landingPageData.About} />
           </Route>
