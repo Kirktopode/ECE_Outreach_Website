@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Card from "./card/Card";
-import Navigation from "./navigation";
 
 export class Gallery extends Component {
   render() {
@@ -17,8 +16,8 @@ export class Gallery extends Component {
           </div>
           <div className="row">
             <div className="portfolio-items">
-              <Card src="../cards/solar_cars" float="left"/>
-              <Card src="../cards/solar_cars" float="right"/>
+              <Card src="cards/solar_cars" float="left"/>
+              <Card src="cards/solar_cars" float="right"/>
             </div>
           </div>
         </div>

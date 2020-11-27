@@ -42,7 +42,7 @@ class Card extends React.Component {
 	super(props);
 	if(!props.float)
 	    throw new Error("Component Card lacking 'float' property. Help: <Card float=\"left\">");
-	if(props.float != "left" && props.float != "right")
+	if(props.float !== "left" && props.float !== "right")
 	    throw new Error("Component Card has invalid 'float' property. Help: <Card float=\"left\"> or <Card float=\"right\">");
 	this.state = {
 	    hovering: false,
@@ -53,15 +53,16 @@ class Card extends React.Component {
 	// first check if we need to load JSON or if inline is okay
 	let children;
 	if(this.props.src) {
-	    let config = TOML.parse(syncGet(this.props.src + "/config.toml"));
+	    let src_url = "../" + this.props.src;
+	    let config = TOML.parse(syncGet(src_url + "/config.toml"));
 	    this.title = config.center.title;
 	    this.description = config.center.description;
 	    children = [
 		(<Icon alt={config.center.alt}
-		       src={`${this.props.src+'/'+config.center.src}`}
+		       src={`${src_url+'/'+config.center.src}`}
 		 />)];
 	    config.dropdown.forEach(dropdown => {
-		let content = syncGet(this.props.src+'/'+dropdown.content);
+		let content = syncGet(src_url+'/'+dropdown.content);
 		children.push(
 		    (<Dropdown>
 			 <Icon alt=""
@@ -144,13 +145,13 @@ class Card extends React.Component {
             <TrackVisibility>
 		{({ isVisible }) => {
 		    if(isVisible && !this.state.hovering) {
-			this.setState({hovering: true});
+		    	this.setState({hovering: true});
 		    }
 		    if(!isVisible && this.state.hovering && !this.state.hover_override) {
 			this.setState({hovering: false});
 			this.setState({open: null});
 		    }
-		    return (<div className={"card_wrapper " + (this.state.float_dir == "left" ? "cw_left" : "cw_right")}
+		    return (<div className={"card_wrapper " + (this.state.float_dir === "left" ? "cw_left" : "cw_right")}
 				 onMouseLeave={() => {
 				     if(this.state.hover_override) {
 					 this.setState({hover_override: false});
