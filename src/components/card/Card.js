@@ -144,10 +144,10 @@ class Card extends React.Component {
 	return (
             <TrackVisibility>
 		{({ isVisible }) => {
-		    if(isVisible && !this.state.hovering) {
+		    if(isVisible && this.state.hovering !== true) {
 		    	this.setState({hovering: true});
 		    }
-		    if(!isVisible && this.state.hovering && !this.state.hover_override) {
+		    if(!isVisible && this.state.hovering === true && !this.state.hover_override) {
 			this.setState({hovering: false});
 			this.setState({open: null});
 		    }

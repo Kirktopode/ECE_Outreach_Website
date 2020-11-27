@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {
     Link,
-} from "react-router-dom"
+} from "react-router-dom";
 
 export class Navigation extends Component {
   render() {
@@ -21,7 +21,7 @@ export class Navigation extends Component {
               <span className="icon-bar"></span>{" "}
               <span className="icon-bar"></span>{" "}
             </button>
-            <Link className="navbar-brand page-scroll" to="/">
+            <Link className="navbar-brand page-scroll" to="/ECE_Outreach_Website/">
               ECE Outreach
             </Link>{" "}
           </div>
@@ -37,7 +37,7 @@ export class Navigation extends Component {
                 </Link>
               </li> */}
               <li>
-                <Link to="/ECE_Outreach_Website" className="page-scroll">
+                <Link to="/ECE_Outreach_Website/" className="page-scroll">
                   About
                 </Link>
               </li>
