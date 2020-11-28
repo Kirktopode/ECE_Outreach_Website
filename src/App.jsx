@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import Navigation from './components/navigation';
 import Header from './components/header';
 import Features from './components/features';
@@ -14,7 +14,8 @@ import {
     Switch,
     Route,
     Link,
-} from "react-router-dom"
+    Redirect,
+} from "react-router-dom";
 // import Card from "./Card";
 
 export class App extends Component {
@@ -22,7 +23,7 @@ export class App extends Component {
     landingPageData: {},
   }
   getlandingPageData() {
-    this.setState({landingPageData : JsonData})
+      this.setState({landingPageData : JsonData});
   }
 
   componentDidMount() {
@@ -64,13 +65,14 @@ export class App extends Component {
             {/* <Features data={this.state.landingPageData.Features} /> */}
             <Contact data={this.state.landingPageData.Contact} />
           </Route>
-          <Route path="/ECE_Outreach_Website">
+          <Route path="/ECE_Outreach_Website/about">
             <Header data={this.state.landingPageData.Header} />
             <About data={this.state.landingPageData.About} />
           </Route>
+          <Redirect from="/ECE_Outreach_Website(/?)" to="/ECE_Outreach_Website/about" />
         </Switch>
       </Router>
-    )
+    );
   }
 }
 
