@@ -49,27 +49,28 @@ export class App extends Component {
     //           </Route>
     //       </Switch>
     //   </Router>
-    // )
-
+      // )
+      
     return (
       <Router>
         <Navigation />
         <Switch>
-          <Route path="/ECE_Outreach_Website/gallery">
+          <Route path={process.env.PUBLIC_URL + "/gallery"}>
             <Gallery />
           </Route>
-          <Route path="/ECE_Outreach_Website/team">
+          <Route path={process.env.PUBLIC_URL + "/team"}>
             <Team data={this.state.landingPageData.Team} />
           </Route>
-          <Route path="/ECE_Outreach_Website/contact">
+          <Route path={process.env.PUBLIC_URL + "/contact"}>
             {/* <Features data={this.state.landingPageData.Features} /> */}
             <Contact data={this.state.landingPageData.Contact} />
           </Route>
-          <Route path="/ECE_Outreach_Website/about">
+          <Route path={process.env.PUBLIC_URL + "/about"}>
             <Header data={this.state.landingPageData.Header} />
             <About data={this.state.landingPageData.About} />
           </Route>
-          <Redirect from="/ECE_Outreach_Website(/?)" to="/ECE_Outreach_Website/about" />
+          <Redirect from={process.env.PUBLIC_URL + "(/?)"}
+                    to={process.env.PUBLIC_URL + "/about"} />
         </Switch>
       </Router>
     );
