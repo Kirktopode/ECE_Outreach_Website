@@ -9,7 +9,7 @@ import TrackVisibility from 'react-on-screen';
 
 const TOML = require('toml/index');
 
-const iconBasePath = "./card_floats"
+const iconBasePath = process.env.PUBLIC_URL + "/card_floats"
 
 function lookupIconName(name) {
     return iconBasePath + "/" + name + ".png"
@@ -64,9 +64,7 @@ class Card extends React.Component {
 		let content = syncGet(this.props.src+'/'+dropdown.content);
 		children.push(
 		    (<Dropdown>
-			 <Icon alt=""
-			       src={require(`${lookupIconName(dropdown.icon)}`)}
-			 />
+			 <Icon alt="" src={lookupIconName(dropdown.icon)} />
 			 <Label>
 			     {dropdown.label}
 			 </Label>
