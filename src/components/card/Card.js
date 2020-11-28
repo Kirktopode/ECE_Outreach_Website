@@ -162,10 +162,12 @@ class Card extends React.Component {
 					 this.setState({hover_override: true});
 				     }
 				 }}>
-				<div className="card">
-				    {center}
-				    {hover_elements}
-				    {dropdown_elements}
+				<div className="card_align">
+				    <div className="card">
+					{center}
+					{hover_elements}
+					{dropdown_elements}
+				    </div>
 				</div>
 				<div className="card_description_wrapper">
 				    <div className="card_title">

@@ -45,11 +45,11 @@
 }
 
 /* big container around a card, handles re-hiding on exit */
-.card_wrapper.cw_left>.card {
-    float: left;
+.card_wrapper.cw_left .card_align {
+    transform: translate(0);
 }
-.card_wrapper.cw_right>.card {
-    float: right;
+.card_wrapper.cw_right .card_align {
+    transform: translate(calc(100% - 32em));
 }
 .card {
     display: flex;
@@ -129,7 +129,7 @@
     transform: translate(5em, 8.75em);
 }
 .card_wrapper.cw_right .card_dropdown {
-    transform: translate(-5em, 8.75em);
+    transform: translate(-2.25em, 8.75em);
 }
 .card_dropdown {
     font-size: 1.5em;
@@ -221,8 +221,8 @@
     transition-delay: 0.3s;
 }
 
-.card_title_mover>p {
-    margin: 0.25em 2em 0.25em 2em; /* top right bottom left */
+.card_title_mover p {
+    margin: 0.25em 2em; /* top/bottom left/right */
     font-size: 1.75em;
 }
 
