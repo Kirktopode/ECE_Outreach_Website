@@ -53,16 +53,15 @@ class Card extends React.Component {
 	// first check if we need to load JSON or if inline is okay
 	let children;
 	if(this.props.src) {
-	    let src_url = "../" + this.props.src;
-	    let config = TOML.parse(syncGet(src_url + "/config.toml"));
+	    let config = TOML.parse(syncGet(this.props.src + "/config.toml"));
 	    this.title = config.center.title;
 	    this.description = config.center.description;
 	    children = [
 		(<Icon alt={config.center.alt}
-		       src={`${src_url+'/'+config.center.src}`}
+		       src={`${this.props.src+'/'+config.center.src}`}
 		 />)];
 	    config.dropdown.forEach(dropdown => {
-		let content = syncGet(src_url+'/'+dropdown.content);
+		let content = syncGet(this.props.src+'/'+dropdown.content);
 		children.push(
 		    (<Dropdown>
 			 <Icon alt=""
