@@ -8,7 +8,7 @@ import {
   useParams
 } from "react-router-dom";
 import { withRouter } from "react-router";
-import { getTOML } from "./card/Card";
+import { getTOML, syncGet, baseURL } from "./card/Card";
 
 export class Project extends Component {
     constructor(props) {
@@ -18,6 +18,7 @@ export class Project extends Component {
         this.config = getTOML(this.projectID);
     }
     render() {
+        let content = syncGet(baseURL+this.projectID+'/'+this.config.center.main_page);
         return (
             <div id="portfolio" className="text-center">
               <div className="container">
@@ -27,7 +28,8 @@ export class Project extends Component {
                     {this.config.center.description}
                   </p>
                 </div>
-                
+                <div dangerouslySetInnerHTML={{__html: content}}>
+		</div>
               </div>
             </div>
         );

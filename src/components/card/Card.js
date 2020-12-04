@@ -195,5 +195,7 @@ class Card extends React.Component {
 
 export default Card;
 export {
-    getTOML
+    getTOML,
+    syncGet,
+    baseURL
 };
