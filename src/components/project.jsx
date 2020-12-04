@@ -15,18 +15,16 @@ export class Project extends Component {
         super(props);
         this.projectID = props.match.params.projectID;
         
-        let config = getTOML(this.projectID);
-
-        console.log(config);
+        this.config = getTOML(this.projectID);
     }
     render() {
         return (
             <div id="portfolio" className="text-center">
               <div className="container">
                 <div className="section-title">
-                  <h2>Project {this.projectID}</h2>
+                  <h2>{this.config.center.title}</h2>
                   <p>
-                    re
+                    {this.config.center.description}
                   </p>
                 </div>
                 
