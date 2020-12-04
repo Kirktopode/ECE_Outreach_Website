@@ -176,7 +176,7 @@ class Card extends React.Component {
 				    <div className="card_description">
 					{this.description}
 				    </div>
-				    <a href={"../projects/" + this.props.src.split('/').pop()}
+				    <a href={process.env.PUBLIC_URL + "/projects/" + this.props.src.split('/').pop()}
 				       className={"card_reader_link breathing subtle" + (this.state.hovering ? " open" : "")}>
 					Read Further
 				    </a>

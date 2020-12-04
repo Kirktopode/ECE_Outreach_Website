@@ -7,6 +7,7 @@ import Gallery from './components/gallery';
 import Team from './components/Team';
 import Contact from './components/contact';
 import JsonData from './data/data.json';
+import Projects from './components/projects';
 import {
     BrowserRouter as Router,
     Switch,
@@ -48,7 +49,7 @@ export class App extends Component {
                   <About data={this.state.landingPageData.About} />
                 </Route>
                 <Route path={process.env.PUBLIC_URL + "/projects"}>
-                  <About data={this.state.landingPageData.Projects} />
+                  <Projects />
                 </Route>
                 <Redirect from={process.env.PUBLIC_URL + "(/?)"}
                           to={process.env.PUBLIC_URL + "/about"} />
