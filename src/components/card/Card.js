@@ -64,10 +64,10 @@ class Card extends React.Component {
 	    this.description = config.center.description;
 	    children = [
 		(<Icon alt={config.center.alt}
-		       src={`${this.props.src+'/'+config.center.src}`}
+		       src={`${baseURL+this.props.src+'/'+config.center.src}`}
 		 />)];
 	    config.dropdown.forEach(dropdown => {
-		let content = syncGet(this.props.src+'/'+dropdown.content);
+		let content = syncGet(baseURL+this.props.src+'/'+dropdown.content);
 		children.push(
 		    (<Dropdown>
 			 <Icon alt="" src={lookupIconName(dropdown.icon)} />
