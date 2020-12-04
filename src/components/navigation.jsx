@@ -31,11 +31,6 @@ export class Navigation extends Component {
             id="bs-example-navbar-collapse-1"
           >
             <ul className="nav navbar-nav navbar-right">
-              {/* <li>
-                <Link href="#features" className="page-scroll">
-                  Features
-                </Link>
-              </li> */}
               <li>
                 <Link to="/ECE_Outreach_Website/about" className="page-scroll">
                   About

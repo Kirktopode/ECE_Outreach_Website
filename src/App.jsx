@@ -47,6 +47,9 @@ export class App extends Component {
                   <Header data={this.state.landingPageData.Header} />
                   <About data={this.state.landingPageData.About} />
                 </Route>
+                <Route path={process.env.PUBLIC_URL + "/projects"}>
+                  <About data={this.state.landingPageData.Projects} />
+                </Route>
                 <Redirect from={process.env.PUBLIC_URL + "(/?)"}
                           to={process.env.PUBLIC_URL + "/about"} />
               </Switch>
