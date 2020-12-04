@@ -42,6 +42,10 @@ function getTOML(title) {
     return TOML.parse(syncGet(baseURL + title + "/config.toml"));
 }
 
+function getCardItem(cardTitle, path) {
+    return syncGet(baseURL + cardTitle + '/' + path);
+}
+
 class Card extends React.Component {
     static degmax = 150; // how far the hover elements move out of the way
     constructor(props) {
@@ -196,6 +200,5 @@ class Card extends React.Component {
 export default Card;
 export {
     getTOML,
-    syncGet,
-    baseURL
+    getCardItem
 };

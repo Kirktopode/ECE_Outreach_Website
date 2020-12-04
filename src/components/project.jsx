@@ -8,7 +8,7 @@ import {
   useParams
 } from "react-router-dom";
 import { withRouter } from "react-router";
-import { getTOML, syncGet, baseURL } from "./card/Card";
+import { getTOML, getCardItem } from "./card/Card";
 
 export class Project extends Component {
     constructor(props) {
@@ -18,7 +18,7 @@ export class Project extends Component {
         this.config = getTOML(this.projectID);
     }
     render() {
-        let content = syncGet(baseURL+this.projectID+'/'+this.config.center.main_page);
+        let content = getCardItem(this.projectID, this.config.center.main_page);
         return (
             <div id="portfolio" className="text-center">
               <div className="container">
