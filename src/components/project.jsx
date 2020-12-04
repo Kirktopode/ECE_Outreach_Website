@@ -8,11 +8,16 @@ import {
   useParams
 } from "react-router-dom";
 import { withRouter } from "react-router";
+import { getTOML } from "./card/Card";
 
 export class Project extends Component {
     constructor(props) {
         super(props);
-        this.projectID = props.match.params.projectID; // will be used to load toml config
+        this.projectID = props.match.params.projectID;
+        
+        let config = getTOML(this.projectID);
+
+        console.log(config);
     }
     render() {
         return (

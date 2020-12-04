@@ -7,6 +7,8 @@ import Dropdown from './Dropdown.js';
 
 import TrackVisibility from 'react-on-screen';
 
+const baseURL = process.env.PUBLIC_URL + "/cards/";
+
 const TOML = require('toml/index');
 
 const iconBasePath = process.env.PUBLIC_URL + "/card_floats"
@@ -36,6 +38,10 @@ function syncGet(url) {
     return response.text;
 }
 
+function getTOML(title) {
+    return TOML.parse(syncGet(baseURL + title + "/config.toml"));
+}
+
 class Card extends React.Component {
     static degmax = 150; // how far the hover elements move out of the way
     constructor(props) {
@@ -53,7 +59,7 @@ class Card extends React.Component {
 	// first check if we need to load JSON or if inline is okay
 	let children;
 	if(this.props.src) {
-	    let config = TOML.parse(syncGet(this.props.src + "/config.toml"));
+	    let config = getTOML(this.props.src);
 	    this.title = config.center.title;
 	    this.description = config.center.description;
 	    children = [
@@ -188,3 +194,6 @@ class Card extends React.Component {
 }
 
 export default Card;
+export {
+    getTOML
+};
