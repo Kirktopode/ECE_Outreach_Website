@@ -13,15 +13,15 @@ export class Header extends Component {
                     {this.props.data ? this.props.data.title : "Loading"}
                     <span></span>
                   </h1>
-                  <p>
+                  <p><b>
                     {this.props.data ? this.props.data.paragraph : "Loading"}
-                  </p>
-                  <a
-                    href="#features"
+                  </b></p>
+                  {/* <a
+                    href="#about"
                     className="btn btn-custom btn-lg page-scroll"
                   >
                     Learn More
-                  </a>{" "}
+                  </a>{" "} */}
                 </div>
               </div>
             </div>

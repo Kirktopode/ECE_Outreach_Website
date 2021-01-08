@@ -114,7 +114,7 @@ export class Contact extends Component {
             </div>
           </div>
         </div>
-        <div id="footer">
+        {/* <div id="footer">
           <div className="container text-center">
             <p>
               &copy; 2020 Issaaf Kattan React Land Page Template. Design by{" "}
@@ -123,7 +123,7 @@ export class Contact extends Component {
               </a>
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }

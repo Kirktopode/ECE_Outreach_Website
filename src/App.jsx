@@ -13,7 +13,7 @@ import {
     Switch,
     Route,
     Redirect,
-} from "react-router-dom";
+} from "react-router-dom"
 
 export class App extends Component {
     state = {
@@ -28,7 +28,7 @@ export class App extends Component {
     }
 
     render() {
-        
+        console.log({url:process.env.PUBLIC_URL})
         return (
             <Router>
               <Navigation />
@@ -50,8 +50,8 @@ export class App extends Component {
                 <Route path={process.env.PUBLIC_URL + "/projects"}>
                   <Projects />
                 </Route>
-                <Redirect from={process.env.PUBLIC_URL + "(/?)"}
-                          to={process.env.PUBLIC_URL + "/about"} />
+                {/* <Redirect from={process.env.PUBLIC_URL + "(/?)"} */}
+                          {/* to={process.env.PUBLIC_URL + "/about"} /> */}
               </Switch>
             </Router>
         );
