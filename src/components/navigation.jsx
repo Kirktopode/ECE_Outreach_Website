@@ -32,22 +32,22 @@ export class Navigation extends Component {
           >
             <ul className="nav navbar-nav navbar-right">
               <li>
-                <Link to="/ECE_Outreach_Website/about" className="page-scroll">
+                <Link to={process.env.PUBLIC_URL + "/about"} className="page-scroll">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/ECE_Outreach_Website/gallery" className="page-scroll">
+                <Link to={process.env.PUBLIC_URL + "/gallery"} className="page-scroll">
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link to="/ECE_Outreach_Website/team" className="page-scroll">
+                <Link to={process.env.PUBLIC_URL + "/team"} className="page-scroll">
                   Team
                 </Link>
               </li>
               <li>
-                <Link to="/ECE_Outreach_Website/contact" className="page-scroll">
+                <Link to={process.env.PUBLIC_URL + "/contact"} className="page-scroll">
                   Contact
                 </Link>
               </li>
