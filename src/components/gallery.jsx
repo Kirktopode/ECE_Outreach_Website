@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import Card from "./card/Card"
-import Navigation from "./navigation";
+import Card from "./card/Card";
 
 export class Gallery extends Component {
   render() {
     return (
       <div id="portfolio" className="text-center">
-
         <div className="container">
           <div className="section-title">
             <h2>Gallery</h2>
@@ -18,8 +16,8 @@ export class Gallery extends Component {
           </div>
           <div className="row">
             <div className="portfolio-items">
-              <Card src="./cards/solar_cars" float="left"/>
-              <Card src="./cards/solar_cars" float="right"/>
+              <Card src="solar_cars" float="left"/>
+              <Card src="solar_cars" float="right"/>
             </div>
           </div>
         </div>

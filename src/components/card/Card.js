@@ -7,9 +7,11 @@ import Dropdown from './Dropdown.js';
 
 import TrackVisibility from 'react-on-screen';
 
+const baseURL = process.env.PUBLIC_URL + "/cards/";
+
 const TOML = require('toml/index');
 
-const iconBasePath = "./card_floats"
+const iconBasePath = process.env.PUBLIC_URL + "/card_floats"
 
 function lookupIconName(name) {
     return iconBasePath + "/" + name + ".png"
@@ -36,13 +38,21 @@ function syncGet(url) {
     return response.text;
 }
 
+function getTOML(title) {
+    return TOML.parse(syncGet(baseURL + title + "/config.toml"));
+}
+
+function getCardItem(cardTitle, path) {
+    return syncGet(baseURL + cardTitle + '/' + path);
+}
+
 class Card extends React.Component {
     static degmax = 150; // how far the hover elements move out of the way
     constructor(props) {
 	super(props);
 	if(!props.float)
 	    throw new Error("Component Card lacking 'float' property. Help: <Card float=\"left\">");
-	if(props.float != "left" && props.float != "right")
+	if(props.float !== "left" && props.float !== "right")
 	    throw new Error("Component Card has invalid 'float' property. Help: <Card float=\"left\"> or <Card float=\"right\">");
 	this.state = {
 	    hovering: false,
@@ -53,20 +63,18 @@ class Card extends React.Component {
 	// first check if we need to load JSON or if inline is okay
 	let children;
 	if(this.props.src) {
-	    let config = TOML.parse(syncGet(this.props.src + "/config.toml"));
+	    let config = getTOML(this.props.src);
 	    this.title = config.center.title;
 	    this.description = config.center.description;
 	    children = [
 		(<Icon alt={config.center.alt}
-		       src={`${this.props.src+'/'+config.center.src}`}
+		       src={`${baseURL+this.props.src+'/'+config.center.src}`}
 		 />)];
 	    config.dropdown.forEach(dropdown => {
-		let content = syncGet(this.props.src+'/'+dropdown.content);
+		let content = syncGet(baseURL+this.props.src+'/'+dropdown.content);
 		children.push(
 		    (<Dropdown>
-			 <Icon alt=""
-			       src={require(`${lookupIconName(dropdown.icon)}`)}
-			 />
+			 <Icon alt="" src={lookupIconName(dropdown.icon)} />
 			 <Label>
 			     {dropdown.label}
 			 </Label>
@@ -143,14 +151,14 @@ class Card extends React.Component {
 	return (
             <TrackVisibility>
 		{({ isVisible }) => {
-		    if(isVisible && !this.state.hovering) {
-			this.setState({hovering: true});
+		    if(isVisible && this.state.hovering !== true) {
+		    	this.setState({hovering: true});
 		    }
-		    if(!isVisible && this.state.hovering && !this.state.hover_override) {
+		    if(!isVisible && this.state.hovering === true && !this.state.hover_override) {
 			this.setState({hovering: false});
 			this.setState({open: null});
 		    }
-		    return (<div className={"card_wrapper " + (this.state.float_dir == "left" ? "cw_left" : "cw_right")}
+		    return (<div className={"card_wrapper " + (this.state.float_dir === "left" ? "cw_left" : "cw_right")}
 				 onMouseLeave={() => {
 				     if(this.state.hover_override) {
 					 this.setState({hover_override: false});
@@ -164,10 +172,12 @@ class Card extends React.Component {
 					 this.setState({hover_override: true});
 				     }
 				 }}>
-				<div className="card">
-				    {center}
-				    {hover_elements}
-				    {dropdown_elements}
+				<div className="card_align">
+				    <div className="card">
+					{center}
+					{hover_elements}
+					{dropdown_elements}
+				    </div>
 				</div>
 				<div className="card_description_wrapper">
 				    <div className="card_title">
@@ -176,6 +186,10 @@ class Card extends React.Component {
 				    <div className="card_description">
 					{this.description}
 				    </div>
+				    <a href={process.env.PUBLIC_URL + "/projects/" + this.props.src.split('/').pop()}
+				       className={"card_reader_link breathing subtle" + (this.state.hovering ? " open" : "")}>
+					Read Further
+				    </a>
 				</div>
 			    </div>);
 		}}
@@ -184,3 +198,7 @@ class Card extends React.Component {
 }
 
 export default Card;
+export {
+    getTOML,
+    getCardItem
+};
