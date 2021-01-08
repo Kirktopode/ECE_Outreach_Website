@@ -149,6 +149,7 @@ class Card extends React.Component {
 	    className: ("card_center " + (this.state.hovering ? "" : "breathing"))
 	}, this.center.props.children);
 	return (
+	    <div id={this.props.id}>
             <TrackVisibility>
 		{({ isVisible }) => {
 		    if(isVisible && this.state.hovering !== true) {
@@ -158,7 +159,8 @@ class Card extends React.Component {
 			this.setState({hovering: false});
 			this.setState({open: null});
 		    }
-		    return (<div className={"card_wrapper " + (this.state.float_dir === "left" ? "cw_left" : "cw_right")}
+		    return (<div
+				 className={"card_wrapper " + (this.state.float_dir === "left" ? "cw_left" : "cw_right")}
 				 onMouseLeave={() => {
 				     if(this.state.hover_override) {
 					 this.setState({hover_override: false});
@@ -193,7 +195,8 @@ class Card extends React.Component {
 				</div>
 			    </div>);
 		}}
-		</TrackVisibility>);
+	    </TrackVisibility>
+	    </div>);
     }
 }
 

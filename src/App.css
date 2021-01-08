@@ -393,7 +393,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: begin;
+    align-items: stretch;
     justify-content: center;
 }
 
@@ -408,9 +408,10 @@
 
 .card_scroll_align {
     width: calc(100% * (1 - var(--aspect)));
-    height: 100%;
+    position: relative;
 }
 .card_scroll_designator {
+    width: 100%;
     line-height: 3em;
     color: white;
     position: sticky;
