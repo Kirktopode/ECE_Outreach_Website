@@ -393,8 +393,8 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;   
+    align-items: begin;
+    justify-content: center;
 }
 
 .card_scroll_browser, .card_scroll_designator {
@@ -403,12 +403,18 @@
 
 .card_scroll_browser {
     width: calc(100%*var(--aspect));
+    overflow-x: hidden;
 }
 
+.card_scroll_align {
+    width: calc(100% * (1 - var(--aspect)));
+    height: 100%;
+}
 .card_scroll_designator {
     line-height: 3em;
     color: white;
-    width: calc(100% * (1 - var(--aspect)));
+    position: sticky;
+    top: calc(15px + 1px + 20px + 50px); /* calculated from topbar */
 }
 
 .card_scroll_entry {

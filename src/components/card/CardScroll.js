@@ -15,9 +15,11 @@ class CardScroll extends React.Component {
     render() {
 	return (
 	    <div className="card_scroll_wrapper">
-		<ul className="card_scroll_designator">
-		    {this.content}
-		</ul>
+		<div>
+		    <ul className="card_scroll_designator">
+			{this.content}
+		    </ul>
+		</div>
 		<div className="card_scroll_browser">
 		    {this.children}
 		</div>
