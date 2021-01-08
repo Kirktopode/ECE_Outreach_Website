@@ -14,6 +14,7 @@ import {
     Switch,
     Route,
     Link,
+    Redirect,
 } from "react-router-dom"
 // import Card from "./Card";
 
@@ -67,6 +68,9 @@ export class App extends Component {
           <Route path="/ECE_Outreach_Website">
             <Header data={this.state.landingPageData.Header} />
             <About data={this.state.landingPageData.About} />
+          </Route>
+          <Route path="/">
+            <Redirect to="/ECE_Outreach_Website" />
           </Route>
         </Switch>
       </Router>
