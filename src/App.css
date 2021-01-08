@@ -428,9 +428,14 @@
     position: relative;
 }
 
+.card_scroll_entry.highlighted {
+    transform: translate(1.5em) !important;
+}
 .card_scroll_entry:hover {
+    transform: translate(0.75em);
+}
+.card_scroll_entry.highlighted, .card_scroll_entry:hover {
     background: red;
-    transform: translate(2em);
 }
 
 .card_scroll_entry:after {
@@ -443,8 +448,7 @@
     transition: 300ms;
 }
 
-.card_scroll_entry:hover:after {
-    transform: translate(-1px);
+.card_scroll_entry.highlighted:after, .card_scroll_entry:hover:after {
     border-left: 1.5em solid red;
     border-top: 1.5em solid transparent; 
     border-bottom: 1.5em solid transparent;

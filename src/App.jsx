@@ -28,7 +28,6 @@ export class App extends Component {
     }
 
     render() {
-        console.log({url:process.env.PUBLIC_URL})
         return (
             <Router>
               <Navigation />
