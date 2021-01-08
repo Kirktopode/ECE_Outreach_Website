@@ -314,7 +314,7 @@
 
 .card_wrapper {
     font-family: Bahnschrift;
-    font-size: 1.1em;
+    font-size: 0.6em;
     height: 32em;
     position: relative;
     margin-bottom: 4em;
@@ -385,6 +385,60 @@
     text-align: justify;
 }
 
-.portfolio-items {
+.portfolio-items, .portfolio-cards {
     margin-top: -6em;
+}
+
+.card_scroll_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   
+}
+
+.card_scroll_browser, .card_scroll_designator {
+    --aspect: 0.8;
+}
+
+.card_scroll_browser {
+    width: calc(100%*var(--aspect));
+}
+
+.card_scroll_designator {
+    line-height: 3em;
+    color: white;
+    width: calc(100% * (1 - var(--aspect)));
+}
+
+.card_scroll_entry {
+    width: 100%;
+    margin-bottom: 3px;
+    background: gray;
+    list-style-type: none;
+    transition: 300ms;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.card_scroll_entry:hover {
+    background: red;
+    transform: translate(2em);
+}
+
+.card_scroll_entry:after {
+    width: 3em;
+    height: 3em;
+    content: "";
+    right: -3em;
+    position: absolute;
+    border-left: 1.5em solid gray;
+    transition: 300ms;
+}
+
+.card_scroll_entry:hover:after {
+    transform: translate(-1px);
+    border-left: 1.5em solid red;
+    border-top: 1.5em solid transparent; 
+    border-bottom: 1.5em solid transparent;
 }
