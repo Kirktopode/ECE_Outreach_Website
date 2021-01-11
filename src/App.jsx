@@ -12,7 +12,6 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
     Redirect,
 } from "react-router-dom"
 
@@ -29,7 +28,6 @@ export class App extends Component {
     }
 
     render() {
-        console.log({url:process.env.PUBLIC_URL})
         return (
             <Router>
               <Navigation />
