@@ -121,10 +121,10 @@
             "description": ""
         },
         {
-            "img": "img/team/no_image.png",
+            "img": "img/team/ryan_barnes.jpg",
             "name": "Ryan Barnes",
-            "job": "Senior",
-            "description": ""
+            "job": "Senior, Team Lead",
+            "description": "I am a senior in Electrical Engineering and am the current ECE Outreach Team Lead. I am interested in signal processing, specifically in the field of biomedical imaging and sensing."
         }, {
             "img": "img/team/no_image.png",
             "name": "David Neitenbach",
@@ -144,10 +144,10 @@
             "description": ""
         },
         {
-            "img": "img/team/no_image.png",
+            "img": "img/team/kori_eliaz.jpg",
             "name": "Kori Eliaz",
             "job": "Junior",
-            "description": ""
+            "description": "I’m a junior in Electrical Engineering and lead of the Media team. I’m super passionate about all things aerospace, specifically deep space communications."
         },
         {
             "img": "img/team/no_image.png",
