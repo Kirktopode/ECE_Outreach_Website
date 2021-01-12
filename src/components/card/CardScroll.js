@@ -10,7 +10,7 @@ class CardScroll extends React.Component {
 		this.children = React.Children.toArray(this.props.children);
 		this.content = this.children
 			.map((child, i) => (
-			<li className="card_scroll_entry" key={i}
+			<div className="card_scroll_entry" key={i}
 				onClick={() => { // correctly scroll to element, accounting for topbar
 				const element = document.getElementById("project_"+i);
 				
@@ -23,7 +23,7 @@ class CardScroll extends React.Component {
 
 				}}>
 				{new child.type(child.props).title}
-			</li>
+			</div>
 			));
 		window.onscroll = () => {
 			this.setHighlight()
@@ -62,7 +62,10 @@ class CardScroll extends React.Component {
 	return (
 	    <div className="card_scroll_wrapper">
 		<div className="card_scroll_align">
-		    <ul className="card_scroll_designator">
+		    <div className="card_scroll_title">
+			Our Projects
+		    </div>
+		    <div className="card_scroll_designator">
 			{this.content.map
 			 ((child, i) =>
 			   React.cloneElement
@@ -71,7 +74,7 @@ class CardScroll extends React.Component {
 					 ? " highlighted"
 					 : "")})
 			 )}
-		    </ul>
+		    </div>
 		</div>
 		<div className="card_scroll_browser">
 		    {this.children.map((child, i) =>
