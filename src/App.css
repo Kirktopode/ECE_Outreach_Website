@@ -408,43 +408,57 @@
     position: relative;
 }
 .card_scroll_designator {
-    font-size: 0.4em;
+    list-style: none;
+    font-size: 1em;
     width: 90%;
     background: lightgray;
     color: #666;
     position: sticky;
     top: calc(15px + 1px + 20px + 50px); /* calculated from topbar */
+    border-radius: 0 0 1.5em 1.5em;
 }
 
 .card_scroll_entry {
     text-align: left;
-    padding-left: 10%;
+    padding-left: 5%;
     width: 100%;
     margin-bottom: 3px;
     transition: 300ms;
     position: relative;
-    font-size: 0.3em;
+}
+.card_scroll_entry::before {
+    content: "\00BB";
+    padding-right: 0.5em;
+    opacity: 0;
+    transition: 300ms;
+}
+.card_scroll_entry.highlighted::before {
+    opacity: 100%;
+}
+.card_scroll_entry:hover::before {
+    opacity: 50%;
 }
 
 .card_scroll_entry.highlighted {
-    padding-left: 20%;
+    padding-left: 15% !important;
 }
 .card_scroll_entry:hover {
-    padding-left: 15%;
-    color: #333;
+    padding-left: 10%;
+    color: #555;
 }
 .card_scroll_entry.highlighted {
     color: #111;
 }
 
 .card_scroll_title {
+    text-align: left;
     background: grey;
     color: #eee;
-    font-size: 1.6em;
+    font-size: 2em;
+    padding-left: calc(95% * 0.1);
     padding-top: 0.15em;
-    padding-left: 0.3em;
     padding-bottom: 0.15em;
-    padding-right: 1.8em;
+    padding-right: 0;
     border-radius: 0 2em 2em 0;
     width: 100%;
 }
