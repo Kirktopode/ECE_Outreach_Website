@@ -52,7 +52,7 @@ class CardScroll extends React.Component {
 		}).sort((e, f) => e[1]-f[1])[0][0];
 
 		if(highlight !== this.state.highlight) {
-			this.setState({highlight: highlight});
+		    this.setState({highlight: highlight});
 		}
 
 	}
@@ -62,19 +62,21 @@ class CardScroll extends React.Component {
 	return (
 	    <div className="card_scroll_wrapper">
 		<div className="card_scroll_align">
-		    <div className="card_scroll_title">
-			Our Projects
+		    <div className="card_scroll_stickwrap">
+			<div className="card_scroll_title">
+			    Our Projects
+			</div>
+			<ul className="card_scroll_designator">
+			    {this.content.map
+			     ((child, i) =>
+				 React.cloneElement
+				 (child, {className: child.props.className
+					  + (this.state.highlight === i
+					     ? " highlighted"
+					     : "")})
+			     )}
+			</ul>
 		    </div>
-		    <ul className="card_scroll_designator">
-			{this.content.map
-			 ((child, i) =>
-			   React.cloneElement
-			     (child, {className: child.props.className
-				      + (this.state.highlight === i
-					 ? " highlighted"
-					 : "")})
-			 )}
-		    </ul>
 		</div>
 		<div className="card_scroll_browser">
 		    {this.children.map((child, i) =>

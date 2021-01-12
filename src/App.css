@@ -395,7 +395,6 @@
     flex-direction: row;
     align-items: stretch;
     justify-content: center;
-    position: relative;
 }
 
 .card_scroll_browser {
@@ -403,9 +402,13 @@
     overflow-x: hidden;
 }
 
+.card_scroll_stickwrap {
+    position: sticky;
+    top: calc(15px + 1px + 20px + 50px); /* calculated from topbar */
+}
+
 .card_scroll_align {
     width: 20%;
-    position: relative;
 }
 .card_scroll_designator {
     list-style: none;
@@ -413,9 +416,8 @@
     width: 90%;
     background: lightgray;
     color: #666;
-    position: sticky;
-    top: calc(15px + 1px + 20px + 50px); /* calculated from topbar */
     border-radius: 0 0 1.5em 1.5em;
+    min-height: 30em;
 }
 
 .card_scroll_entry {
