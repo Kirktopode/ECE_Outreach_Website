@@ -20,6 +20,11 @@
     }
 }
 
+* { /* TODO */
+    --csu-green: green;
+    --csu-gold: gold;
+}
+
 .App-header {
     background-color: #181c24;
     min-height: 100vh;
@@ -350,17 +355,18 @@
     top: calc((32em + (32em - 15em) / 2) * 0.6 / 1.5 - 0.5em);
     font-size: 1.5em;
     color: #fff;
-    border-radius: 0.5em;
+    border-radius: 0.25em;
     padding: 0.1em 0.5em 0.1em 0.5em; /* top right bottom left */
     transition: 0.35s;
-    
-    background: red;
+    font-weight: bold;
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_reader_link {
     right: 5%;
+    background: var(--csu-green);
 }
 .card_scroll_browser>div:nth-child(2n) .card_reader_link {
     left: 5%;
+    background: var(--csu-gold);
 }
 
 .card_description {
