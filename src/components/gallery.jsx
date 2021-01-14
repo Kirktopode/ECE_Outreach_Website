@@ -17,8 +17,8 @@ export class Gallery extends Component {
           </div>
           <div className="row">
             <CardScroll>
-              <Card src="solar_cars" float="left"/>
-              <Card src="solar_cars" float="right"/>
+              <Card src="solar_cars"/>
+              <Card src="solar_cars"/>
             </CardScroll>
           </div>
         </div>

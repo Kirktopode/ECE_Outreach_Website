@@ -50,15 +50,10 @@ class Card extends React.Component {
     static degmax = 150; // how far the hover elements move out of the way
     constructor(props) {
 	super(props);
-	if(!props.float)
-	    throw new Error("Component Card lacking 'float' property. Help: <Card float=\"left\">");
-	if(props.float !== "left" && props.float !== "right")
-	    throw new Error("Component Card has invalid 'float' property. Help: <Card float=\"left\"> or <Card float=\"right\">");
 	this.state = {
 	    hovering: false,
 	    hover_override: false,
 	    open: null,
-	    float_dir: props.float,
 	};
 	// first check if we need to load JSON or if inline is okay
 	let children;
@@ -149,7 +144,7 @@ class Card extends React.Component {
 	    className: ("card_center " + (this.state.hovering ? "" : "breathing"))
 	}, this.center.props.children);
 	return (
-	    <div id={this.props.id}>
+	    <div id={this.props.id} className="RE">
             <TrackVisibility>
 		{({ isVisible }) => {
 		    if(isVisible && this.state.hovering !== true) {
@@ -160,7 +155,7 @@ class Card extends React.Component {
 			this.setState({open: null});
 		    }
 		    return (<div
-				 className={"card_wrapper " + (this.state.float_dir === "left" ? "cw_left" : "cw_right")}
+				 className="card_wrapper"
 				 onMouseLeave={() => {
 				     if(this.state.hover_override) {
 					 this.setState({hover_override: false});
@@ -170,29 +165,25 @@ class Card extends React.Component {
 				     if(!this.state.hovering) {
 					 this.setState({hovering: true});
 				     }
-				     if(!this.state.hover_override) {
-					 this.setState({hover_override: true});
-				     }
-				 }}>
-				<div className="card_align">
-				    <div className="card">
-					{center}
-					{hover_elements}
-					{dropdown_elements}
-				    </div>
+				    if(!this.state.hover_override) {
+					this.setState({hover_override: true});
+				    }
+				}}>
+				<div className="card">
+				    {center}
+				    {hover_elements}
+				    {dropdown_elements}
 				</div>
-				<div className="card_description_wrapper">
-				    <div className="card_title">
-					{this.title}
-				    </div>
-				    <div className="card_description">
-					{this.description}
-				    </div>
-				    <a href={process.env.PUBLIC_URL + "/projects/" + this.props.src.split('/').pop()}
-				       className={"card_reader_link breathing subtle" + (this.state.hovering ? " open" : "")}>
-					Read Further
-				    </a>
+				<div className="card_title">
+				    {this.title}
 				</div>
+				<div className="card_description">
+				    {this.description}
+				</div>
+				<a href={process.env.PUBLIC_URL + "/projects/" + this.props.src.split('/').pop()}
+				   className="card_reader_link breathing subtle">
+				    Read Further
+				</a>
 			    </div>);
 		}}
 	    </TrackVisibility>
