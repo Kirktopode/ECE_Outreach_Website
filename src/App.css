@@ -333,7 +333,6 @@
     z-index: 0;
     top: 4.5em;
     position: absolute;
-    width: 78%;
     z-index: 1;
     background: #777;
     font-weight: 425;
@@ -345,9 +344,11 @@
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_title {
     right: 0;
+    left: 8em;
 }
 .card_scroll_browser>div:nth-child(2n) .card_title {
     left: 0;
+    right: 8em;
 }
 .card_reader_link {
     position: absolute;
