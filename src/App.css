@@ -83,6 +83,7 @@
     position: absolute;
     top: 0;
     transition: 0.5s;
+    z-index: 1;
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_dropdown>img {
     left: 0;
@@ -94,9 +95,8 @@
     --scale: 6em;
 }
 .card_dropdown {
-    position: relative;
+    position: absolute;
     transition: 0.5s;
-    z-index: 0;
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_dropdown {
     transform: rotate(var(--angle))
@@ -141,11 +141,11 @@
     height: 15em;
     border-radius: calc(15em/2);
     position: absolute;
-    z-index: 1;
+    z-index: 0;
 }
 
 .card_title_wrapper {
-    overflow: hidden;
+    position: absolute;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -154,10 +154,35 @@
     transition-delay: 1.5s;
 }
 
+.card_title_align {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.card_title_mover {
+    background: #30303090;
+    color: #eee;
+    position: absolute;
+    width: 17em;
+    top: 0.25em;
+    height: 2.1em;
+    font-size: 3em;
+    text-shadow: -0.5px 1px black;
+}
+.card_scroll_browser>div:nth-child(2n+1) .card_title_mover {
+    margin-left: 2em;
+    left: 0;
+    border-radius: 0 1.2em 1.2em 0;
+}
+.card_scroll_browser>div:nth-child(2n) .card_title_mover {
+    margin-right: 2em;
+    right: 0;
+    border-radius: 1.2em 0 0 1.2em;
+}
+
 .card_dropdown_content_wrapper {
     position: absolute;
     transform: translate(0, 100%) translate(0, -1px);
-    overflow: hidden;
     padding: 0 5em 5em; /* top right/left bottom */
 }
 
@@ -224,17 +249,13 @@
 
 .card_title {
     text-align: center;
-    z-index: 0;
     top: 4.5em;
     position: absolute;
-    z-index: 1;
     background: #777;
     font-weight: 425;
     font-size: 2.5em;
     color: #eee;
     padding: 0.1%;
-    
-    /*text-shadow: -0.5px 1px black;*/
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_title {
     right: 0;
@@ -246,7 +267,6 @@
 }
 .card_reader_link {
     position: absolute;
-    z-index: 0;
     bottom: -1em;
     transform: translate(0, 100%);
     font-size: 1.2em;
@@ -266,7 +286,6 @@
 }
 
 .card_description {
-    z-index: 1;
     min-width: 10em;
     padding: 0.3em 0.75em 0.3em 0.75em; /* top right bottom left */
     font-size: 1em;

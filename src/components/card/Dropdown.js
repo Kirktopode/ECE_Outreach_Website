@@ -33,20 +33,20 @@ class Dropdown extends React.Component {
 		    {React.cloneElement(this.dropdown,
 					{className: this.props.className.split(" ").includes("breathing") ? "breathing" : ""},
 					{})}
-		    {/*<div className={"card_title_wrapper" + (folded ? " folded" : "")}>
-			<div className={"card_title_mover" + (folded ? " folded" : "")} style={{visibility: "hidden"}}>
-			    <p>
+		    <div className={"card_title_wrapper" + (folded ? " folded" : "")}>
+			<div className={"card_title_mover" + (folded ? " folded" : "")}>
+			    <div className="card_title_align">
 				{this.label}
-			    </p>
+			    </div>
 			</div>
-			<div className={"card_dropdown_mover" + (folded ? " folded" : "")}>
+			{/*<div className={"card_dropdown_mover" + (folded ? " folded" : "")}>
 			    <div className={"card_dropdown_content_wrapper" + (folded ? " folded" : "")}>
 				<div className={"card_dropdown_content" + (folded ? " folded" : "")}>
 				    {this.content}
 				</div>
 			    </div>
-			</div>
-			</div>*/}
+			    </div>*/}
+		    </div>
 		</div>
 	       );
     }

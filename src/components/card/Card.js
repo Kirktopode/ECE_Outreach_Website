@@ -47,8 +47,8 @@ function getCardItem(cardTitle, path) {
 }
 
 class Card extends React.Component {
-    static degmin = -60; // how far the hover elements move out of the way
-    static degmax = -210;
+    static degmin = -50; // how far the hover elements move out of the way
+    static degmax = -220;
     constructor(props) {
 	super(props);
 	this.state = {
