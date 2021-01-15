@@ -41,9 +41,11 @@ class Dropdown extends React.Component {
 				</div>
 			    </div>
 			</div>
-			<div className="card_dropdown_content_align">
-			    <div className="card_dropdown_content">
-				{this.content}
+			<div className="card_dropdown_content_obscure">
+			    <div className="card_dropdown_content_align">
+				<div className="card_dropdown_content">
+				    {this.content}
+				</div>
 			    </div>
 			</div>
 		    </div>

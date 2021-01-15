@@ -205,13 +205,18 @@
 .card_dropdown_content_align {
     position: absolute;
     width: 56.5em;
-    top: 7.2em;
-    left: 5.5em;
+    top: 0;
+    left: 0;
 
     visibility: hidden;
+    transform: translate(0, -27em);
+
+    transition: 1s;
+    transition-delay: 1s;
 }
 .card_dropdown.open .card_dropdown_content_align {
     visibility: visible;
+    transform: translate(0);
 }
 .card_dropdown_content {
     background: #ddd;
@@ -222,6 +227,11 @@
 
 .card_dropdown_content_obscure {
     overflow-y: hidden;
+    left: 5.5em;
+    width: 60em;
+    position: absolute;
+    top: 7.2em;
+    height: 30em;
 }
 
 .card_wrapper {
