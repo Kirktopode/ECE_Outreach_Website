@@ -57,6 +57,7 @@ class Card extends React.Component {
 	    hovering: false,
 	    hover_override: false,
 	    open: null,
+	    id: this.props.id,
 	};
 	// first check if we need to load JSON or if inline is okay
 	let children;
@@ -147,7 +148,7 @@ class Card extends React.Component {
 	    className: ("card_center " + (this.state.hovering ? "" : "breathing"))
 	}, this.center.props.children);
 	return (
-	    <div id={this.props.id}>
+	    <div id={this.state.id}>
             <TrackVisibility>
 		{({ isVisible }) => {
 		    if(isVisible && this.state.hovering !== true) {
