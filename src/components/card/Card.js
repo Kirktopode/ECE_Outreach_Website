@@ -118,11 +118,14 @@ class Card extends React.Component {
 	for(let i=0; i<this.hover_elements.length; ++i) {
 	    hover_elements[i] = React.cloneElement(this.hover_elements[i], {
 		style: {"--angle":
-			this.calc_hover_angle(((this.dropdown_elements.length-i-1)+this.state.open < this.dropdown_elements.length) ? (
-			    (this.dropdown_elements.length-i-1)+this.state.open
-			) : (
-			    -1-i+this.state.open
-			)) + "deg"},
+			this.calc_hover_angle(((this.dropdown_elements.length-i-1)
+					       +this.state.open < this.dropdown_elements.length)
+					      ? (
+						  (this.dropdown_elements.length-i-1)
+						      +this.state.open
+					      ) : (
+						  -1-i+this.state.open
+					      )) + "deg"},
 		className: ((this.state.open !== i ? "breathing " : "")
 			    + (this.state.open !== null ? "open" : "")),
 	    }, this.hover_elements[i].props.children);

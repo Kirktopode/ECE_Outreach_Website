@@ -82,9 +82,13 @@
     border-radius: calc(var(--scale)/2);
     position: absolute;
     top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
     transition: 0.5s;
+}
+.card_scroll_browser>div:nth-child(2n+1) .card_dropdown>img {
+    left: 0;
+}
+.card_scroll_browser>div:nth-child(2n) .card_dropdown>img {
+    right: 0;
 }
 .card_dropdown>img.breathing {
     --scale: 6em;
@@ -93,8 +97,16 @@
     position: relative;
     transition: 0.5s;
     z-index: 0;
+}
+.card_scroll_browser>div:nth-child(2n+1) .card_dropdown {
     transform: rotate(var(--angle))
-	       translate(12em) rotate(calc(-1 * var(--angle)));
+	       translate(12em) rotate(calc(-1 * var(--angle)))
+	       translate(-4em, -4em);
+}
+.card_scroll_browser>div:nth-child(2n) .card_dropdown {
+    transform: rotate(calc(-180deg - var(--angle)))
+	       translate(12em) rotate(calc(180deg + var(--angle)))
+	       translate(4em, -4em);
 }
 
 .breathing{

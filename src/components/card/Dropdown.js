@@ -27,7 +27,7 @@ class Dropdown extends React.Component {
     }
     render() {
 	let folded = this.props.folded === "true";
-	return (<div className={"card_dropdown " + (folded ? "folded " : " ") + this.props.className}
+	return (<div className={"card_dropdown " + (folded ? "folded " : " ") + this.props.className.split(" ").filter(e => e!=="breathing").join(" ")}
 		     style={this.props.style}
 		     onClick={this.props.onClick}>
 		    {React.cloneElement(this.dropdown,
