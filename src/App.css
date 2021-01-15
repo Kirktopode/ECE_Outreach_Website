@@ -87,9 +87,11 @@
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_dropdown>img {
     left: 0;
+    background-color: var(--csu-green);
 }
 .card_scroll_browser>div:nth-child(2n) .card_dropdown>img {
     right: 0;
+    background-color: var(--csu-gold);
 }
 .card_dropdown>img.breathing {
     --scale: 6em;
@@ -114,15 +116,21 @@
     animation: breathing 3s infinite;
     animation-delay: 0s;
 }
+.card_scroll_browser>div:nth-child(2n+1) .breathing {
+    --color: var(--csu-green);
+}
+.card_scroll_browser>div:nth-child(2n) .breathing {
+    --color: var(--csu-gold);
+}
 .breathing.subtle{
     --breathing-scale: 0.25em;
 }
 @keyframes breathing {
     0% {
-	box-shadow: 0 0 0 0em rgba(30, 77, 43, 255);
+	box-shadow: 0 0 0 0em var(--color);
     }
     75% {
-	box-shadow: 0 0 0 var(--breathing-scale) rgba(30, 77, 43, 0);
+	box-shadow: 0 0 0 var(--breathing-scale) rgba(0, 0, 0, 0);
     }
     100% {
 	box-shadow: 0 0 0 var(--breathing-scale) rgba(0, 0, 0, 0);
