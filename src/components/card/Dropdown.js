@@ -28,10 +28,10 @@ class Dropdown extends React.Component {
     render() {
 	let folded = this.props.folded === "true";
 	return (<div className={"card_dropdown " + (folded ? "folded " : " ") + this.props.className.split(" ").filter(e => e!=="breathing").join(" ")}
-		     style={this.props.style}
-		     onClick={this.props.onClick}>
+		     style={this.props.style}>
 		    {React.cloneElement(this.dropdown,
-					{className: this.props.className.split(" ").includes("breathing") ? "breathing" : ""},
+					{className: this.props.className.split(" ").includes("breathing") ? "breathing" : "",
+					 onClick:this.props.onClick},
 					{})}
 		    <div className={"card_title_wrapper" + (folded ? " folded" : "")}>
 			<div className={"card_title_obscure"}>

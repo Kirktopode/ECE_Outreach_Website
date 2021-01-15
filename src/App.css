@@ -163,8 +163,11 @@
 .card_title_obscure {
     position: absolute;
     top: 0.75em;
-    width: 60em;
+    width: 0;
     overflow-x: hidden;
+}
+.card_dropdown.open .card_title_obscure {
+    width: 60em;
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_title_obscure {
     left: 0;
