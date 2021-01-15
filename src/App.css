@@ -110,6 +110,18 @@
 	       translate(12em) rotate(calc(180deg + var(--angle)))
 	       translate(4em, -4em);
 }
+.card_scroll_browser>div:nth-child(2n+1) .card_dropdown.open {
+    transform: rotate(var(--angle))
+	       translate(12em) rotate(calc(-1 * var(--angle)))
+	       translate(-4em, -4em)
+	       translate(-2em, 4em);
+}
+.card_scroll_browser>div:nth-child(2n) .card_dropdown.open {
+    transform: rotate(calc(-180deg - var(--angle)))
+	       translate(12em) rotate(calc(180deg + var(--angle)))
+	       translate(4em, -4em)
+	       translate(-2em, 4em);
+}
 
 .breathing{
     --breathing-scale: 0.75em;
@@ -269,10 +281,13 @@
     transition-delay: 0.8s;
 }
 .card_wrapper.open {
-    margin-bottom: 30em;
+    margin-bottom: 35em;
 }
 .card_scroll_browser>div:last-child .card_wrapper {
-    margin-bottom: 25em;
+    margin-bottom: 20em;
+}
+.card_scroll_browser>div:last-child .card_wrapper.open {
+    margin-bottom: 35em;
 }
 .card_scroll_browser>div:not(:last-child) .card_wrapper::after {
     position: absolute;
@@ -285,9 +300,8 @@
     transition: 0.4s;
     transition-delay: 0.8s;
 }
-
 .card_scroll_browser>div:not(:last-child) .card_wrapper.open::after {
-    bottom: -26em;
+    bottom: -31em;
 }
 
 .card_title {

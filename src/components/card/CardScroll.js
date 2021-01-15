@@ -1,7 +1,8 @@
 import React from 'react';
 
-const topbar_offset = 100;
+
 class CardScroll extends React.Component {
+    static topbar_offset = 100;
     constructor(props) {
 		super(props);
 		this.state = {
@@ -17,7 +18,7 @@ class CardScroll extends React.Component {
 				window.scrollTo({
 					top: element.getBoundingClientRect().top
 					- document.body.getBoundingClientRect().top
-					- topbar_offset,
+					- CardScroll.topbar_offset,
 					behavior: 'smooth'
 				});
 
@@ -58,7 +59,6 @@ class CardScroll extends React.Component {
 	}
 
     render() {
-	console.log(this.state);
 	return (
 	    <div className="card_scroll_wrapper">
 		<div className="card_scroll_align">

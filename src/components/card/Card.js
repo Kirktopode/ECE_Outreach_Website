@@ -4,6 +4,7 @@ import Icon from './Icon.js';
 import Label from './Label.js';
 import Content from './Content.js';
 import Dropdown from './Dropdown.js';
+import CardScroll from './CardScroll.js';
 
 import TrackVisibility from 'react-on-screen';
 
@@ -51,6 +52,7 @@ class Card extends React.Component {
     static degmax = -220;
     constructor(props) {
 	super(props);
+	this.ref = React.createRef();
 	this.state = {
 	    hovering: false,
 	    hover_override: false,
@@ -102,7 +104,18 @@ class Card extends React.Component {
 	    let angle = this.calc_hover_angle(i);
 	    this.hover_elements[i] = React.cloneElement(this.dropdown_elements[i], {
 		style: {"--angle": angle + "deg"},
-		onClick:() => this.setState({open: i}),
+		onClick: () => {
+		    const element = this.ref.current;
+		    
+		    window.scrollTo({
+			top: element.getBoundingClientRect().top
+			    - document.body.getBoundingClientRect().top
+			    - CardScroll.topbar_offset,
+			behavior: 'smooth'
+		    });
+		    
+		    this.setState({open: i});
+		},
 		}, this.dropdown_elements[i].props.children);
 	}
     }
@@ -133,7 +146,6 @@ class Card extends React.Component {
 	let center = React.cloneElement(this.center, {
 	    className: ("card_center " + (this.state.hovering ? "" : "breathing"))
 	}, this.center.props.children);
-	console.log(hover_elements);
 	return (
 	    <div id={this.props.id}>
             <TrackVisibility>
@@ -145,7 +157,8 @@ class Card extends React.Component {
 			this.setState({hovering: false});
 			this.setState({open: null});
 		    }
-		    return (<div className={"card_wrapper" +
+		    return (<div ref={this.ref}
+				 className={"card_wrapper" +
 					    (this.state.open !== null ? " open" : "")}
 				 onMouseLeave={() => {
 				     if(this.state.hover_override) {
