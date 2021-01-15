@@ -179,11 +179,11 @@ class Card extends React.Component {
 				</div>
 				<div className="card_description">
 				    {this.description}
+				    <a href={process.env.PUBLIC_URL + "/projects/" + this.props.src.split('/').pop()}
+				       className="card_reader_link breathing subtle">
+					Read Further
+				    </a>
 				</div>
-				<a href={process.env.PUBLIC_URL + "/projects/" + this.props.src.split('/').pop()}
-				   className="card_reader_link breathing subtle">
-				    Read Further
-				</a>
 			    </div>);
 		}}
 	    </TrackVisibility>

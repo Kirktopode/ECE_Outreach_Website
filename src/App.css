@@ -353,7 +353,8 @@
 .card_reader_link {
     position: absolute;
     z-index: 0;
-    top: calc((32em + (32em - 15em) / 2) * 0.6 / 1.5 - 0.5em);
+    bottom: 0;
+    transform: translate(0, 100%);
     font-size: 1.5em;
     color: #fff;
     border-radius: 0.25em;
@@ -374,11 +375,13 @@
     z-index: 1;
     min-width: 10em;
     padding: 0.3em 0.75em 0.3em 0.75em; /* top right bottom left */
-    background: #999;
-    border-radius: 1.2em;
-    font-size: 1.5em;
-    color: #eee;
+    font-size: 1em;
+    color: #111;
     text-align: justify;
+    top: 16em;
+    left: 29em;
+    right: 5em;
+    position: absolute;
 }
 
 .portfolio-items, .portfolio-cards {
