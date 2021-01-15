@@ -211,12 +211,15 @@
     visibility: hidden;
     transform: translate(0, -27em);
 
-    transition: 1s;
-    transition-delay: 1s;
+    transition: 0.1s;
+    transition-delay: 0s;
 }
 .card_dropdown.open .card_dropdown_content_align {
     visibility: visible;
     transform: translate(0);
+    
+    transition: 0.4s;
+    transition-delay: 0.8s;
 }
 .card_dropdown_content {
     background: #ddd;
