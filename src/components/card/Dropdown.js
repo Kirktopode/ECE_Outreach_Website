@@ -34,13 +34,15 @@ class Dropdown extends React.Component {
 					{className: this.props.className.split(" ").includes("breathing") ? "breathing" : ""},
 					{})}
 		    <div className={"card_title_wrapper" + (folded ? " folded" : "")}>
-			<div className={"card_title_mover" + (folded ? " folded" : "")}>
-			    <div className="card_title_align">
-				{this.label}
+			<div className={"card_title_obscure"}>
+			    <div className={"card_title_mover" + (folded ? " folded" : "")}>
+				<div className="card_title_align">
+				    {this.label}
+				</div>
 			    </div>
 			</div>
 			{/*<div className={"card_dropdown_mover" + (folded ? " folded" : "")}>
-			    <div className={"card_dropdown_content_wrapper" + (folded ? " folded" : "")}>
+			   <div className={"card_dropdown_content_wrapper" + (folded ? " folded" : "")}>
 				<div className={"card_dropdown_content" + (folded ? " folded" : "")}>
 				    {this.content}
 				</div>

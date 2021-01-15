@@ -127,7 +127,7 @@ class Card extends React.Component {
 						  -1-i+this.state.open
 					      )) + "deg"},
 		className: ((this.state.open !== i ? "breathing " : "")
-			    + (this.state.open !== null ? "open" : "")),
+			    + (this.state.open === i ? "open" : "")),
 	    }, this.hover_elements[i].props.children);
 	}
 	let center = React.cloneElement(this.center, {
