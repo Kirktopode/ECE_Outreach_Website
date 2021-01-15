@@ -146,6 +146,9 @@ class Card extends React.Component {
 			this.setState({open: null});
 		    }
 		    return (<div className="card_wrapper"
+				 style={this.state.open !== null ? {
+				     "margin-bottom": "20em",
+				 } : {}}
 				 onMouseLeave={() => {
 				     if(this.state.hover_override) {
 					 this.setState({hover_override: false});

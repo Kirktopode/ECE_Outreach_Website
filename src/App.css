@@ -238,6 +238,9 @@
     width: 60em;
     position: absolute;
     top: 7.2em;
+    height: 0;
+}
+.card_dropdown.open .card_dropdown_content_obscure {
     height: 30em;
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_dropdown_content_obscure {
@@ -254,6 +257,8 @@
     position: relative;
     margin-bottom: 4em;
     position: relative;
+    transition: 0.4s;
+    transition-delay: 0.8s;
 }
 
 .card_title {
