@@ -177,29 +177,37 @@
 .card_title_mover {
     position: relative;
     width: 60em;
-    height: 6.5em;
     
     background: #30303090;
     color: #eee;
     text-shadow: -0.5px 1px black;
-    transition: 0.5s;
-    transition-delay: 0.5s;
+    
+    height: 5.5em;
+    transition:
+	height 0.25s 0s,
+	transform 0.25s 0s;
+}
+.card_dropdown.open .card_title_mover {
+    height: 6.5em;
+    transition:
+	height 0.125s 0.125s,
+	transform 0.4s 0.5s;
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_dropdown.open .card_title_mover {
     left: 0;
-    border-radius: 0 1.2em 1.2em 0;
     transform: translate(0);
 }
 .card_scroll_browser>div:nth-child(2n) .card_dropdown.open .card_title_mover {
     right: 0;
-    border-radius: 1.2em 0 0 1.2em;
     transform: translate(0);
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_title_mover {
     transform: translate(-60em);
+    border-radius: 0 1.2em 1.2em 0;
 }
 .card_scroll_browser>div:nth-child(2n) .card_title_mover {
     transform: translate(60em);
+    border-radius: 1.2em 0 0 1.2em;
 }
 
 .card_dropdown_content_wrapper {
