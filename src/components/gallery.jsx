@@ -19,6 +19,9 @@ export class Gallery extends Component {
             <CardScroll>
               <Card src="solar_cars"/>
               <Card src="solar_cars"/>
+              <Card src="solar_cars"/>
+              <Card src="solar_cars"/>
+              <Card src="solar_cars"/>
             </CardScroll>
           </div>
         </div>
