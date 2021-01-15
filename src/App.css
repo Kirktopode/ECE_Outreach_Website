@@ -363,11 +363,11 @@
     font-weight: bold;
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_reader_link {
-    right: 5%;
+    right: 0;
     background: var(--csu-green);
 }
 .card_scroll_browser>div:nth-child(2n) .card_reader_link {
-    left: 5%;
+    left: 0;
     background: var(--csu-gold);
 }
 
@@ -379,9 +379,15 @@
     color: #111;
     text-align: justify;
     top: 16em;
+    position: absolute;
+}
+.card_scroll_browser>div:nth-child(2n+1) .card_description {
     left: 29em;
     right: 5em;
-    position: absolute;
+}
+.card_scroll_browser>div:nth-child(2n) .card_description {
+    right: 29em;
+    left: 5em;
 }
 
 .portfolio-items, .portfolio-cards {
