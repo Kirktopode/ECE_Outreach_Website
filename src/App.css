@@ -271,6 +271,9 @@
 .card_wrapper.open {
     margin-bottom: 30em;
 }
+.card_scroll_browser>div:last-child .card_wrapper {
+    margin-bottom: 25em;
+}
 .card_scroll_browser>div:not(:last-child) .card_wrapper::after {
     position: absolute;
     bottom: 0;
@@ -357,7 +360,7 @@
 
 .card_scroll_browser {
     width: 80%;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .card_scroll_stickwrap {
