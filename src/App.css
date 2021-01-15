@@ -76,7 +76,7 @@
 
 /* the little hover bubbles */
 .hover {
-    --scale: 4em;
+    --scale: 8em;
     width: var(--scale);
     height: var(--scale);
     border-radius: calc(var(--scale)/2);
@@ -91,14 +91,8 @@
     visibility: visible;
     transform: rotate(var(--angle)) translate(12em) rotate(calc(-1 * var(--angle)));
 }
-.hover.open {
-    transform: rotate(var(--angle-open)) translate(5em) rotate(calc(-1 * var(--angle-open)));
-}
-.hover.hovering.open {
-    transform: rotate(var(--angle-open)) translate(12em) rotate(calc(-1 * var(--angle-open)));
-}
 .hover.breathing {
-    --scale: 5em;
+    --scale: 6em;
 }
 
 .breathing{
@@ -353,12 +347,12 @@
 .card_reader_link {
     position: absolute;
     z-index: 0;
-    bottom: 0;
+    bottom: -1em;
     transform: translate(0, 100%);
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #fff;
-    border-radius: 0.25em;
-    padding: 0.1em 0.5em 0.1em 0.5em; /* top right bottom left */
+    border-radius: 0.75em;
+    padding: 0.5em 2.2em; /* top-bottom left-right */
     transition: 0.35s;
     font-weight: bold;
 }

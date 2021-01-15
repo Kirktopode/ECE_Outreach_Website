@@ -47,7 +47,8 @@ function getCardItem(cardTitle, path) {
 }
 
 class Card extends React.Component {
-    static degmax = 150; // how far the hover elements move out of the way
+    static degmin = -60; // how far the hover elements move out of the way
+    static degmax = -210;
     constructor(props) {
 	super(props);
 	this.state = {
@@ -98,43 +99,30 @@ class Card extends React.Component {
 
 	this.hover_elements = [];
 	for(let i=0; i<this.dropdown_elements.length; ++i) {
-	    let angle = i/this.dropdown_elements.length*360;
-	    let angle_open;
-	    if(this.dropdown_elements.length%2===1) {
-		if(i<this.dropdown_elements.length/2) {
-		    angle_open = (i+1+Math.floor(this.dropdown_elements.length/2))/(this.dropdown_elements.length+1)*2*Card.degmax-Card.degmax;
-		} else {
-		    angle_open = (i-Math.floor(this.dropdown_elements.length/2))/(this.dropdown_elements.length+1)*2*Card.degmax-Card.degmax+360;
-		}
-	    } else {
-		if(i<=this.dropdown_elements.length/2) {
-		    angle_open = (i+this.dropdown_elements.length/2)/(this.dropdown_elements.length+1)*2*Card.degmax-Card.degmax;
-		} else {
-		    angle_open = (i+this.dropdown_elements.length/2-this.dropdown_elements.length)/(this.dropdown_elements.length+1)*2*Card.degmax-Card.degmax+360;
-		}
-	    }
+	    let angle = this.calc_hover_angle(i);
 	    this.hover_elements[i] = React.cloneElement(this.dropdown_elements[i], {
-		style: {"--angle": (angle-90) + "deg",
-			"--angle-open": (angle_open-90) + "deg"},
+		style: {"--angle": angle + "deg"},
 		onClick:() => this.setState({open: i}),
 		mode: "hover"}, this.dropdown_elements[i].props.children);
 	}
+    }
+
+    calc_hover_angle(index) {
+	return Card.degmin + (Card.degmax-Card.degmin)/(this.dropdown_elements.length-1)*index;
     }
     
     render() {
 	if(!this.dropdown_elements)
 	    return null;
-	let dropdown_elements = [];
-	for(let i=0; i<this.dropdown_elements.length; ++i) {
-	    dropdown_elements[i] = React.cloneElement(this.dropdown_elements[i], {
-		mode: "expand",
-		folded: (this.state.open !== i || !this.state.hovering).toString(),
-	    }, this.dropdown_elements[i].props.children);
-	}
-
 	let hover_elements = [];
 	for(let i=0; i<this.hover_elements.length; ++i) {
 	    hover_elements[i] = React.cloneElement(this.hover_elements[i], {
+		style: {"--angle":
+			this.calc_hover_angle(((this.dropdown_elements.length-i-1)+this.state.open < this.dropdown_elements.length) ? (
+			    (this.dropdown_elements.length-i-1)+this.state.open
+			) : (
+			    -1-i+this.state.open
+			)) + "deg"},
 		className: ("hover " + (this.state.hovering ? " hovering " : "")
 			    + (this.state.open !== i ? " breathing" : "")
 			    + (this.state.open !== null ? " open" : "")),
@@ -172,7 +160,6 @@ class Card extends React.Component {
 				<div className="card">
 				    {center}
 				    {hover_elements}
-				    {dropdown_elements}
 				</div>
 				<div className="card_title">
 				    {this.title}
