@@ -260,6 +260,15 @@
     transition: 0.4s;
     transition-delay: 0.8s;
 }
+.card_wrapper::after {
+    position: absolute;
+    bottom: -1.25em;
+    width: 98%;
+    left: 1%;
+    background-color: #888;
+    height: 1px;
+    content: "";
+}
 
 .card_title {
     text-align: center;
