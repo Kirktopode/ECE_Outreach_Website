@@ -144,16 +144,6 @@
     z-index: 0;
 }
 
-.card_title_wrapper {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-    transition: 0.5s;
-    transition-delay: 1.5s;
-}
-
 .card_title_align {
     position: relative;
     top: 50%;
@@ -212,63 +202,26 @@
     transform: translate(60em);
     border-radius: 5em 0 0 5em;
 }
-
-.card_dropdown_content_wrapper {
+.card_dropdown_content_align {
     position: absolute;
-    transform: translate(0, 100%) translate(0, -1px);
-    padding: 0 5em 5em; /* top right/left bottom */
-}
+    width: 56.5em;
+    top: 7.2em;
+    left: 5.5em;
 
-.card_dropdown_content_wrapper.folded {
-    padding: 0;
+    visibility: hidden;
 }
-
-.card_scroll_browser>div:nth-child(2n+1) .card_dropdown_content {
-    transform: translate(-1em);
-}
-.card_scroll_browser>div:nth-child(2n) .card_dropdown_content {
-    transform: translate(1em);
+.card_dropdown.open .card_dropdown_content_align {
+    visibility: visible;
 }
 .card_dropdown_content {
-    overflow: hidden;
-    position: relative;
-    background: #9998;
-    padding: 1em;
-    border-radius: 0 0 calc(1em) calc(1em); /* top-left top-right bottom-right bottom-;eft */
-    font-size: 0.6em;
-    text-align: left;
-    max-height: 17em;
-    width: 28em;
-    color: #444;
-    
-    transition:
-	max-height 0.5s 1.3s,
-	padding 0s 1.3s;
+    background: #ddd;
+    color: #888;
+    border-radius: 0 0 4em 4em;
+    padding: 0.75em;
 }
 
-
-.card_dropdown_content:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6em;
-    content: "";
-    border-radius: 0 0 calc(1em) calc(1em); /* top-left top-right bottom-right bottom-;eft */
-    background: linear-gradient(to top,
-				#444f 20%, 
-		 		#4440 100%
-);
-    pointer-2nts: none; /* so the text is still selectable */
-    transform: translate(0, 13em);
-}
-
-.card_dropdown_content.folded {
-    max-height: 0;
-    padding: 0;
-    transition:
-	max-height 0.3s 0s,
-	padding 0s 0.2s;
+.card_dropdown_content_obscure {
+    overflow-y: hidden;
 }
 
 .card_wrapper {
