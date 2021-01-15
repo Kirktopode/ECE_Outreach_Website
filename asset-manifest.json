@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/ECE_Outreach_Website/static/css/main.70abf635.chunk.css",
-    "main.js": "/ECE_Outreach_Website/static/js/main.59959a84.chunk.js",
-    "main.js.map": "/ECE_Outreach_Website/static/js/main.59959a84.chunk.js.map",
+    "main.css": "/ECE_Outreach_Website/static/css/main.042d7d5a.chunk.css",
+    "main.js": "/ECE_Outreach_Website/static/js/main.0db1f7f4.chunk.js",
+    "main.js.map": "/ECE_Outreach_Website/static/js/main.0db1f7f4.chunk.js.map",
     "runtime-main.js": "/ECE_Outreach_Website/static/js/runtime-main.09697835.js",
     "runtime-main.js.map": "/ECE_Outreach_Website/static/js/runtime-main.09697835.js.map",
     "static/js/2.1aca6d76.chunk.js": "/ECE_Outreach_Website/static/js/2.1aca6d76.chunk.js",
     "static/js/2.1aca6d76.chunk.js.map": "/ECE_Outreach_Website/static/js/2.1aca6d76.chunk.js.map",
     "index.html": "/ECE_Outreach_Website/index.html",
-    "static/css/main.70abf635.chunk.css.map": "/ECE_Outreach_Website/static/css/main.70abf635.chunk.css.map",
+    "static/css/main.042d7d5a.chunk.css.map": "/ECE_Outreach_Website/static/css/main.042d7d5a.chunk.css.map",
     "static/js/2.1aca6d76.chunk.js.LICENSE.txt": "/ECE_Outreach_Website/static/js/2.1aca6d76.chunk.js.LICENSE.txt",
     "static/media/App.css": "/ECE_Outreach_Website/static/media/latinmodern-math.ba2af738.otf"
   },
   "entrypoints": [
     "static/js/runtime-main.09697835.js",
     "static/js/2.1aca6d76.chunk.js",
-    "static/css/main.70abf635.chunk.css",
-    "static/js/main.59959a84.chunk.js"
+    "static/css/main.042d7d5a.chunk.css",
+    "static/js/main.0db1f7f4.chunk.js"
   ]
 }
