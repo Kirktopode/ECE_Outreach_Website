@@ -206,13 +206,18 @@
     position: absolute;
     width: 56.5em;
     top: 0;
-    left: 0;
+    transform: translate(0, -27em);
 
     visibility: hidden;
-    transform: translate(0, -27em);
 
     transition: 0.1s;
     transition-delay: 0s;
+}
+.card_scroll_browser>div:nth-child(2n+1) .card_dropdown_content_align {
+    left: 0;
+}
+.card_scroll_browser>div:nth-child(2n) .card_dropdown_content_align {
+    right: 0;
 }
 .card_dropdown.open .card_dropdown_content_align {
     visibility: visible;
@@ -230,11 +235,16 @@
 
 .card_dropdown_content_obscure {
     overflow-y: hidden;
-    left: 5.5em;
     width: 60em;
     position: absolute;
     top: 7.2em;
     height: 30em;
+}
+.card_scroll_browser>div:nth-child(2n+1) .card_dropdown_content_obscure {
+    left: 5.5em;
+}
+.card_scroll_browser>div:nth-child(2n) .card_dropdown_content_obscure {
+    right: 5.5em;
 }
 
 .card_wrapper {
