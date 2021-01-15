@@ -268,14 +268,23 @@
     transition: 0.4s;
     transition-delay: 0.8s;
 }
+.card_wrapper.open {
+    margin-bottom: 30em;
+}
 .card_scroll_browser>div:not(:last-child) .card_wrapper::after {
     position: absolute;
-    bottom: -1.25em;
+    bottom: 0;
     width: 98%;
     left: 1%;
     background-color: #888;
     height: 1px;
     content: "";
+    transition: 0.4s;
+    transition-delay: 0.8s;
+}
+
+.card_scroll_browser>div:not(:last-child) .card_wrapper.open::after {
+    bottom: -26em;
 }
 
 .card_title {
