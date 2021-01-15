@@ -260,7 +260,7 @@
     transition: 0.4s;
     transition-delay: 0.8s;
 }
-.card_wrapper::after {
+.card_scroll_browser>div:not(:last-child) .card_wrapper::after {
     position: absolute;
     bottom: -1.25em;
     width: 98%;
