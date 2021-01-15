@@ -26,47 +26,29 @@ class Dropdown extends React.Component {
 	    })[0];
     }
     render() {
-	if(this.props.mode === "hover") {
-	    return React.cloneElement(
-		this.dropdown,
-		this.props,
-		this.dropdown.props.children);
-	} else if(this.props.mode === "expand") {
-	    let folded = this.props.folded === "true";
-	    return (<>
-			<div className={"card_dropdown" + (folded ? " folded" : "")}>
-			    <div className={"card_title_wrapper" + (folded ? " folded" : "")}>
-				<div className={"card_title_mover" + (folded ? " folded" : "")}>
-				    <p>
-					{this.label}
-				    </p>
-				</div>
-			    </div>
-			    {React.cloneElement(
-				this.dropdown,
-				this.props,
-				this.dropdown.props.children)}
+	let folded = this.props.folded === "true";
+	return (<div className={"card_dropdown " + (folded ? "folded " : " ") + this.props.className}
+		     style={this.props.style}
+		     onClick={this.props.onClick}>
+		    {React.cloneElement(this.dropdown,
+					{className: this.props.className.split(" ").includes("breathing") ? "breathing" : ""},
+					{})}
+		    {/*<div className={"card_title_wrapper" + (folded ? " folded" : "")}>
+			<div className={"card_title_mover" + (folded ? " folded" : "")} style={{visibility: "hidden"}}>
+			    <p>
+				{this.label}
+			    </p>
 			</div>
-			<div className={"card_dropdown" + (folded ? " folded" : "")}
-			     style={{"zIndex": "2"}}>
-			    <div className={"card_title_wrapper" + (folded ? " folded" : "")}>
-				<div className={"card_title_mover" + (folded ? " folded" : "")} style={{visibility: "hidden"}}>
-				    <p>
-					{this.label /* phantom for alignment */}
-				    </p>
-				</div>
-				<div className={"card_dropdown_mover" + (folded ? " folded" : "")}>
-				    <div className={"card_dropdown_content_wrapper" + (folded ? " folded" : "")}>
-					<div className={"card_dropdown_content" + (folded ? " folded" : "")}>
-					    {this.content}
-					</div>
-				    </div>
+			<div className={"card_dropdown_mover" + (folded ? " folded" : "")}>
+			    <div className={"card_dropdown_content_wrapper" + (folded ? " folded" : "")}>
+				<div className={"card_dropdown_content" + (folded ? " folded" : "")}>
+				    {this.content}
 				</div>
 			    </div>
 			</div>
-		    </>
-		   );
-	}
+			</div>*/}
+		</div>
+	       );
     }
 }
 

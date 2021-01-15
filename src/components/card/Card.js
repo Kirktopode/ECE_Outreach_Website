@@ -103,7 +103,7 @@ class Card extends React.Component {
 	    this.hover_elements[i] = React.cloneElement(this.dropdown_elements[i], {
 		style: {"--angle": angle + "deg"},
 		onClick:() => this.setState({open: i}),
-		mode: "hover"}, this.dropdown_elements[i].props.children);
+		}, this.dropdown_elements[i].props.children);
 	}
     }
 
@@ -123,16 +123,16 @@ class Card extends React.Component {
 			) : (
 			    -1-i+this.state.open
 			)) + "deg"},
-		className: ("hover " + (this.state.hovering ? " hovering " : "")
-			    + (this.state.open !== i ? " breathing" : "")
-			    + (this.state.open !== null ? " open" : "")),
+		className: ((this.state.open !== i ? "breathing " : "")
+			    + (this.state.open !== null ? "open" : "")),
 	    }, this.hover_elements[i].props.children);
 	}
 	let center = React.cloneElement(this.center, {
 	    className: ("card_center " + (this.state.hovering ? "" : "breathing"))
 	}, this.center.props.children);
+	console.log(hover_elements);
 	return (
-	    <div id={this.props.id} className="RE">
+	    <div id={this.props.id}>
             <TrackVisibility>
 		{({ isVisible }) => {
 		    if(isVisible && this.state.hovering !== true) {
@@ -142,8 +142,7 @@ class Card extends React.Component {
 			this.setState({hovering: false});
 			this.setState({open: null});
 		    }
-		    return (<div
-				 className="card_wrapper"
+		    return (<div className="card_wrapper"
 				 onMouseLeave={() => {
 				     if(this.state.hover_override) {
 					 this.setState({hover_override: false});
