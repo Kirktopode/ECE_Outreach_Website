@@ -21,6 +21,7 @@ export class Gallery extends Component {
               <Card src="spark"/>
               <Card src="levitating_led"/>
               <Card src="tesla_coil"/>
+              <Card src="filters"/>
             </CardScroll>
           </div>
         </div>
