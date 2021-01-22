@@ -54,8 +54,6 @@ class Card extends React.Component {
 	super(props);
 	this.ref = React.createRef();
 	this.state = {
-	    hovering: false,
-	    hover_override: false,
 	    open: null,
 	    id: this.props.id,
 	};
@@ -99,6 +97,9 @@ class Card extends React.Component {
 		else
 		    return !child.props.children
 	    })[0];
+	this.center = React.cloneElement(this.center, {
+	    className: "card_center"
+	}, this.center.props.children);
 
 	this.hover_elements = [];
 	for(let i=0; i<this.dropdown_elements.length; ++i) {
@@ -144,38 +145,20 @@ class Card extends React.Component {
 			    + (this.state.open === i ? "open" : "")),
 	    }, this.hover_elements[i].props.children);
 	}
-	let center = React.cloneElement(this.center, {
-	    className: ("card_center " + (this.state.hovering ? "" : "breathing"))
-	}, this.center.props.children);
 	return (
 	    <div id={this.state.id}>
             <TrackVisibility>
 		{({ isVisible }) => {
-		    if(isVisible && this.state.hovering !== true) {
-		    	this.setState({hovering: true});
-		    }
-		    if(!isVisible && this.state.hovering === true && !this.state.hover_override) {
-			this.setState({hovering: false});
+		    if(!isVisible && this.state.open !== null) {
 			this.setState({open: null});
+
+			console.log("closed");
 		    }
 		    return (<div ref={this.ref}
 				 className={"card_wrapper" +
-					    (this.state.open !== null ? " open" : "")}
-				 onMouseLeave={() => {
-				     if(this.state.hover_override) {
-					 this.setState({hover_override: false});
-				     }
-				 }}
-				 onMouseEnter={() => {
-				     if(!this.state.hovering) {
-					 this.setState({hovering: true});
-				     }
-				    if(!this.state.hover_override) {
-					this.setState({hover_override: true});
-				    }
-				}}>
+					    (this.state.open !== null ? " open" : "")}>
 				<div className="card">
-				    {center}
+				    {this.center}
 				    {hover_elements}
 				</div>
 				<div className="card_title">
