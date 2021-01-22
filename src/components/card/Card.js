@@ -55,6 +55,7 @@ class Card extends React.Component {
 	this.ref = React.createRef();
 	this.state = {
 	    open: null,
+	    opening_wait: false,
 	    id: this.props.id,
 	};
 	// first check if we need to load JSON or if inline is okay
@@ -116,9 +117,10 @@ class Card extends React.Component {
 			behavior: 'smooth'
 		    });
 		    
+		    this.setState({opening_wait: true});
 		    this.setState({open: i});
 		},
-		}, this.dropdown_elements[i].props.children);
+	    }, this.dropdown_elements[i].props.children);
 	}
     }
 
@@ -147,42 +149,47 @@ class Card extends React.Component {
 	}
 	return (
 	    <div id={this.state.id}>
-            <TrackVisibility>
-		{({ isVisible }) => {
-		    if(!isVisible && this.state.open !== null) {
-			this.setState({open: null});
+		<TrackVisibility>
+		    {({ isVisible }) => {
+			if(!isVisible && this.state.open !== null && this.state.opening_wait === false) {
+			    this.setState({open: null});
 
-			if(this.ref.current.getBoundingClientRect().top - CardScroll.topbar_offset < 0) {
-			    // currently below the element about to retract, correct so scrolling isn't thrown off
-			    let font_size = parseFloat(getComputedStyle(this.ref.current).fontSize);
-			    setTimeout(() =>
-				window.scrollBy({
-				    top: -font_size*35,
-				    left: 0,
-				    behavior : "smooth"
-				}), 900)
+			    if(this.ref.current.getBoundingClientRect().top - CardScroll.topbar_offset < 0 ) {
+				// currently below the element about to retract, correct so scrolling isn't thrown off
+				let font_size = parseFloat(getComputedStyle(this.ref.current).fontSize);
+				setTimeout(() =>
+				    window.scrollBy({
+					top: -font_size*35,
+					left: 0,
+					behavior : "smooth"
+				    }), 900);
+			    }
 			}
-		    }
-		    return (<div ref={this.ref}
-				 className={"card_wrapper" +
-					    (this.state.open !== null ? " open" : "")}>
-				<div className="card">
-				    {this.center}
-				    {hover_elements}
-				</div>
-				<div className="card_title">
-				    {this.title}
-				</div>
-				<div className="card_description">
-				    {this.description}
-				    <a href={process.env.PUBLIC_URL + "/projects/" + this.props.src.split('/').pop()}
-				       className="card_reader_link breathing subtle">
-					Read Further
-				    </a>
-				</div>
-			    </div>);
-		}}
-	    </TrackVisibility>
+			if(isVisible && this.state.opening_wait === true) {
+			    setTimeout(() =>
+				this.setState({opening_wait: false}),
+				100);
+			}
+			return (<div ref={this.ref}
+				     className={"card_wrapper" +
+						(this.state.open !== null ? " open" : "")}>
+				    <div className="card">
+					{this.center}
+					{hover_elements}
+				    </div>
+				    <div className="card_title">
+					{this.title}
+				    </div>
+				    <div className="card_description">
+					{this.description}
+					<a href={process.env.PUBLIC_URL + "/projects/" + this.props.src.split('/').pop()}
+					   className="card_reader_link breathing subtle">
+					    Read Further
+					</a>
+				    </div>
+				</div>);
+		    }}
+		</TrackVisibility>
 	    </div>);
     }
 }
