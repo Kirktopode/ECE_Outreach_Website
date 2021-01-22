@@ -1,0 +1,21 @@
+[center]
+title="Levitating LED"
+description="This is a student designed and built device that levitates and powers an LED using the principles of electromagnetics. We have used this demonstration many times to teach concepts in analog circuits."
+src="center.gif"
+alt="LED"
+main_page="main.html"
+
+[[dropdown]]
+icon="lightbulb"
+label="Applicable Areas"
+content="areas.html"
+
+[[dropdown]]
+icon="classroom"
+label="Lesson Points"
+content="lessons.html"
+
+[[dropdown]]
+icon="math"
+label="Math"
+content="math.html"
