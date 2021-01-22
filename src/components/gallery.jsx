@@ -20,6 +20,7 @@ export class Gallery extends Component {
               <Card src="solar_cars"/>
               <Card src="spark"/>
               <Card src="levitating_led"/>
+              <Card src="tesla_coil"/>
             </CardScroll>
           </div>
         </div>

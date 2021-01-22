@@ -1,0 +1,21 @@
+[center]
+title="Tesla Coil"
+description="The goal of this project is to be able to present a demonstration that engages students and gets them interested in topics related to tesla coils. By using a tesla coil as a demonstration we can create lesson plans around inductors, transformers, and wireless energy."
+src="center.gif"
+alt="TESLA"
+main_page="main.html"
+
+[[dropdown]]
+icon="math"
+label="Math"
+content="math.html"
+
+[[dropdown]]
+icon="lightbulb"
+label="Applicable Areas"
+content="areas.html"
+
+[[dropdown]]
+icon="classroom"
+label="Lesson Points"
+content="lessons.html"
