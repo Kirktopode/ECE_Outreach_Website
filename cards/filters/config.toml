@@ -1,0 +1,21 @@
+[center]
+title="Filters"
+description="The filters project will show students how high pass, low pass filters work. Showing how an input signal changes at the output of the filters as the frequency changes."
+src="center.png"
+alt="Filter"
+main_page="main.html"
+
+[[dropdown]]
+icon="lightbulb"
+label="Applicable Areas"
+content="areas.html"
+
+[[dropdown]]
+icon="classroom"
+label="Key Lesson Points"
+content="lessons.html"
+
+[[dropdown]]
+icon="globe"
+label="Applications in Electronics"
+content="news.html"
