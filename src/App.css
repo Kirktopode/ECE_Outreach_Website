@@ -250,7 +250,20 @@
     background: #ddd;
     color: #888;
     border-radius: 0 0 4em 4em;
-    padding: 0.75em;
+    padding: 2em;
+    text-align: left;
+}
+.card_dropdown_content ul {
+    list-style: square; padding-left: 2em;
+}
+.card_dropdown_content .equation {
+    font-size:2em;
+    font-family: 'Latin Modern Math';
+    font-weight:600;
+}
+.card_dropdown_content p.equation {
+    padding-left:10%;
+    margin-bottom:0;
 }
 
 .card_dropdown_content_obscure {

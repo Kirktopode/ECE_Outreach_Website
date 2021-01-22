@@ -1,28 +1,21 @@
 [center]
-src="center.png"
-alt="Spark"
+title="Capacitor Spark Demo"
+description="Capacitors are an essential component to nearly all the devices you use every day. This demonstration is a great way to grab the attention of an audience and shows the energy storage capability of capacitors."
+src="center.gif"
+alt="Capacitor Demo"
+main_page="main.html"
 
 [[dropdown]]
 icon="lightbulb"
-label="Key Concepts"
-content="concepts.html"
+label="Applicable Areas"
+content="areas.html"
 
 [[dropdown]]
 icon="math"
-label="Math Ideas"
+label="Relevant Equations"
 content="math.html"
 
 [[dropdown]]
 icon="globe"
-label="History of the Project"
-content="history.html"
-
-[[dropdown]]
-icon="newspaper"
-label="News"
-content="news.html"
-
-[[dropdown]]
-icon="classroom"
-label="Lessons"
-content="lessons.html"
+label="Applications in Industry"
+content="industry.html"
