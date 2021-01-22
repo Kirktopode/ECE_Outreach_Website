@@ -152,7 +152,16 @@ class Card extends React.Component {
 		    if(!isVisible && this.state.open !== null) {
 			this.setState({open: null});
 
-			console.log("closed");
+			if(this.ref.current.getBoundingClientRect().top - CardScroll.topbar_offset < 0) {
+			    // currently below the element about to retract, correct so scrolling isn't thrown off
+			    let font_size = parseFloat(getComputedStyle(this.ref.current).fontSize);
+			    setTimeout(() =>
+				window.scrollBy({
+				    top: -font_size*35,
+				    left: 0,
+				    behavior : "smooth"
+				}), 900)
+			}
 		    }
 		    return (<div ref={this.ref}
 				 className={"card_wrapper" +
