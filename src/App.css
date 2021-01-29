@@ -249,15 +249,16 @@
 .card_dropdown_content {
     background: #ddd;
     color: #888;
-    border-radius: 0 0 4em 4em;
-    padding: 2em;
+    border-radius: 0 0 2em 2em;
+    padding: 1em;
     text-align: left;
+    font-size: 1.5em;
 }
 .card_dropdown_content ul {
     list-style: square; padding-left: 2em;
 }
 .card_dropdown_content .equation {
-    font-size:2em;
+    font-size:1.1em;
     font-family: 'Latin Modern Math';
     font-weight:600;
 }
@@ -358,19 +359,19 @@
 .card_description {
     min-width: 10em;
     padding: 0.3em 0.75em 0.3em 0.75em; /* top right bottom left */
-    font-size: 1em;
+    font-size: 1.6em;
     color: #111;
     text-align: justify;
-    top: 16em;
+    top: 10em;
     position: absolute;
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_description {
-    left: 29em;
-    right: 5em;
+    left: 16em;
+    right: 2em;
 }
 .card_scroll_browser>div:nth-child(2n) .card_description {
-    right: 29em;
-    left: 5em;
+    right: 16em;
+    left: 2em;
 }
 
 .portfolio-items, .portfolio-cards {
