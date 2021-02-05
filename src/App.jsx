@@ -42,15 +42,15 @@ export class App extends Component {
                   {/* <Features data={this.state.landingPageData.Features} /> */}
                   <Contact data={this.state.landingPageData.Contact} />
                 </Route>
-                <Route path={process.env.PUBLIC_URL + "/about"}>
-                  <Header data={this.state.landingPageData.Header} />
-                  <About data={this.state.landingPageData.About} />
-                </Route>
                 <Route path={process.env.PUBLIC_URL + "/projects"}>
                   <Projects />
                 </Route>
-                {/* <Redirect from={process.env.PUBLIC_URL + "(/?)"} */}
-                          {/* to={process.env.PUBLIC_URL + "/about"} /> */}
+                <Route path={process.env.PUBLIC_URL + "(/?)"}>
+                  <Header data={this.state.landingPageData.Header} />
+                  <About data={this.state.landingPageData.About} />
+                </Route>
+                {/* <Redirect from={process.env.PUBLIC_URL + "(/?)"}
+                  to={process.env.PUBLIC_URL + "/about"} /> */}
               </Switch>
             </Router>
         );
