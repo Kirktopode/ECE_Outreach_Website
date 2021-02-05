@@ -1,13 +1,20 @@
 import React, { Component } from 'react'
+import {
+    Redirect,
+} from "react-router-dom"
 
 export class about extends Component {
 
   componentDidMount() {
-    if (window.location.href.indexOf("?/") !== -1)
-      window.location.replace(window.location.href.replace("?/",""))
+    // if (window.location.href.indexOf("?/") !== -1)
+    //   window.location.replace(window.location.href.replace("?/",""))
   }
 
   render() {
+    if (window.location.href.indexOf("?/") !== -1)
+      return (
+        <Redirect to={process.env.PUBLIC_URL + "/" + window.location.href.split("/")[-1]} />
+      )
     return (
         <div id="about">
         <div className="container">
