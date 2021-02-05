@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 
 export class about extends Component {
+
+  componentDidMount() {
+    if (window.location.href.indexOf("?/") !== -1)
+      window.location.replace(window.location.href.replace("?/",""))
+  }
+
   render() {
     return (
         <div id="about">
