@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/ECE_Outreach_Website/static/css/main.5aafcffd.chunk.css",
-    "main.js": "/ECE_Outreach_Website/static/js/main.7155ddae.chunk.js",
-    "main.js.map": "/ECE_Outreach_Website/static/js/main.7155ddae.chunk.js.map",
+    "main.css": "/ECE_Outreach_Website/static/css/main.02e03ed1.chunk.css",
+    "main.js": "/ECE_Outreach_Website/static/js/main.2d9c79a7.chunk.js",
+    "main.js.map": "/ECE_Outreach_Website/static/js/main.2d9c79a7.chunk.js.map",
     "runtime-main.js": "/ECE_Outreach_Website/static/js/runtime-main.09697835.js",
     "runtime-main.js.map": "/ECE_Outreach_Website/static/js/runtime-main.09697835.js.map",
-    "static/js/2.bf6c23e2.chunk.js": "/ECE_Outreach_Website/static/js/2.bf6c23e2.chunk.js",
-    "static/js/2.bf6c23e2.chunk.js.map": "/ECE_Outreach_Website/static/js/2.bf6c23e2.chunk.js.map",
+    "static/js/2.8536d7b7.chunk.js": "/ECE_Outreach_Website/static/js/2.8536d7b7.chunk.js",
+    "static/js/2.8536d7b7.chunk.js.map": "/ECE_Outreach_Website/static/js/2.8536d7b7.chunk.js.map",
     "index.html": "/ECE_Outreach_Website/index.html",
-    "static/css/main.5aafcffd.chunk.css.map": "/ECE_Outreach_Website/static/css/main.5aafcffd.chunk.css.map",
-    "static/js/2.bf6c23e2.chunk.js.LICENSE.txt": "/ECE_Outreach_Website/static/js/2.bf6c23e2.chunk.js.LICENSE.txt",
+    "static/css/main.02e03ed1.chunk.css.map": "/ECE_Outreach_Website/static/css/main.02e03ed1.chunk.css.map",
+    "static/js/2.8536d7b7.chunk.js.LICENSE.txt": "/ECE_Outreach_Website/static/js/2.8536d7b7.chunk.js.LICENSE.txt",
     "static/media/App.css": "/ECE_Outreach_Website/static/media/latinmodern-math.ba2af738.otf"
   },
   "entrypoints": [
     "static/js/runtime-main.09697835.js",
-    "static/js/2.bf6c23e2.chunk.js",
-    "static/css/main.5aafcffd.chunk.css",
-    "static/js/main.7155ddae.chunk.js"
+    "static/js/2.8536d7b7.chunk.js",
+    "static/css/main.02e03ed1.chunk.css",
+    "static/js/main.2d9c79a7.chunk.js"
   ]
 }
