@@ -8,7 +8,7 @@ export class Gallery extends Component {
       <div id="portfolio" className="text-center">
         <div className="container">
           <div className="section-title">
-            <h2>Gallery</h2>
+            <h2>What We Do</h2>
             <p>
               These are the projects that our team has developed for teaching your students.
               Some of these are meant to be hands-on workshops, others are flashy demonstrations,

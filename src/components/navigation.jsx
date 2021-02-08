@@ -38,7 +38,7 @@ export class Navigation extends Component {
               </li>
               <li>
                 <Link to={process.env.PUBLIC_URL + "/gallery"} className="page-scroll">
-                  Gallery
+                  Projects
                 </Link>
               </li>
               <li>

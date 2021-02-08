@@ -293,6 +293,8 @@
     position: relative;
     transition: 0.4s;
     transition-delay: 0.8s;
+    background: #eee;
+    border-radius: 3em;
 }
 .card_wrapper.open {
     margin-bottom: 35em;
@@ -302,20 +304,6 @@
 }
 .card_scroll_browser>div:last-child .card_wrapper.open {
     margin-bottom: 35em;
-}
-.card_scroll_browser>div:not(:last-child) .card_wrapper::after {
-    position: absolute;
-    bottom: 0;
-    width: 98%;
-    left: 1%;
-    background-color: #888;
-    height: 1px;
-    content: "";
-    transition: 0.4s;
-    transition-delay: 0.8s;
-}
-.card_scroll_browser>div:not(:last-child) .card_wrapper.open::after {
-    bottom: -31em;
 }
 
 .card_title {

@@ -1,69 +1,21 @@
 # ECE Outreach Site
 
 <a href="https://kirktopode.github.io/ECE_Outreach_Website/">Preview Site</a>
-## Cards
-Extensive work has gone into making cards easy to work with. They are currently configured
-using TOML (can be made to work with JSON super easily). The recommended card directory
-structure is as follows:  
+
+## Adding Team Member Info
+In `src/data/data.json`, team members are declared. See the `"Team"` array for examples and adding new info. Images are stored in `public/img/team`. Everything should work automatically.
+
+## Adding/Revising Projects
+Projects are stored in `public/cards`. Each project has its own directory with the following structure:
 ```
 public
-└─card_dir
+└─PROJECT_NAME
   ├─config.toml
-  ├─center.jpg
-  ├─dropdown_ideas.html
-  ├─dropdown_lessons.html
-  └─dropdown_news.html
+  ├─CENTER_IMAGE
+  └─DROPDOWN.html
 ```
-These should be put in the `public` folder of the react app. Here is a minimal example
-of how to use a card with the above directory structure:  
-```jsx
-import React from 'react';
-import Card from './Card.js';
-import './App.css';
+where `PROJECT_NAME` is a given project, `CENTER_IMAGE` is any web-compatible simple image file (png, jpg, gif, etc), and `DROPDOWN.html` is a *set* of files that provide content for each dropdown.
 
-function App() {
-    return (
-	<div className="App">
-	    <header className="App-header">
-			<Card src="./card_dir" />
-	    </header>
-	</div>
-    );
-}
+To set up, reference existing `config.toml` files. An important note is that `[[dropdown]]` items link to `DROPDOWN.html` files, which are defined in the same directory.
 
-export default App;
-```
-Once compiled, the `<Card>` tag will fetch the `card_dir/config.toml` file and parse its
-contents, fetching additional files as required.  
-
-What follows is a sample `config.toml` that references the above directory structure:  
-```toml
-[center]
-src="center.jpg"
-alt="CardName"
-
-[[dropdown]]
-icon="lightbulb"
-label="Ideas"
-content="dropdown_ideas.html"
-
-[[dropdown]]
-icon="classroom"
-label="Lessons"
-content="dropdown_lessons.html"
-
-[[dropdown]]
-icon="newspaper"
-label="News"
-content="dropdown_news.html"
-```
-
-The contents of `dropdown_*.html` above will be literally copy-pasted into the card dropdown
-box.  
-
-Available values for `icon` are:  
-- `lightbulb`
-- `math`
-- `globe`
-- `newspaper`
-- `classroom`
+**Note:** to make projects go live, edit `src/components/gallary.jsx`, adding a new `Card` tag with the name of the card.
