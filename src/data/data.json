@@ -172,6 +172,12 @@
             "name": "Kendra Ott",
             "job": "Sophomore",
             "description": ""
+        },
+        {
+            "img": "img/team/naser_moin.jpg",
+            "name": "Naser Moin",
+            "job": "Sophomore",
+            "description": "I am a second year undergraduate in computer engineering. My interests include software and digital systems, as well as the physics of electrical circuits. I also have a passion for teaching others, which is why I joined CSU's ECE Outreach team."
         }
     ],
     "Contact": {
