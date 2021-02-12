@@ -5,7 +5,7 @@ import CardScroll from "./card/CardScroll";
 export class Gallery extends Component {
   render() {
     return (
-      <div id="portfolio" className="text-center">
+        <div id="portfolio" className="text-center" style={{"padding-bottom": "0"}}>
         <div className="container">
           <div className="section-title">
             <h2>What We Do</h2>

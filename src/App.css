@@ -287,9 +287,10 @@
 }
 
 .card_wrapper {
+    --base-height: 33em;
     font-family: Bahnschrift;
     font-size: 0.6em;
-    height: 32em;
+    height: var(--base-height);
     position: relative;
     margin-bottom: 4em;
     position: relative;
@@ -297,15 +298,6 @@
     transition-delay: 0.8s;
     background: #eee;
     border-radius: 3em;
-}
-.card_wrapper.open {
-    margin-bottom: 35em;
-}
-.card_scroll_browser>div:last-child .card_wrapper {
-    margin-bottom: 20em;
-}
-.card_scroll_browser>div:last-child .card_wrapper.open {
-    margin-bottom: 35em;
 }
 
 .card_title {

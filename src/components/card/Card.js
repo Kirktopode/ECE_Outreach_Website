@@ -50,6 +50,7 @@ function getCardItem(cardTitle, path) {
 class Card extends React.Component {
     static degmin = -50; // how far the hover elements move out of the way
     static degmax = -220;
+    static actual_baseheight_em = 33;
     constructor(props) {
 	super(props);
 	this.ref = React.createRef();
@@ -172,7 +173,14 @@ class Card extends React.Component {
 			}
 			return (<div ref={this.ref}
 				     className={"card_wrapper" +
-						(this.state.open !== null ? " open" : "")}>
+						(this.state.open !== null ? " open" : "")}
+				     style={{"--base-height": (
+					 Card.actual_baseheight_em +
+					  (this.state.open !== null ?
+					      35
+					   : 0)
+					     + "em"
+				     )}}>
 				    <div className="card">
 					{this.center}
 					{hover_elements}
