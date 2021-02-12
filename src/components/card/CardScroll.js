@@ -77,6 +77,9 @@ class CardScroll extends React.Component {
 			     )}
 			</ul>
 		    </div>
+		    <div className="stickwrap_legend">
+			LEGEND HERE
+		    </div>
 		</div>
 		<div className="card_scroll_browser">
 		    {this.children.map((child, i) =>

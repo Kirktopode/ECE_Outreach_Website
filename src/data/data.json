@@ -135,13 +135,19 @@
             "img": "img/team/devin_pohl.jpg",
             "name": "Devin Pohl",
             "job": "Junior",
-            "description": "I am a junior in Computer Engineering and lead Outreach's Digital/Programming team. I <i>really</i> like programming, regularly contributing to open source projects."
+            "description": "I am a junior in Computer Engineering and lead Outreach's Digital/Programming team. I 𝘳𝘦𝘢𝘭𝘭𝘺 like programming, regularly contributing to open source projects."
         },
         {
             "img": "img/team/no_image.png",
             "name": "Jacklyn Moore",
             "job": "Junior",
             "description": ""
+        },
+        {
+            "img": "img/team/kendra_ott.jpg",
+            "name": "Kendra Ott",
+            "job": "Junior",
+            "description": "I'm a Junior in Computer Engineering and I lead the math team. I love programming and am interested in firmware. "
         },
         {
             "img": "img/team/kori_eliaz.jpg",
@@ -164,12 +170,6 @@
         {
             "img": "img/team/no_image.png",
             "name": "Ethan Schultz",
-            "job": "Sophomore",
-            "description": ""
-        },
-        {
-            "img": "img/team/no_image.png",
-            "name": "Kendra Ott",
             "job": "Sophomore",
             "description": ""
         },

@@ -23,6 +23,8 @@
 * { /* TODO */
     --csu-green: green;
     --csu-gold: gold;
+
+    --header-height: calc(15px + 1px + 20px + 50px)
 }
 
 .App-header {
@@ -381,7 +383,7 @@
 
 .card_scroll_stickwrap {
     position: sticky;
-    top: calc(15px + 1px + 20px + 50px); /* calculated from topbar */
+    top: var(--header-height); /* calculated from topbar */
 }
 
 .card_scroll_align {
@@ -394,7 +396,20 @@
     background: lightgray;
     color: #666;
     border-radius: 0 0 1.5em 1.5em;
-    min-height: 30em;
+    height: calc((100vh - 2em - var(--header-height)) / 2);
+    overflow-y: scroll;
+}
+.stickwrap_legend {
+    list-style: none;
+    font-size: 1em;
+    width: 90%;
+    background: lightgray;
+    color: #666;
+    border-radius: 0 0 1.5em 1.5em;
+    overflow-y: scroll;
+    position: sticky;
+    height: calc((100vh - 2em - var(--header-height)) / 2);
+    top: calc((100vh - 2em - var(--header-height)) / 2 + 2em + var(--header-height));
 }
 
 .card_scroll_entry {
@@ -430,6 +445,7 @@
 }
 
 .card_scroll_title {
+    height: 2em;
     text-align: left;
     background: grey;
     color: #eee;
