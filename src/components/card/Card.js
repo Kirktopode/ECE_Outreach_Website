@@ -58,6 +58,7 @@ class Card extends React.Component {
 	    open: null,
 	    opening_wait: false,
 	    id: this.props.id,
+	    clientHeight: [],
 	};
 	// first check if we need to load JSON or if inline is okay
 	let children;
@@ -128,6 +129,12 @@ class Card extends React.Component {
     calc_hover_angle(index) {
 	return Card.degmin + (Card.degmax-Card.degmin)/(this.dropdown_elements.length-1)*index;
     }
+
+    componentDidMount() {
+	this.setState({clientHeight:
+		       [...this.ref.current.querySelectorAll('.card_dropdown_content')]
+			.map(e => e.clientHeight)});
+    }
     
     render() {
 	if(!this.dropdown_elements)
@@ -153,18 +160,18 @@ class Card extends React.Component {
 		<TrackVisibility>
 		    {({ isVisible }) => {
 			if(!isVisible && this.state.open !== null && this.state.opening_wait === false) {
-			    this.setState({open: null});
-
 			    if(this.ref.current.getBoundingClientRect().top - CardScroll.topbar_offset < 0 ) {
 				// currently below the element about to retract, correct so scrolling isn't thrown off
-				let font_size = parseFloat(getComputedStyle(this.ref.current).fontSize);
+				let scroll_offset = this.state.clientHeight[this.state.open]+10;
 				setTimeout(() =>
 				    window.scrollBy({
-					top: -font_size*35,
+					top: -scroll_offset,
 					left: 0,
 					behavior : "smooth"
 				    }), 900);
 			    }
+			    
+			    this.setState({open: null});
 			}
 			if(isVisible && this.state.opening_wait === true) {
 			    setTimeout(() =>
@@ -174,13 +181,14 @@ class Card extends React.Component {
 			return (<div ref={this.ref}
 				     className={"card_wrapper" +
 						(this.state.open !== null ? " open" : "")}
-				     style={{"--base-height": (
-					 Card.actual_baseheight_em +
-					  (this.state.open !== null ?
-					      35
-					   : 0)
-					     + "em"
-				     )}}>
+				     style={{"--base-height": ("calc(" + 
+							       Card.actual_baseheight_em + "em + " +
+							       (this.state.open !== null ?
+								this.state.clientHeight[this.state.open]
+								+ 10 // a little extra padding to make things look nice
+								: 0)
+							       + "px)"
+							      )}}>
 				    <div className="card">
 					{this.center}
 					{hover_elements}
