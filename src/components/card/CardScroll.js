@@ -82,10 +82,10 @@ class CardScroll extends React.Component {
 			</ul>
 		    </div>
 		    <div className="stickwrap_legend">
-			<h3>
+			<div className="card_scroll_title">
 			    Legend
-			</h3>
-			<ul className="legend_ul">
+			</div>
+			<ul className="legend_ul card_scroll_designator">
 			    <li style={{"--url": `url(${lookupIconPath("lightbulb")})`}}>
 				Applicable Areas
 			    </li>

@@ -393,24 +393,18 @@
     overflow-y: scroll;
 }
 .stickwrap_legend {
-    list-style: none;
-    font-size: 1em;
-    width: 90%;
-    background: lightgray;
-    color: #666;
-    border-radius: 0 0 1.5em 1.5em;
-    overflow-y: scroll;
     position: sticky;
     height: calc((100vh - 2em - var(--header-height)) / 2 - 2em);
     top: calc((100vh - 2em - var(--header-height)) / 2 + 3em + var(--header-height));
 }
 .legend_ul {
-    float: left;
     list-style: none;
-    margin-left: 1.8em;
 }
 .legend_ul li {
+    margin-left: 1em;
+    padding-top: 0.5em;
     color: #333;
+    float: left;
 }
 .legend_ul li::before {
     content: "";
