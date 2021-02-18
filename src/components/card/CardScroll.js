@@ -1,5 +1,9 @@
 import React from 'react';
+import Icon from './Icon.js';
 
+function lookupIconPath(name) {
+    return process.env.PUBLIC_URL+'/card_floats/'+name + ".png";
+}
 
 class CardScroll extends React.Component {
     static topbar_offset = 100;
@@ -78,7 +82,26 @@ class CardScroll extends React.Component {
 			</ul>
 		    </div>
 		    <div className="stickwrap_legend">
-			LEGEND HERE
+			<h3>
+			    Legend
+			</h3>
+			<ul className="legend_ul">
+			    <li style={{"--url": `url(${lookupIconPath("lightbulb")})`}}>
+				Applicable Areas
+			    </li>
+			    <li style={{"--url": `url(${lookupIconPath("globe")})`}}>
+				Applications
+			    </li>
+			    <li style={{"--url": `url(${lookupIconPath("classroom")})`}}>
+				Lesson Points
+			    </li>
+			    <li style={{"--url": `url(${lookupIconPath("math")})`}}>
+				Math
+			    </li>
+			    <li style={{"--url": `url(${lookupIconPath("newspaper")})`}}>
+				News
+			    </li>
+			</ul>
 		    </div>
 		</div>
 		<div className="card_scroll_browser">

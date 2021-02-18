@@ -404,6 +404,27 @@
     height: calc((100vh - 2em - var(--header-height)) / 2 - 2em);
     top: calc((100vh - 2em - var(--header-height)) / 2 + 3em + var(--header-height));
 }
+.legend_ul {
+    float: left;
+    list-style: none;
+    margin-left: 1.8em;
+}
+.legend_ul li {
+    color: #333;
+}
+.legend_ul li::before {
+    content: "";
+    border-radius: 1.5em;
+    background: var(--csu-green);
+    background-image: var(--url);
+    background-size: contain;
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    position: relative;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
 
 .card_scroll_entry {
     text-align: left;
