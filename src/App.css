@@ -389,13 +389,13 @@
     background: lightgray;
     color: #666;
     border-radius: 0 0 1.5em 1.5em;
-    height: calc((100vh - 2em - var(--header-height)) / 2 - 2em);
+    height: calc((100vh - 2 * 1.75em - var(--header-height)) / 2 - 1.75em);
     overflow-y: scroll;
 }
 .stickwrap_legend {
     position: sticky;
-    height: calc((100vh - 2em - var(--header-height)) / 2 - 2em);
-    top: calc((100vh - 2em - var(--header-height)) / 2 + 3em + var(--header-height));
+    height: calc((100vh - 2 * 1.75em - var(--header-height)) / 2 - 1.75em);
+    top: calc((100vh - 2 * 1.75em - var(--header-height)) / 2 + 2em + var(--header-height));
 }
 .legend_ul {
     list-style: none;
@@ -453,11 +453,11 @@
 }
 
 .card_scroll_title {
-    height: 2em;
+    height: 1.75em;
     text-align: left;
     background: grey;
     color: #eee;
-    font-size: 2em;
+    font-size: 1.75em;
     padding-left: calc(95% * 0.1);
     padding-top: 0.15em;
     padding-bottom: 0.15em;
