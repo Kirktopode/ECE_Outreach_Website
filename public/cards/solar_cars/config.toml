@@ -21,6 +21,6 @@ label="Key Lesson Points"
 content="lessons.html"
 
 [[dropdown]]
-icon="newspaper"
+icon="globe"
 label="Applications in Industry"
 content="news.html"

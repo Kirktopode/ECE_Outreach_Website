@@ -99,7 +99,7 @@ class CardScroll extends React.Component {
 				Math
 			    </li>
 			    <li style={{"--url": `url(${lookupIconPath("newspaper")})`}}>
-				News
+				Research
 			    </li>
 			</ul>
 		    </div>
