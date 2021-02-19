@@ -15,9 +15,28 @@ export class Team extends Component {
             {this.props.data
               ? this.props.data.map((d, i) => (
                   <div  key={`${d.name}-${i}`} className="col-md-3 col-sm-6 team">
-                    <div className="thumbnail">
+                    <div
+                      className="thumbnail" 
+                      style={{
+                        height: '520px',
+                        textAlign: 'center'
+                      }}>
                       {" "}
-                      <img src={d.img} alt="..." className="team-img" />
+                      <div 
+                      style={{
+                        height: '320px',
+                        position: 'relative',
+                        width: '220px',
+                        overflow: 'hidden',
+                        left: 15
+                      }}>
+                        <img src={d.img} alt={d.name} className="team-img" 
+                          style={{
+                            position: 'absolute',
+                            bottom: 0,
+                            left: 0
+                          }}/>
+                      </div>
                       <div className="caption">
                         <h4>{d.name}</h4>
                         <p>{d.job}</p>

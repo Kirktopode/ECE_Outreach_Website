@@ -99,14 +99,8 @@
         {
             "img": "img/team/jameson_richard.png",
             "name": "Jameson Richard",
-            "job": "Senior Design Student",
+            "job": "Senior",
             "description": "I'm a senior in Computer Engineering and I am interested in robotics and web development."
-        },
-        {
-            "img": "img/team/no_image.png",
-            "name": "Jeremy Rodriquez",
-            "job": "Senior Design Student",
-            "description": ""
         },
         {
             "img": "img/team/cole_taylor.png",
@@ -126,10 +120,10 @@
             "job": "Senior, Team Lead",
             "description": "I am a senior in Electrical Engineering and am the current ECE Outreach Team Lead. I am interested in signal processing, specifically in the field of biomedical imaging and sensing."
         }, {
-            "img": "img/team/no_image.png",
+            "img": "img/team/david_neitenbach.jpg",
             "name": "David Neitenbach",
             "job": "Junior",
-            "description": ""
+            "description": "I really enjoy climbing and playing hockey! These let me clear my head and relax. I also really like to design and build speakers in my free time. It isn't the cheapest hobby but I really enjoy it!"
         },
         {
             "img": "img/team/devin_pohl.jpg",
@@ -138,10 +132,10 @@
             "description": "I am a junior in Computer Engineering and lead Outreach's Digital/Programming team. I 𝘳𝘦𝘢𝘭𝘭𝘺 like programming, regularly contributing to open source projects."
         },
         {
-            "img": "img/team/no_image.png",
+            "img": "img/team/jacklyn_moore.jpg",
             "name": "Jacklyn Moore",
             "job": "Junior",
-            "description": ""
+            "description": "I am a junior in both Electrical Engineering & Biomedical Engineering. I am part of the Math Team in ECE Outreach, and I am interested in pursuing a career in cardiology!"
         },
         {
             "img": "img/team/kendra_ott.jpg",
@@ -177,7 +171,13 @@
             "img": "img/team/naser_moin.jpg",
             "name": "Naser Moin",
             "job": "Sophomore",
-            "description": "I am a second year undergraduate in computer engineering. My interests include software and digital systems, as well as the physics of electrical circuits. I also have a passion for teaching others, which is why I joined CSU's ECE Outreach team."
+            "description": "I am a second year undergraduate in computer engineering. My interests include software and digital systems, and I also have a passion for teaching others."
+        },
+        {
+            "img": "img/team/thomas_balzer.png",
+            "name": "Thomas Balzer",
+            "job": "Sophomore",
+            "description": "I am a freshman electrical engineering student interested in controls and robotics."
         }
     ],
     "Contact": {
