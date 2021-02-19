@@ -34,7 +34,7 @@ export class Team extends Component {
                           style={{
                             position: 'absolute',
                             bottom: 0,
-                            left: 0
+                            left: -10
                           }}/>
                       </div>
                       <div className="caption">
