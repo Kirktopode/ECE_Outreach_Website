@@ -91,10 +91,10 @@
             "description": "I’m a senior in Electrical Engineering, and lead of the Analog Outreach Team, and I’m interested in power electronics."
         },
         {
-            "img": "img/team/no_image.png",
+            "img": "img/team/ian_johnson.jpg",
             "name": "Ian Johnson",
             "job": "Senior Design Student",
-            "description": ""
+            "description": "I have been a part of the CSU ECE Outreach team for a little over a year and have worked on several projects in that time. I am a firm believer in reducing carbon emissions by biking and home cooked meals."
         },
         {
             "img": "img/team/jameson_richard.png",
@@ -178,6 +178,18 @@
             "name": "Thomas Balzer",
             "job": "Sophomore",
             "description": "I am a freshman electrical engineering student interested in controls and robotics."
+        },
+        {
+            "img": "img/team/no_image.png",
+            "name": "Ticus Brandt",
+            "job": "Freshman",
+            "description": ""
+        },
+        {
+            "img": "img/team/no_image.png",
+            "name": "Pacen Whited",
+            "job": "Freshman",
+            "description": ""
         }
     ],
     "Contact": {
