@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ECE_Outreach_Website/static/css/main.672ac416.chunk.css",
-    "main.js": "/ECE_Outreach_Website/static/js/main.f5919cd5.chunk.js",
-    "main.js.map": "/ECE_Outreach_Website/static/js/main.f5919cd5.chunk.js.map",
+    "main.js": "/ECE_Outreach_Website/static/js/main.72900b20.chunk.js",
+    "main.js.map": "/ECE_Outreach_Website/static/js/main.72900b20.chunk.js.map",
     "runtime-main.js": "/ECE_Outreach_Website/static/js/runtime-main.09697835.js",
     "runtime-main.js.map": "/ECE_Outreach_Website/static/js/runtime-main.09697835.js.map",
     "static/js/2.9df41f14.chunk.js": "/ECE_Outreach_Website/static/js/2.9df41f14.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.09697835.js",
     "static/js/2.9df41f14.chunk.js",
     "static/css/main.672ac416.chunk.css",
-    "static/js/main.f5919cd5.chunk.js"
+    "static/js/main.72900b20.chunk.js"
   ]
 }
