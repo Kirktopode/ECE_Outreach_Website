@@ -40,7 +40,7 @@ export class Team extends Component {
                       <div className="caption">
                         <h4>{d.name}</h4>
                         <p>{d.job}</p>
-                        <p>{d.description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}</p>
+                        <p>{d.description || "..."}</p>
                       </div>
                     </div>
                   </div>
