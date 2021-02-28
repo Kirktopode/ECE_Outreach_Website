@@ -302,6 +302,22 @@
     content: "";
     display: block;
 }
+.card_wrapper.open {
+    animation: open-card 1s;
+    animation-delay: 0s;
+    min-height: calc(var(--base-height) + var(--offset-height) - 26em);
+}
+@keyframes open-card {
+    0% {
+	min-height: calc(var(--offset-height));
+    }
+    75% {
+	min-height: calc(var(--offset-height) + 10em);
+    }
+    100% {
+	min-height: calc(var(--base-height) + var(--offset-height) - 26em);
+    }
+}
 
 .card_title {
     text-align: center;

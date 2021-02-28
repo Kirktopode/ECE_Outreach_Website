@@ -190,10 +190,11 @@ class Card extends React.Component {
 							       (this.state.open !== null ?
 								this.state.clientHeight[this.state.open]
 								+ 10 // a little extra padding to make things look nice
-								+ this.state.wrapperHeight
 								: 0)
-							       + "px - 26em)"
-							      )}}>
+							       + "px)"
+							      ),
+					     "--offset-height": this.state.wrapperHeight + "px",
+					    }}>
 				    <div className="card">
 					{this.center}
 					{hover_elements}
