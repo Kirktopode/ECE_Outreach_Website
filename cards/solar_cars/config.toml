@@ -3,7 +3,7 @@ title="Solar Powered Cars"
 description="Solar panels are a marvel of modern engineering. This project explores how their design, manufacturing, and ability to power various vehicles."
 src="center.jpg"
 alt="Lights"
-main_page="main.html"
+main_page=""
 
 [[dropdown]]
 icon="lightbulb"
