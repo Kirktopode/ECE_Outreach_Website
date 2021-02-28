@@ -165,7 +165,8 @@ class Card extends React.Component {
 			if(!isVisible && this.state.open !== null && this.state.opening_wait === false) {
 			    if(this.ref.current.getBoundingClientRect().top - CardScroll.topbar_offset < 0 ) {
 				// currently below the element about to retract, correct so scrolling isn't thrown off
-				let scroll_offset = this.state.clientHeight[this.state.open]+10;
+				let scroll_offset = this.state.clientHeight[this.state.open]+10
+				    +this.state.wrapperHeight-230;
 				setTimeout(() =>
 				    window.scrollBy({
 					top: -scroll_offset,
@@ -189,8 +190,9 @@ class Card extends React.Component {
 							       (this.state.open !== null ?
 								this.state.clientHeight[this.state.open]
 								+ 10 // a little extra padding to make things look nice
+								+ this.state.wrapperHeight
 								: 0)
-							       + "px)"
+							       + "px - 26em)"
 							      )}}>
 				    <div className="card">
 					{this.center}
