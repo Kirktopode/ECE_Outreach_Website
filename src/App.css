@@ -285,7 +285,7 @@
 .card_wrapper {
     --base-height: 33em;
     font-size: 0.6em;
-    height: var(--base-height);
+    min-height: var(--base-height);
     position: relative;
     margin-bottom: 4em;
     position: relative;
@@ -293,6 +293,12 @@
     transition-delay: 0.8s;
     background: #eee;
     border-radius: 3em;
+}
+/* magic to make sizing correct */
+.card_wrapper:after{
+    clear: both;
+    content: "";
+    display: block;
 }
 
 .card_title {
@@ -314,22 +320,22 @@
     right: 8em;
 }
 .card_reader_link {
-    position: absolute;
-    bottom: -1em;
-    transform: translate(0, 100%);
+    /*transform: translate(0, 100%);*/
     font-size: 1.2em;
     color: #fff;
     border-radius: 0.75em;
     padding: 0.5em 2.2em; /* top-bottom left-right */
+    margin-top: 1em;
+    margin-bottom: 1em;
     transition: 0.35s;
     font-weight: bold;
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_reader_link {
-    right: 0;
+    float: right;
     background: var(--csu-green);
 }
 .card_scroll_browser>div:nth-child(2n) .card_reader_link {
-    left: 0;
+    float: left;
     background: var(--csu-gold);
 }
 
@@ -339,16 +345,15 @@
     font-size: 1.5em;
     color: #111;
     text-align: justify;
-    top: 10em;
-    position: absolute;
+    padding-top: 10em;
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_description {
-    left: 16em;
-    right: 2em;
+    padding-left: 18em;
+    padding-right: 2em;
 }
 .card_scroll_browser>div:nth-child(2n) .card_description {
-    right: 16em;
-    left: 2em;
+    padding-right: 18em;
+    padding-left: 2em;
 }
 
 .portfolio-items, .portfolio-cards {
