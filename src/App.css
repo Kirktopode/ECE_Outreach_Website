@@ -1,10 +1,4 @@
-@font-face {
-  font-family: 'Bahnschrift';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Bahnschrift'),
-       url('fonts/Bahnschrift.ttf') format('truetype');
-}
+@import url('https://static.colostate.edu/fonts/proxima-nova/proxima.css');
 @font-face {
     font-family: "Latin Modern Math";
     src: url('fonts/latinmodern-math.otf');
@@ -21,10 +15,12 @@
 }
 
 * { /* TODO */
-    --csu-green: green;
-    --csu-gold: gold;
+    --csu-green: #1e4d2b;
+    --csu-gold: #c8c372;
 
-    --header-height: calc(15px + 1px + 20px + 50px)
+    --header-height: calc(15px + 1px + 20px + 50px);
+
+    font-family: "Proxima Nova",sans-serif !important;
 }
 
 .App-header {
@@ -288,7 +284,6 @@
 
 .card_wrapper {
     --base-height: 33em;
-    font-family: Bahnschrift;
     font-size: 0.6em;
     height: var(--base-height);
     position: relative;
@@ -464,4 +459,27 @@
     padding-right: 0;
     border-radius: 0 2em 2em 0;
     width: 100%;
+}
+
+/* navbar stuff */
+
+#menu.navbar-default {
+    background: var(--csu-green);
+}
+
+.navbar-title {
+    float: right;
+    font-size: 1.34em;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 10.5px 16px;
+    text-decoration: none;
+}
+
+#menu.navbar-default .navbar-nav > li > a {
+    color: #f1f1f1;
+}
+
+#menu.navbar-default .navbar-nav > li > a::after {
+    background: linear-gradient(to right, var(--csu-gold) 0%, var(--csu-green) 100%);
 }
