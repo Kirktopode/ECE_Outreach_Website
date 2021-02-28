@@ -59,6 +59,7 @@ class Card extends React.Component {
 	    opening_wait: false,
 	    id: this.props.id,
 	    clientHeight: [],
+	    wrapperHeight: 0,
 	};
 	// first check if we need to load JSON or if inline is okay
 	let children;
@@ -131,6 +132,7 @@ class Card extends React.Component {
     }
 
     componentDidMount() {
+	this.setState({wrapperHeight: this.ref.current.clientHeight});
 	this.setState({clientHeight:
 		       [...this.ref.current.querySelectorAll('.card_dropdown_content')]
 			.map(e => e.clientHeight)});
@@ -150,7 +152,8 @@ class Card extends React.Component {
 						      +this.state.open
 					      ) : (
 						  -1-i+this.state.open
-					      )) + "deg"},
+					      )) + "deg",
+			"--offset-height": this.state.wrapperHeight + "px"},
 		className: ((this.state.open !== i ? "breathing " : "")
 			    + (this.state.open === i ? "open" : "")),
 	    }, this.hover_elements[i].props.children);

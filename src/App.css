@@ -112,13 +112,15 @@
     transform: rotate(var(--angle))
 	       translate(12em) rotate(calc(-1 * var(--angle)))
 	       translate(-4em, -4em)
-	       translate(-2em, 4em);
+	       translate(-2em, 4em)
+	       translate(0, calc(var(--offset-height) - 26em));
 }
 .card_scroll_browser>div:nth-child(2n) .card_dropdown.open {
     transform: rotate(calc(-180deg - var(--angle)))
 	       translate(12em) rotate(calc(180deg + var(--angle)))
 	       translate(4em, -4em)
-	       translate(-2em, 4em);
+	       translate(-2em, 4em)
+	       translate(0, calc(var(--offset-height) - 26em));
 }
 
 .breathing{
