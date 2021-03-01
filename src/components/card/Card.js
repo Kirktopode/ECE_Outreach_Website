@@ -59,6 +59,7 @@ class Card extends React.Component {
 	    opening_wait: false,
 	    id: this.props.id,
 	    clientHeight: [],
+	    wrapperHeight: 0,
 	};
 	// first check if we need to load JSON or if inline is okay
 	let children;
@@ -131,6 +132,7 @@ class Card extends React.Component {
     }
 
     componentDidMount() {
+	this.setState({wrapperHeight: this.ref.current.clientHeight});
 	this.setState({clientHeight:
 		       [...this.ref.current.querySelectorAll('.card_dropdown_content')]
 			.map(e => e.clientHeight)});
@@ -150,7 +152,8 @@ class Card extends React.Component {
 						      +this.state.open
 					      ) : (
 						  -1-i+this.state.open
-					      )) + "deg"},
+					      )) + "deg",
+			"--offset-height": this.state.wrapperHeight + "px"},
 		className: ((this.state.open !== i ? "breathing " : "")
 			    + (this.state.open === i ? "open" : "")),
 	    }, this.hover_elements[i].props.children);
@@ -162,7 +165,8 @@ class Card extends React.Component {
 			if(!isVisible && this.state.open !== null && this.state.opening_wait === false) {
 			    if(this.ref.current.getBoundingClientRect().top - CardScroll.topbar_offset < 0 ) {
 				// currently below the element about to retract, correct so scrolling isn't thrown off
-				let scroll_offset = this.state.clientHeight[this.state.open]+10;
+				let scroll_offset = this.state.clientHeight[this.state.open]+10
+				    +this.state.wrapperHeight-230;
 				setTimeout(() =>
 				    window.scrollBy({
 					top: -scroll_offset,
@@ -188,7 +192,9 @@ class Card extends React.Component {
 								+ 10 // a little extra padding to make things look nice
 								: 0)
 							       + "px)"
-							      )}}>
+							      ),
+					     "--offset-height": this.state.wrapperHeight + "px",
+					    }}>
 				    <div className="card">
 					{this.center}
 					{hover_elements}
@@ -198,6 +204,7 @@ class Card extends React.Component {
 				    </div>
 				    <div className="card_description">
 					{this.description}
+					<br/>
 					<a href={process.env.PUBLIC_URL + "/projects/" + this.props.src.split('/').pop()}
 					   className="card_reader_link breathing subtle">
 					    Read Further

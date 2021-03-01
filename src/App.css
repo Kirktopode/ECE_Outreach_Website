@@ -1,10 +1,4 @@
-@font-face {
-  font-family: 'Bahnschrift';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Bahnschrift'),
-       url('fonts/Bahnschrift.ttf') format('truetype');
-}
+@import url('https://static.colostate.edu/fonts/proxima-nova/proxima.css');
 @font-face {
     font-family: "Latin Modern Math";
     src: url('fonts/latinmodern-math.otf');
@@ -21,10 +15,12 @@
 }
 
 * { /* TODO */
-    --csu-green: green;
-    --csu-gold: gold;
+    --csu-green: #1e4d2b;
+    --csu-gold: #c8c372;
 
-    --header-height: calc(15px + 1px + 20px + 50px)
+    --header-height: calc(15px + 1px + 20px + 50px);
+
+    font-family: "Proxima Nova",sans-serif !important;
 }
 
 .App-header {
@@ -116,13 +112,15 @@
     transform: rotate(var(--angle))
 	       translate(12em) rotate(calc(-1 * var(--angle)))
 	       translate(-4em, -4em)
-	       translate(-2em, 4em);
+	       translate(-2em, 4em)
+	       translate(0, calc(var(--offset-height) - 26em));
 }
 .card_scroll_browser>div:nth-child(2n) .card_dropdown.open {
     transform: rotate(calc(-180deg - var(--angle)))
 	       translate(12em) rotate(calc(180deg + var(--angle)))
 	       translate(4em, -4em)
-	       translate(-2em, 4em);
+	       translate(-2em, 4em)
+	       translate(0, calc(var(--offset-height) - 26em));
 }
 
 .breathing{
@@ -288,9 +286,8 @@
 
 .card_wrapper {
     --base-height: 33em;
-    font-family: Bahnschrift;
     font-size: 0.6em;
-    height: var(--base-height);
+    min-height: var(--base-height);
     position: relative;
     margin-bottom: 4em;
     position: relative;
@@ -298,6 +295,28 @@
     transition-delay: 0.8s;
     background: #eee;
     border-radius: 3em;
+}
+/* magic to make sizing correct */
+.card_wrapper:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+.card_wrapper.open {
+    animation: open-card 1s;
+    animation-delay: 0s;
+    min-height: calc(var(--base-height) + var(--offset-height) - 26em);
+}
+@keyframes open-card {
+    0% {
+	min-height: calc(var(--offset-height));
+    }
+    75% {
+	min-height: calc(var(--offset-height) + 10em);
+    }
+    100% {
+	min-height: calc(var(--base-height) + var(--offset-height) - 26em);
+    }
 }
 
 .card_title {
@@ -319,22 +338,22 @@
     right: 8em;
 }
 .card_reader_link {
-    position: absolute;
-    bottom: -1em;
-    transform: translate(0, 100%);
+    /*transform: translate(0, 100%);*/
     font-size: 1.2em;
     color: #fff;
     border-radius: 0.75em;
     padding: 0.5em 2.2em; /* top-bottom left-right */
+    margin-top: 1em;
+    margin-bottom: 1em;
     transition: 0.35s;
     font-weight: bold;
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_reader_link {
-    right: 0;
+    float: right;
     background: var(--csu-green);
 }
 .card_scroll_browser>div:nth-child(2n) .card_reader_link {
-    left: 0;
+    float: left;
     background: var(--csu-gold);
 }
 
@@ -344,16 +363,15 @@
     font-size: 1.5em;
     color: #111;
     text-align: justify;
-    top: 10em;
-    position: absolute;
+    padding-top: 10em;
 }
 .card_scroll_browser>div:nth-child(2n+1) .card_description {
-    left: 16em;
-    right: 2em;
+    padding-left: 18em;
+    padding-right: 2em;
 }
 .card_scroll_browser>div:nth-child(2n) .card_description {
-    right: 16em;
-    left: 2em;
+    padding-right: 18em;
+    padding-left: 2em;
 }
 
 .portfolio-items, .portfolio-cards {
@@ -464,4 +482,27 @@
     padding-right: 0;
     border-radius: 0 2em 2em 0;
     width: 100%;
+}
+
+/* navbar stuff */
+
+#menu.navbar-default {
+    background: var(--csu-green);
+}
+
+.navbar-title {
+    float: right;
+    font-size: 1.34em;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 10.5px 16px;
+    text-decoration: none;
+}
+
+#menu.navbar-default .navbar-nav > li > a {
+    color: #f1f1f1;
+}
+
+#menu.navbar-default .navbar-nav > li > a::after {
+    background: linear-gradient(to right, var(--csu-gold) 0%, var(--csu-green) 100%);
 }
