@@ -20,7 +20,7 @@
 
     --header-height: calc(15px + 1px + 20px + 50px);
 
-    font-family: "Proxima Nova",sans-serif !important;
+    font-family: "prox-regular",sans-serif !important;
 }
 
 .App-header {
@@ -301,6 +301,9 @@
     clear: both;
     content: "";
     display: block;
+}
+.card_scroll_browser>div:last-child .card_wrapper {
+    margin-bottom: 35em;
 }
 .card_wrapper.open {
     animation: open-card 1s;
