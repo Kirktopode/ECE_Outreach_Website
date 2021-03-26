@@ -36,7 +36,7 @@ export class App extends Component {
                   <Gallery />
                 </Route>
                 <Route path={process.env.PUBLIC_URL + "/team"}>
-                  <Team data={this.state.landingPageData.Team} />
+                  <Team teamData={this.state.landingPageData.Team} alumData={this.state.landingPageData.Alumni}/>
                 </Route>
                 <Route path={process.env.PUBLIC_URL + "/contact"}>
                   {/* <Features data={this.state.landingPageData.Features} /> */}

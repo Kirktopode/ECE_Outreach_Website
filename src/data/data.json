@@ -192,6 +192,20 @@
             "description": "I am a freshman computer engineering student and have an interest in software development and embedded systems."
         }
     ],
+    "Alumni": [
+        {
+            "img": "img/team/jameson_richard.png",
+            "name": "Jameson Richard",
+            "linkedin": "https://www.linkedin.com/in/jameson-daniel-richard/",
+            "graduation": 2021
+        },
+        {
+            "img": "img/team/joseph_stubitz.png",
+            "name": "Joseph Stubitz",
+            "linkedin": "https://www.linkedin.com/in/joe-stubitz-p-e-5322a311/",
+            "graduation": 2009
+        }
+    ],
     "Contact": {
         "address": "xxx",
         "phone": "xxx",
