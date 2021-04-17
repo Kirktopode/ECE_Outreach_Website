@@ -197,13 +197,36 @@
             "img": "img/team/jameson_richard.png",
             "name": "Jameson Richard",
             "linkedin": "https://www.linkedin.com/in/jameson-daniel-richard/",
-            "graduation": 2021
+            "graduation": "B.S.Cp.E. 2021",
+            "quote": "ECE opens up a world of potential, both for your career prospects and for your free time."
         },
         {
             "img": "img/team/joseph_stubitz.png",
             "name": "Joseph Stubitz",
             "linkedin": "https://www.linkedin.com/in/joe-stubitz-p-e-5322a311/",
-            "graduation": 2009
+            "graduation": "B.Eng.Sc. 2009",
+            "quote": "ECE majors help keep the lights on and are powering us toward the future."
+        },
+        {
+            "img": "img/team/jarvis_hill.png",
+            "name": "Jarvis Hill",
+            "linkedin": "https://www.linkedin.com/in/jarvis-hill-1856541a/",
+            "graduation": "B.S.E.E. 2009",
+            "quote": "Give 100% in the current moment; it will always lead to your next greatest moment; you’ll never have to sit around wondering in a null state of life."
+        },
+        {
+            "img": "img/team/raj_jethnani.png",
+            "name": "Raj Jethnani",
+            "linkedin": "https://www.linkedin.com/in/jethnani/",
+            "graduation": "B.S.E.E. 2009",
+            "quote": ""
+        },
+        {
+            "img": "img/team/ian_bernstein.png",
+            "name": "Ian Bernstein",
+            "linkedin": "https://www.linkedin.com/in/ianbernstein/",
+            "graduation": "B.S.E.E. 2007",
+            "quote": "With sensors, microcontrollers, and computers surrounding us from our cars to our fitness equipment to sleep aids, ECE is becoming more and more important every day. Not to mention how fun, creative, and rewarding it can be!"
         }
     ],
     "Contact": {
