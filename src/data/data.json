@@ -85,6 +85,12 @@
         }
     ],
     "Team": [{
+            "img": "img/team/kailee_mitsuyasu.png",
+            "name": "Kailee Mitsuyasu",
+            "job": "Graduate Student",
+            "description": "Hi my name is Kailee. Professionally, I am interested in VLSI, circuit design, and embedded systems. In my spare time I love to cook and play the guitar."
+        },
+        {
             "img": "img/team/brandon_crisp.png",
             "name": "Brandon Crisp",
             "job": "Senior Design Student",
@@ -97,22 +103,10 @@
             "description": "I have been a part of the CSU ECE Outreach team for a little over a year and have worked on several projects in that time. I am a firm believer in reducing carbon emissions by biking and home cooked meals."
         },
         {
-            "img": "img/team/jameson_richard.png",
-            "name": "Jameson Richard",
-            "job": "Senior",
-            "description": "I'm a senior in Computer Engineering and I am interested in firmware development. I love hacking hardware in my spare time."
-        },
-        {
             "img": "img/team/cole_taylor.png",
             "name": "Cole Taylor",
             "job": "Senior",
             "description": "I am a senior in Electrical Engineering, the Controls team lead of the Rocket Team at CSU, and have a passion for aerospace and automotives. "
-        },
-        {
-            "img": "img/team/kailee_mitsuyasu.png",
-            "name": "Kailee Mitsuyasu",
-            "job": "Senior",
-            "description": "Hi my name is Kailee and I’m a Senior in Computer Engineering at Colorado State University. Professionally, I am interested in VLSI, circuit design, and embedded systems. In my spare time I love to cook and play the guitar."
         },
         {
             "img": "img/team/ryan_barnes.png",
