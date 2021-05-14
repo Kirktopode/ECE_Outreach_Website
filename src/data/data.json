@@ -85,35 +85,6 @@
         }
     ],
     "Team": [{
-            "img": "img/team/kailee_mitsuyasu.png",
-            "name": "Kailee Mitsuyasu",
-            "job": "Graduate Student",
-            "description": "Hi my name is Kailee. Professionally, I am interested in VLSI, circuit design, and embedded systems. In my spare time I love to cook and play the guitar."
-        },
-        {
-            "img": "img/team/brandon_crisp.png",
-            "name": "Brandon Crisp",
-            "job": "Senior Design Student",
-            "description": "I’m a senior in Electrical Engineering, and lead of the Analog Outreach Team, and I’m interested in power electronics."
-        },
-        {
-            "img": "img/team/ian_johnson.png",
-            "name": "Ian Johnson",
-            "job": "Senior Design Student",
-            "description": "I have been a part of the CSU ECE Outreach team for a little over a year and have worked on several projects in that time. I am a firm believer in reducing carbon emissions by biking and home cooked meals."
-        },
-        {
-            "img": "img/team/cole_taylor.png",
-            "name": "Cole Taylor",
-            "job": "Senior",
-            "description": "I am a senior in Electrical Engineering, the Controls team lead of the Rocket Team at CSU, and have a passion for aerospace and automotives. "
-        },
-        {
-            "img": "img/team/ryan_barnes.png",
-            "name": "Ryan Barnes",
-            "job": "Senior, Team Lead",
-            "description": "I am a senior in Electrical Engineering and am the current ECE Outreach Team Lead. I am interested in signal processing, specifically in the field of biomedical imaging and sensing."
-        }, {
             "img": "img/team/david_neitenbach.png",
             "name": "David Neitenbach",
             "job": "Junior",
@@ -184,6 +155,12 @@
             "name": "Pacen Whited",
             "job": "Freshman",
             "description": "I am a freshman computer engineering student and have an interest in software development and embedded systems."
+        },
+        {
+            "img": "img/team/kailee_mitsuyasu.png",
+            "name": "Kailee Mitsuyasu",
+            "job": "Graduate Student",
+            "description": "Hi my name is Kailee. Professionally, I am interested in VLSI, circuit design, and embedded systems. In my spare time I love to cook and play the guitar."
         }
     ],
     "Alumni": [
@@ -221,6 +198,41 @@
             "linkedin": "https://www.linkedin.com/in/ianbernstein/",
             "graduation": "B.S.E.E. 2007",
             "quote": "With sensors, microcontrollers, and computers surrounding us from our cars to our fitness equipment to sleep aids, ECE is becoming more and more important every day. Not to mention how fun, creative, and rewarding it can be!"
+        },
+        {
+            "img": "img/team/brandon_crisp.png",
+            "name": "Brandon Crisp",
+            "linkedin": "",
+            "graduation": "B.S.E.E. 2021",
+            "quote": ""
+        },
+        {
+            "img": "img/team/ian_johnson.png",
+            "name": "Ian Johnson",
+            "linkedin": "https://www.linkedin.com/in/ianjohnsonelectricalengineer/",
+            "graduation": "B.S.E.E. 2021",
+            "quote": "Risk it for the Biscuit"
+        },
+        {
+            "img": "img/team/cole_taylor.png",
+            "name": "Cole Taylor",
+            "linkedin": "https://www.linkedin.com/in/colewtaylor/",
+            "graduation": "B.S.E.E. 2021",
+            "quote": "I am excited to start a meaningful career in the aerospace industry. I will be working for Lockheed Martin Space as a test engineer."
+        },
+        {
+            "img": "img/team/ryan_barnes.png",
+            "name": "Ryan Barnes",
+            "linkedin": "https://www.linkedin.com/in/ryan-barnes-signal-processing",
+            "graduation": "B.S.E.E. 2021",
+            "quote": ""
+        }, 
+        {
+            "img": "img/team/blake_danis.png",
+            "name": "Blake Danis",
+            "linkedin": "https://www.linkedin.com/in/blake-danis/",
+            "graduation": "B.S.E.E. 2020",
+            "quote": "I am currently working for a fantastic company in Colorado Springs as a Development Engineer where I’m learning more about RF circuit design and getting lots of hands-on hardware excitement!"
         }
     ],
     "Contact": {

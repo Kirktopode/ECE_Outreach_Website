@@ -8,6 +8,7 @@ export class Team extends Component {
     console.log(this.props)
     const { teamData, alumData } = this.props
     console.log({teamData, alumData})
+    
     return (
       <div>
         <div id="team" className="text-center">
@@ -67,7 +68,17 @@ export class Team extends Component {
             </div>
             <div id="row">
               {this.props.alumData
-                ? this.props.alumData.map((d, i) => (
+                ? this.props.alumData.sort((a, b) => {
+                  const aLast = a.name.slice(a.name.lastIndexOf(' '))
+                  const bLast = b.name.slice(b.name.lastIndexOf(' '))
+                  if (aLast < bLast) {
+                    return -1
+                  } else if (bLast < aLast) {
+                    return 1
+                  } else {
+                    return 0
+                  }
+                }).map((d, i) => (
                     
                     <div
                       key={`${d.name}-${i}`}
@@ -76,7 +87,7 @@ export class Team extends Component {
                       <div
                         className="thumbnail" 
                         style={{
-                          height: '520px',
+                          height: '630px',
                           textAlign: 'center'
                         }}>
                         {" "}
@@ -99,7 +110,7 @@ export class Team extends Component {
                           <h4>{d.name}</h4>
                           <p>{d.graduation}</p>
                           <p>{d.quote}</p>
-                          <p><SocialIcon url={d.linkedin} /></p>
+                          {d.linkedin && (<p><SocialIcon url={d.linkedin} /></p>)}
                         </div>
                       </div>
                     </div>
