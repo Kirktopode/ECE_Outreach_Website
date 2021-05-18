@@ -87,74 +87,74 @@
     "Team": [{
             "img": "img/team/david_neitenbach.png",
             "name": "David Neitenbach",
-            "job": "Junior",
+            "job": "Senior",
             "description": "I really enjoy climbing and playing hockey! These let me clear my head and relax. I also really like to design and build speakers in my free time. It isn't the cheapest hobby but I really enjoy it!"
         },
         {
             "img": "img/team/devin_pohl.png",
             "name": "Devin Pohl",
-            "job": "Junior",
-            "description": "I am a junior in Computer Engineering and lead Outreach's Digital/Programming team. I 𝘳𝘦𝘢𝘭𝘭𝘺 like programming, regularly contributing to open source projects."
+            "job": "Senior",
+            "description": "I am a senior in Computer Engineering and lead Outreach's Digital/Programming team. I 𝘳𝘦𝘢𝘭𝘭𝘺 like programming, regularly contributing to open source projects."
         },
         {
             "img": "img/team/jacklyn_moore.png",
             "name": "Jacklyn Moore",
-            "job": "Junior",
-            "description": "I am a junior in both Electrical Engineering & Biomedical Engineering. I am part of the Math Team in ECE Outreach, and I am interested in pursuing a career in cardiology!"
+            "job": "Senior",
+            "description": "I am a senior in both Electrical Engineering & Biomedical Engineering. I am part of the Math Team in ECE Outreach, and I am interested in pursuing a career in cardiology!"
         },
         {
             "img": "img/team/kendra_ott.png",
             "name": "Kendra Ott",
-            "job": "Junior",
-            "description": "I'm a Junior in Computer Engineering and I lead the math team. I love programming and am interested in firmware. "
+            "job": "Senior",
+            "description": "I'm a senior in Computer Engineering and I lead the math team. I love programming and am interested in firmware. "
         },
         {
             "img": "img/team/kori_eliaz.png",
             "name": "Kori Eliaz",
-            "job": "Junior",
-            "description": "I’m a junior in Electrical Engineering and lead of the Media team. I’m super passionate about all things aerospace, specifically deep space communications."
+            "job": "Senior",
+            "description": "I’m a senior in Electrical Engineering and lead of the Media team. I’m super passionate about all things aerospace, specifically deep space communications."
         },
         {
             "img": "img/team/trevor_dunham.png",
             "name": "TJ Dunham",
-            "job": "Junior",
-            "description": "I’m an Electrical Engineering junior and lead for the EV3 Robotics team. I’m here because I believe outreach is one of the most important endeavors we can take on as engineering students."
+            "job": "Senior",
+            "description": "I’m an Electrical Engineering senior and lead for the EV3 Robotics team. I’m here because I believe outreach is one of the most important endeavors we can take on as engineering students."
         },
         {
             "img": "img/team/vani_kapoor.png",
             "name": "Vani Kapoor",
-            "job": "Junior",
-            "description": "I am a Junior Electrical Engineering student. I have been a part of the outreach team since my sophomore year. I am interested in going into project management in the automotive industry."
+            "job": "Senior",
+            "description": "I am a Senior Electrical Engineering student. I have been a part of the outreach team since my sophomore year. I am interested in going into project management in the automotive industry."
         },
         {
             "img": "img/team/ethan_schultz.png",
             "name": "Ethan Schultz",
-            "job": "Sophomore",
-            "description": "I am a sophomore majoring in Electrical Engineering. I really enjoy programming and working on side projects."
+            "job": "Junior",
+            "description": "I am a junior majoring in Electrical Engineering. I really enjoy programming and working on side projects."
         },
         {
             "img": "img/team/naser_moin.png",
             "name": "Naser Moin",
-            "job": "Sophomore",
-            "description": "I am a second year undergraduate in computer engineering. My interests include software and digital systems, and I also have a passion for teaching others."
+            "job": "Junior",
+            "description": "I am a third year undergraduate in computer engineering. My interests include software and digital systems, and I also have a passion for teaching others."
         },
         {
             "img": "img/team/thomas_balzer.png",
             "name": "Thomas Balzer",
             "job": "Sophomore",
-            "description": "I am a freshman electrical engineering student interested in controls and robotics."
+            "description": "I am a sophomore electrical engineering student interested in controls and robotics."
         },
         {
             "img": "img/team/ticus_brandt.png",
             "name": "Ticus Brandt",
-            "job": "Freshman",
-            "description": "I am a Freshman in Computer Engineering. I have a passion for inventing and innovating and using any chance to get creative."
+            "job": "Sophomore",
+            "description": "I am a sophomore in Computer Engineering. I have a passion for inventing and innovating and using any chance to get creative."
         },
         {
             "img": "img/team/pacen_whited.png",
             "name": "Pacen Whited",
-            "job": "Freshman",
-            "description": "I am a freshman computer engineering student and have an interest in software development and embedded systems."
+            "job": "Sophomore",
+            "description": "I am a sophomore computer engineering student and have an interest in software development and embedded systems."
         },
         {
             "img": "img/team/kailee_mitsuyasu.png",
