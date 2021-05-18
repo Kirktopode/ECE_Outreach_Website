@@ -24,7 +24,7 @@ export class Team extends Component {
                 ? this.props.teamData.map((d, i) => (
                     <div
                       key={`${d.name}-${i}`}
-                      className={i % 5 == 0? "col-md-2 col-md-offset-1 col-sm-6 team" : "col-md-2 col-sm-6 team"}
+                      className={i % 5 === 0? "col-md-2 col-md-offset-1 col-sm-6 team" : "col-md-2 col-sm-6 team"}
                     >
                       <div
                         className="thumbnail" 
@@ -82,7 +82,7 @@ export class Team extends Component {
                     
                     <div
                       key={`${d.name}-${i}`}
-                      className={i % 5 == 0? "col-md-2 col-md-offset-1 col-sm-6 team" : "col-md-2 col-sm-6 team"}
+                      className={i % 5 === 0? "col-md-2 col-md-offset-1 col-sm-6 team" : "col-md-2 col-sm-6 team"}
                     >
                       <div
                         className="thumbnail" 
