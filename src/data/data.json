@@ -127,6 +127,12 @@
             "description": "I am a Senior Electrical Engineering student. I have been a part of the outreach team since my sophomore year. I am interested in going into project management in the automotive industry."
         },
         {
+            "img":"img/team/ben_beauvais.png",
+            "name": "Ben Beauvais",
+            "job": "Senior",
+            "description": "I am a senior in Electrical Engineering and the school contact lead for ECE Outreach.  My career interests lie in energy and telecommunications, but I also have a passion for teaching engineering and mentoring younger students!"
+        },
+        {
             "img": "img/team/ethan_schultz.png",
             "name": "Ethan Schultz",
             "job": "Junior",
@@ -137,6 +143,12 @@
             "name": "Naser Moin",
             "job": "Junior",
             "description": "I am a third year undergraduate in computer engineering. My interests include software and digital systems, and I also have a passion for teaching others."
+        },
+        {
+            "img": "img/team/matt_gilmore.png",
+            "name": "Matt Gilmore",
+            "job": "Junior",
+            "description": "My name is Matt, and I am a junior EE student who enjoys fly fishing and building PC's when I have free time."
         },
         {
             "img": "img/team/thomas_balzer.png",
