@@ -133,6 +133,12 @@
             "description": "I am a senior in Electrical Engineering and the school contact lead for ECE Outreach.  My career interests lie in energy and telecommunications, but I also have a passion for teaching engineering and mentoring younger students!"
         },
         {
+            "img":"img/team/gwyn_tari.png",
+            "name": "Gwyn Tari",
+            "job": "Senior",
+            "description": "Gwyndolyn Tari is a computer engineering student with a passion for animatronics and computer hardware."
+        },
+        {
             "img": "img/team/ethan_schultz.png",
             "name": "Ethan Schultz",
             "job": "Junior",
